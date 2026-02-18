@@ -1,0 +1,80 @@
+{  
+    "Placement": 2,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a Moody's Mega Math Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The mean sea level (MSL) rise for a given area is determined by three factors: ice caps melting, the thermal expansion of water, and vertical elevation changes in the Earth's surface in different areas.",  
+        "The MSL trend data provided by NOAA takes into account all of the above factors.",  
+        "Rate of MSL change is and will remain constant on both a global and local park level.",  
+        "This constant rate of MSL change can be determined based on MSL trends from the past 20 years.",  
+        "The sea level change risk is directly proportional to the change in sea level.",  
+        "A park with a lot of coastline relative to its area is more vulnerable to a change in sea level than a park with less coastline relative to its area.",  
+        "The entire coastline of a park is at sea level.",  
+        "The national park coastlines have a grade of 0.07% upward."  
+      \],  
+      "Model": \[  
+        "Our model is based upon the realization that a given park's sea level risk depends primarily on two factors: the projected local mean sea level (MSL) rise, and the area of the park that is directly exposed to the coast."  
+      \],  
+      "Results": \[  
+        "Over the next 50 years, Padre Island, Acadia, and Cape Hatteras were all projected to fall into the 'high risk' category, given their rapidly rising sea levels and high coastal exposure. On the other hand, Kenai Fjords, which is experiencing decreasing sea levels, was projected to be at 'low' risk due to sea level change."  
+      \],  
+      "Sensitivity Analysis": \[  
+        "For this analysis, we alter the rate of change of sea level for Acadia National Park:",  
+        "The two rates above and below the mean are the 5th and 95th percentiles for Acadia National Park \[7\]. The results for these values do not stray too far from those for the mean value, which illustrates that our model responds reasonably to small changes in the rate of change of sea level."  
+      \],  
+      "Strength and Weakness": {}  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "A park's vulnerability to climate-related events is determined by the expected value total park asset loss as a result of the event, normalized by the number of acres in the park.",  
+        "Park asset losses will primarily be derived from sea level rise, hurricanes, and wildfires for coastal parts (of all climate related events). The vulnerability index model will focus on these factors.",  
+        "Inflation and time value of money are irrelevant to this issue.",  
+        "The value of a park is uniformly distributed across all of its land.",  
+        "One acre of national parkland is worth $1195.",  
+        "Storms that are ranked below Category 1 on the Saffir-Simpson scale are not powerful enough to cause any appreciable damage to national parks.",  
+        "No hurricanes will occur in the states of Alaska and Washington in the next 50 years.",  
+        "Hurricane rates will not change over the next 50 years.",  
+        "There will be no wildfires in Alaska over the next 50 years."  
+      \],  
+      "Model": \[  
+        "Next, we developed a model to give any coastal unit a climate vulnerability index, based on the likelihood and severity of negative climate-related events occurring there over the next 50 years. The vulnerability index was measured in the dollar value of damage per acre of park land expected over the next 50 years. We determined that the three largest climate-related threats to consider in coastal areas are sea level risk, hurricanes, and wildfires."  
+      \],  
+      "Results": \[  
+        "Padre Island National Seashore was found to have the highest vulnerability index, based on its exposure to rising sea levels, hurricanes, and wildfires. On the other hand, Kenai Fjords National Park in Alaska, which does not have a history of hurricanes or wildfires and is actually experiencing falling sea levels, had a vulnerability index of 0."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[\],  
+        "Weaknesses": \[  
+          "An issue in the model is the damage estimates for hurricane damage, which, if incorrect, can lead to skewed results. We assume that a category 5 hurricane causes $40 of damage per acre. However, this was essentially an educated guess due to a lack of available data on hurricane damage in national parks. If this value is actually $80, for example, all of the hurricane vulnerability values would double. When it comes to hurricane values, the accuracy of the estimates can swing the results.",  
+          "Other climate related events, such as temperatures and air quality, were not included in the model. Although we believe that these factors pale in comparison to the ones we did include, they could turn out to play an unforeseen role which the model misses."  
+        \]  
+      }  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Park entrance fees will remain constant (relative to inflation) over the next 50 years.",  
+        "The primary factors that determine park attendance are the U.S. population, the vulnerability index for the park, and the temperatures for the year at the park.",  
+        "The vulnerability index for each park is held constant over the past 25 years and will remain constant over the next 50 years."  
+      \],  
+      "Model": \[  
+        "Finally, we built upon the first two models we designed to create a model which predicted visitor changes for each park. We used the United States population, the local temperature, and our climate vulnerability index to predict the visitorship for each of our five focus parks. This was done by training a multivariate regression model on all three of the above features, and the resulting visitor level predictions were mostly in line with our expectations based on the results of the previous two models."  
+      \],  
+      "Results": \[  
+        "Based on our model, we recommend that the NPS use its limited resources on the five focus parks in the following order: Cape Hatteras National Seashore, Olympic National Park, Kenai Fjords National Park, Acadia National Park, Padre Island National Seashore. Our model suggested that Kenai Fjords's visitor rates will benefit the most in the future, while its overall rates will still be rather small compared to the other parks. On the other hand, Padre Island National Seashore is projected to have very few visitors 50 years from now and may not be a financially sustainable operation at the time."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[\],  
+        "Weaknesses": \[  
+          "We understand the dangers of using multivariate regression, and the unknowns that it brings. When using multivariate regression, one risks introducing variables that do not actually influence the output value in expected ways, and one risks having a limited understanding of how the model arrives at the value it actually arrives at. Unfortunately, in this scenario, a multivariate regression model proved to be the most viable option, since a single value (visitor count) needed to be calculated from multiple input parameters. In this case, this risk is limited by careful selection of input parameters and careful analysis of outputs."  
+        \]  
+      }  
+    }  
+}

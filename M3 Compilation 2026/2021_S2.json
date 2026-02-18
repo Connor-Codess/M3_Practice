@@ -1,0 +1,69 @@
+{  
+  "Placement": "Runner Up",  
+  "Comments": \[  
+    "Good that you provided some results in your summary. Summaries are the first thing read and set an indication of what is to come. Model 1 good, but present and discuss R^2. Need to include all 10 years, not just a few. Why a normal distribution for Model 2—did you analyze the data? The idea of SNR is excellent but you misused it. Overall better than average.",  
+    "The choice of a logistic curve for modeling internet bandwidth in problem 1 is an interesting choice, but one that could benefit from closer scrutiny. Tables, such as 2.2.1, would benefit from labeling the units of numbers provided. The extrapolation to a logistic curve in Figure 2.2.1 is curious; it seems the data would better support a linear relationship which would be more conservative. The sensitivity analysis to provide 80% confidence intervals was original and fresh, for parts 1 and 3."  
+  \],  
+  "Q1": {  
+    "Definition": "Predict the cost per unit of bandwidth in dollars or pounds per Megabit per second (Mbps) over the next 10 years for consumers in the United States and the United Kingdom.",  
+    "Assumption": \[  
+      "No major disruptive technology will be introduced within the next 10 years.",  
+      "The only sources of Internet are wired—including DSL, cable, and fiber-optic—mobile, and satellite.",  
+      "Most wired Internet service providers essentially have a monopoly over their consumers.",  
+      "The demand for high-speed Internet does not significantly affect the cost per Megabit per second.",  
+      "The level of infrastructure and average Internet speed will not affect the cost of an Internet plan.",  
+      "Satellite data speed will be roughly similar in the US and the UK."  
+    \],  
+    "Model": "Logistic curve to model average Internet speed over time.  The cost per unit bandwidth is then calculated based on the predicted speed.",  
+    "Results": "Average monthly cost per Mbps of Internet for wired, mobile, and satellite connections in the US and UK for 2020 (or 2019), 2025, and 2030\.  Costs are predicted to decrease.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by adjusting the variables k, t0, and S0 (parameters of the logistic curve) by \+10% and \-10%.",  
+    "Strength and Weakness": \[  
+      "Logistic model fits the data well.",  
+      "Accounts for various types of Internet (wired, mobile, satellite).",  
+      "Model is robust and resilient to changes in determining variables.",  
+      "Model may not be effective at predicting speeds more than 10 years into the future due to new technology."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Create a mathematical model that predicts the Internet access required over the course of a year for the following three households: a couple in their early 30’s (one is looking for work and the other is a teacher) with a 3-year-old child; a retired woman in her 70’s who cares for two school-aged grandchildren twice a week; and three former M3 Challenge participants sharing an off-campus apartment while they complete their undergraduate degrees full-time and work part-time. Determine the minimum amount of required bandwidth for 90% and 99% of the households’ Internet needs.",  
+    "Assumption": \[  
+      "Bandwidth follows a normal distribution.",  
+      "Using a TV connected game console is considered online gaming.",  
+      "Watching traditional television, using a TV connected Internet device, and using video on a computer are considered video streaming.",  
+      "The expected bandwidth for video streaming a given activity is based on the proportion used in high definition (HD) and the proportion used in standard definition (SD).",  
+      "Average income for a given age will remain constant.",  
+      "Average income will not affect use of electronics if the consumer is retired.",  
+      "College students will attend online classes during the next year.",  
+      "All jobs within the next year will be remote."  
+    \],  
+    "Model": "Calculates the expected hours per week spent on different Internet activities based on age, income, and household composition.  Then, it calculates the total Megabits needed per week and converts this to an average bandwidth.  Finally, it uses a normal distribution to determine the minimum bandwidth required to meet needs 90% and 99% of the time.",  
+    "Results": "Minimum bandwidth required for each household to cover 90% and 99% of Internet usage.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by changing the hours per week for each activity based on income by \+10% and \-10%.",  
+    "Strength and Weakness": \[  
+      "Model takes into account different income levels and hours spent on activities for different age groups.",  
+      "Ensures minimum bandwidth meets needs given a certain Internet availability by using a normal distribution.",  
+      "Model is resilient to changes in hours per week.",  
+      "Assumed all jobs and college classes will be online for the next year."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Develop a model that will create an optimal plan for placing cellular nodes providing 4G and 5G access in three given hypothetical regions, taking into account the population, demographic data, and bandwidth needed for the regions.",  
+    "Assumption": \[  
+      "There is a uniform population density with uniform demographics within each region.",  
+      "All three types of cellular towers have equal cost.",  
+      "Each individual within a subregion will only use Internet provided by cellular towers within that subregion.",  
+      "The optimal number of cellular towers in a certain subregion is independent of the cellular towers in other regions.",  
+      "The given regions A, B, and C are all suburban areas.",  
+      "The number and type of cellular towers needed are dependent on the area of the subregion and the specific demographics of the subregion.",  
+      "The effective area covered by a cellular tower is the region such that the Internet speed recorded is at least midway between the minimum and maximum speeds for the cellular tower.",  
+      "The transmitted frequency from each cellular tower is the frequency halfway between the maximum and minimum frequencies for the range."  
+    \],  
+    "Model": "Calculates the center of mass for each region to determine optimal placement of 4G towers.  Establishes criteria for 5G network implementation based on population density and household income. Uses integer programming to minimize the number of cellular towers (low-band, mid-band, and high-band) needed to cover each subregion, subject to constraints on area coverage and bandwidth.",  
+    "Results": "Optimal number of low-band, mid-band, and high-band towers for each subregion in the three given regions.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by raising and lowering the effective areas of the different tower types by 10%.",  
+    "Strength and Weakness": \[  
+      "Model is accurate at determining the optimal point for placing 4G and 5G nodes.",  
+      "Model does not deem 4G and 5G networks in a given region as mutually exclusive."  
+    \]  
+  }  
+}

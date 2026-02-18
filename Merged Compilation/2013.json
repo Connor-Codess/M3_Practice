@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2013_S3_Q1_Assumption",
+    "text": "SECTION: 2013 Third Place (S3) Question 1 Assumption\nCONTEXT: Volume of plastic in landfills (Density Integration).\nCONTENT: The model assumes that the **density function $p(d)$** (density as a function of depth) derived from core samples is **representative of the entire landfill volume**. It assumes that the **composition of plastic waste** remains constant over the life of the landfill.",
+    "metadata": {
+      "year": "2013",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Density Function, Composition Uniformity",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2013_S3_Q1_Model",
+    "text": "SECTION: 2013 Third Place (S3) Question 1 Model\nCONTEXT: Volume of plastic in landfills.\nCONTENT: A Density Integration model. Instead of assuming constant density, they derived a non-constant density function p(d) based on depth and integrated it to calculate the total volume of plastic waste.",
+    "metadata": {
+      "year": "2013",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Integration, Non-constant Density Function",
+      "chunk_index": 1
+    }
+  }
+]

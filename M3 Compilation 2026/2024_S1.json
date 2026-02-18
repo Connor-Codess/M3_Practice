@@ -1,0 +1,179 @@
+{  
+  "Placement": 1,  
+  "Comments": \[  
+    "COMMENT 1: You presented a well-written executive summary providing some results and rationale. The assumptions and justifications are clearly described. Your choice of models was creative. In each part, the analysis is clearly presented and justified. Well done\!",  
+    "COMMENT 2: The executive summary can be improved by including the problem, and a clearer explanation of the modeling. Assumptions are very clear. The use of a single model (logistic model and multivariate linear regression) needs to be better justified—i.e., why not other models? Overall, the report is well written and the organization was clear.",  
+    "COMMENT 3: The section of the report for Q3 would be improved by including more specific suggestions to the city for mitigating the conditions of the unhoused population.",  
+    "COMMENT 4: You answered all questions with adequate details. Well done\! Also, good job providing citations for your references."  
+  \],  
+  "Q1": {  
+    "Defining the Problem": "The first problem asks us to develop a model to predict the growth of the housing supply in two cities for the next 10, 20, and 50 years. We have selected Seattle, Washington, and Albuquerque, New Mexico as our cities. Our model will take into account previous housing unit data from the U.S. in the last decade.",  
+    "Assumptions": \[  
+      {  
+        "Assumption": "1.2-1. Current construction firms will not undergo any drastic changes in the near future.",  
+        "Justification": "It is difficult to predict the business decisions of any construction firms or other manufacturers. As such, we will exclude these changes from our model."  
+      },  
+      {  
+        "Assumption": "1.2-2. Covid-19 has a negligible impact on the housing market after 2024 and did not significantly impact historical data.",  
+        "Justification": "Any short-term impacts of Covid-19 on the housing market have ended by 2024\. Our model will not consider any continued influence of Covid-19 to create accurate predictions for future decades."  
+      },  
+      {  
+        "Assumption": "1.2-3. There will be no major policy changes regarding the housing market in Seattle or Albuquerque in the near future.",  
+        "Justification": "It is difficult to predict the policy changes that may be enacted in Seattle and Albuquerque, so we will exclude these changes from our model, assuming that any policy changes will not drastically change the way the housing market operates in the near future."  
+      },  
+      {  
+        "Assumption": "1.2-4. Any detached or attached housing units, as well as any mobile homes, boats, RVs, vans, etc., used primarily for housing are considered housing units in our model.",  
+        "Justification": "Data collected on housing units in the 2020 Census includes mobile homes, boats, RVs, vans, etc."  
+      },  
+      {  
+        "Assumption": "1.2-5. The number of housing units that can be built in Seattle or Albuquerque is finite.",  
+        "Justification": "There are strict limits on the number of housing units built in a city based on zoning laws and land area."  
+      },  
+      {  
+        "Assumption": "1.2-6 The growth of the housing market follows a logistic curve.",  
+        "Justification": "Based on 1.2-5, there is a limit on the number of housing units, so we assume this is the capacity in a logistic model."  
+      },  
+      {  
+        "Assumption": "1.2-7 The growth of the housing market is independent of which kinds of housing units are built.",  
+        "Justification": "We assume that houses are built according to market demands and focus only on the overall growth of the housing market."  
+      },  
+      {  
+        "Assumption": "1.2-8 The growth of the housing market from 2010 to 2021 in the U.S. is sufficient to determine growth in the future.",  
+        "Justification": "The data provided by the Mathworks Math Modelling Challenge is only from 2010 to 2021, so we assume for simplicity that this data is sufficient."  
+      },  
+      {  
+        "Assumption": "1.2-9 Rising sea levels caused by global warming will not impact the production of housing units in Seattle.",  
+        "Justification": "Seattle Public Utilities predicts that sea levels will rise by approximately one foot by 2050, but this pushes most coastlines inland by about 100 feet, which for Seattle will not significantly encroach on current or future housing units."  
+      }  
+    \],  
+    "Model": {  
+      "Model Development": "We chose a logistic model for determining the growth of housing units Logistic models measure the growth of a variable that starts exponential and then approaches an upper limit. The production of housing units already experienced exponential growth during the 1990s, so our model mainly exhibits the latter logarithmic growth. As stated in 1.2-5, the number of housing units in a given city is finite, and we can calculate a limit on the number of housing units based on information regarding land use. Logistic models are also more accurate for long-term forecasting because the logistic model includes a carrying capacity as a limit.  Our team considered utilizing other models, particularly linear regression. Using the provided data points from 2010 to 2019 in Seattle, a linear model estimated that there would be 680,568 housing units by 2070\. The prediction exceeds the estimated maximum number of housing units that can feasibly be constructed in Seattle, as described later in our model execution. Thus, a linear model could not accurately estimate the number of housing units because it completely disregarded any limits on the land area available. On the other hand, the logistic model does consider the carrying capacity of a given variable, making it far more accurate in the long term when the variable may be near the carrying capacity.",  
+      "Model Execution": "We used the provided data on housing units from 2010 to 2023 in Seattle, Washington, and Albuquerque, New Mexico to conduct our logistic model.  As the logistic model requires a carrying capacity that bounds the growth of the given variable, we used information on developed and undeveloped land areas to determine the limit on housing units in each city.  Calculations from the Seattle Development Capacity Report considered data on the amount of available land in Seattle based on vacant and undeveloped parcels to estimate future development on those land areas. The final estimate on housing unit capacity in Seattle was 531,770 housing units, which we then used as our carrying capacity for the Seattle logistic model."  
+    },  
+    "Results": "Using our logistic models developed in the previous section, we estimated the number of housing units in Seattle and Albuquerque for 10, 20, and 50 years into the future in Seattle and",  
+    "Discussion": "For Seattle, our model estimates that there will be 411,600, 453,000, and 513,000 housing units in 2030, 2040, and 2070, respectively. For Albuquerque, our model estimates that there will be 261,000, 270,900, and 290,800 housing units in 2030, 2040, and 2070, respectively. From this, we can conclude that the housing market will continue to grow in Seattle and Albuquerque over the next fifty years, albeit at a decreased rate over time as it nears the carrying capacity.",  
+    "Sensitivity Analysis": "To determine the accuracy of our predictions, we randomly offset each data point by up to 5% and then ran the model again to get a new prediction. Then we calculated the percent difference between the original prediction and the new prediction. We repeated this process five times and averaged the percent differences. This process determined that our prediction of housing units had the following average jittered variations:",  
+    "Strengths & Weaknesses": "The use of a logistic model is better for long-term predictions compared to other models, which is particularly important for our problem considering that we are making predictions up to fifty years in the future. Moreover, the logistic model uses a carrying capacity that takes into account the capacity limit of the number of housing units that can be built in a given city, based on the available land area. This is particularly important to consider for the housing market because we cannot expect the market to increase without limits given the physical and legal limitations on the number of housing units that can be constructed in a given area.  In the same vein, such a carrying capacity can be hard to estimate accurately, given that there exists minimal data on predictions of housing capacity in the two cities we are considering. Because the logistic model is based largely on the carrying capacity we calculated, our model could consequently be less accurate. Moreover, we assumed in 1.2-3 that there would be no major changes to zoning laws in either of the two cities in the near future. However, given the severity of the housing crises in recent years, there could be significant changes to legislation regarding zoning laws, particularly the allowed maximum capacity in land parcels, which would change our carrying capacity. Moreover, our exclusion of the data from Covid-19 in 2020 through 2022 eliminates the potential impact of Covid-19 on the housing market, although we expect that any such impact would be minimized for such long-term estimates."  
+  },  
+  "Q2": {  
+    "Defining the Problem": "The second problem asks us to estimate the homeless population in Seattle and Albuquerque in the next 10, 20, and 50 years. We used a number of factors that were strongly correlated with shifts in the homeless population in order to generate an accurate estimate.",  
+    "Assumptions": \[  
+      {  
+        "Assumption": "2.2-1. There will be no natural disasters or other anomalies that cause significant unpredictable changes to the homeless population in Seattle and Albuquerque.",  
+        "Justification": "It is difficult to account for any unpredictable future events that may cause drastic changes to the number of homeless individuals in Seattle and Albuquerque. We will assume that any external factors remain the same for the near future."  
+      },  
+      {  
+        "Assumption": "2.2-2. Examined historical trends over the last decade will remain similar in the near future.",  
+        "Justification": "It is difficult to account for unexpected changes to historical trends. Moreover, our data spans the last decade, so we can assume that such historical trends will remain the same for the near future."  
+      },  
+      {  
+        "Assumption": "2.2-3. There are no other independent factors besides total housing units and median listing price that significantly impact the number of homeless people.",  
+        "Justification": "We cannot comprehensively include all potential parameters within the time allotted. Moreover, as discussed in 2.3.1 below, most other factors are strongly correlated with the two variables above, so we disregard them."  
+      },  
+      {  
+        "Assumption": "2.2-4 The number of total housing units over time reflects the total population growth.",  
+        "Justification": "The number of housing units and population growth are each logistic over time. Moreover, the number of occupied housing units remains linear with respect to total housing units, so we can then interpret that the growth of the total population is reflected by the growth of housing units. Detailed justification is provided in 2.3.1 below. Thus, we do not need to independently consider population growth."  
+      },  
+      {  
+        "Assumption": "2.2-6 The median listing price of housing units reflects the median household income due to the way the housing market operates.",  
+        "Justification": "The median listing price of housing units must grow at a similar rate to the median household income, as the housing market will adjust to match the demand for housing units. Detailed justification is provided in 2.3.1 below. Thus, we do not need to independently consider median household income."  
+      },  
+      {  
+        "Assumption": "2.2-7. Staggering data values by year is negligible.",  
+        "Justification": "Although causal effects typically take some lag time to manifest, all variables most likely still reflect the change in homelessness within the same year the variable changes. Since our data is measured each year, the time lag will be trivial."  
+      },  
+      {  
+        "Assumption": "2.2-8 The data for variables considered is homoscedastic.",  
+        "Justification": "We assume the error variance is constant or equal across the levels of independent variables. That is, our independent variables are good predictors of homelessness."  
+      },  
+      {  
+        "Assumption": "2.2-9 There is a linear relationship between homelessness and our independent variables, and the residuals of the independent variables are normally distributed.",  
+        "Justification": "The multivariate regression we will use requires this assumption, and we can verify this assumption from the data we're given."  
+      },  
+      {  
+        "Assumption": "2.2-10 Missing data can be extrapolated from the given data for Question 2.",  
+        "Justification": "Some of the data given for Question 2 of the Mathwork Math Modeling Challenge is missing, so we use imputing to fill in the missing values."  
+      },  
+      {  
+        "Assumption": "2.2-11 Covid-19 was a significant anomaly in terms of homelessness in each city, so we do not consider the data from 2020-2022, instead assuming that homelessness returned to normal by 2023.",  
+        "Justification": "During 2020-2022, the number of homeless people for each city shifted significantly and data collection capabilities were diminished, leading to less accurate values. As such, we assume that the number of homeless people from 2023 onwards will adopt the same trends as before Covid-19."  
+      }  
+    \],  
+    "Model": {  
+      "Model Development": "We first examined various factors to determine correlations to the number of homeless individuals in each of the two cities through a multivariate linear regression. Our data for Question 2 spanned from 2010 to 2023, with some missing data values, so we used imputing to fill in the missing values. We used Python to import all the data and subset the portion we are analyzing.  We then chose multivariate linear regression as a model to determine the correlation for the various factors in each city. We used the following equation, where E is the total number of homeless people, b is an error term, a subscript i are coefficients of independent variables, and V subscript i are the values of the independent variables: E \= b \+ sum(a\_i \* V\_i) from i=1 to n",  
+      "Variables": \[  
+        {  
+          "Symbol": "E",  
+          "Variable": "Number of homeless people",  
+          "Unit": "People"  
+        },  
+        {  
+          "Symbol": "b",  
+          "Variable": "Error term",  
+          "Unit": "N/A"  
+        },  
+        {  
+          "Symbol": "a\_i",  
+          "Variable": "Coefficients of independent variables",  
+          "Unit": "N/A"  
+        },  
+        {  
+          "Symbol": "V\_i",  
+          "Variable": "Values of independent variables",  
+          "Unit": "N/A"  
+        }  
+      \],  
+      "Model Execution": "The predicted total housing units in Seattle and Albuquerque were calculated in Section 1 based on the logistic model in 1.3.2.  We then calculated the median listing price for housing units in Seattle and Albuquerque based on a linear model, included below with predictions from 2030 to 2070."  
+    },  
+    "Results": "We used a multiple regression model to calculate the homelessness numbers in Seattle and Albuquerque based on total housing units and median housing prices. The results are included below.",  
+    "Discussion": "In Seattle, homelessness will increase to 14,400, 17,100, and 23,200 individuals by 2030, 2040, and 2070, respectively. In Albuquerque, homelessness will increase to 3,800, 5,100, and 10,400, respectively. The results above demonstrate that without intervention through government policies or other means, the homeless populations in each city will increase significantly in the following decades. These results reflect the increase in the overall population expected in Seattle and Albuquerque, as well as the steadily increasing price of housing units in each city that contribute to greater values of homelessness.",  
+    "Sensitivity Analysis": "To determine the accuracy of our predictions, we plotted our model’s predicted values for homeless people for the years 2012 to 2022 against the actual data. Then we calculated the cumulative percentage error for each graph, which is the average error calculated for each data point, giving values of 3.482% for Seattle and 14.338% for Albuquerque. The percentage of error for Seattle is relatively low, so we are confident in our prediction for homelessness in this case. For Albuquerque, however, our error is higher, so we are less confident in our prediction here. This error stems from extreme spikes and dips in homelessness from 2011 to 2016, which do not reflect the normal rate of homelessness shifts during normal years, as seen in the data points from 2016 onward.",  
+    "Strengths & Weaknesses": "One major strength of our model is that we have taken into account the two distinct factors of total housing supply and median listing price that are each highly correlated with the homeless population in each city to perform our analysis. By using these two factors, we were able to achieve more accurate results than by considering just one. Also, our model for Seattle had a low cumulative error when compared to the actual data for the last decade, which shows that it has a high potential for accurate predictions in future years.  Our model was weaker in our prediction of the number of homeless people in Albuquerque due to the abnormal fluctuation from 2011 to 2016, which made it more difficult to get an accurate measure of homelessness over the last decade. As a result, the cumulative error was also higher, decreasing our confidence in our prediction for Albuquerque in comparison to Seattle. Our heat map showed that for Albuquerque, homelessness was generally less correlated to the two factors we used in comparison to Seattle, which made it harder to create an accurate prediction for Albuquerque, as a result. Another weakness is that although we tested high values of correlation for each of our factors, we can not assume causation stems from correlation, even though the logical assumption should indicate that housing units and prices likely influence homelessness."  
+  },  
+  "Q3": {  
+    "Defining the Problem": "The third problem asks us to create a model that would help determine a long-term plan to handle homelessness in at least one of the cities. We combined results from the previous two questions to create a model for Seattle, Washington.",  
+    "Assumptions": \[  
+      {  
+        "Assumption": "3.2-1. Certain factors, such as household units and unit prices, can be adjusted to model unforeseen circumstances such as natural disasters, economic recessions, or incoming migrant populations.",  
+        "Justification": "Factors such as household units and unit prices will naturally be affected by unforeseen circumstances, which we can adjust to properly mimic the effects of the event. For example, a reduction of household units in our model would mimic a flood."  
+      },  
+      {  
+        "Assumption": "3.2-2. The government and social services are capable of adjusting the variables in our model.",  
+        "Justification": "We chose specific variables that the government and social services could feasibly adjust, such as unemployment rate and substance abuse."  
+      },  
+      {  
+        "Assumption": "3.2-3. Monthly data for variables not influenced by seasons are reflective of the entire year.",  
+        "Justification": "We determined that variables such as unemployment rate and housing cost depend on the economic landscape rather than season. Thus, monthly data was adapted to be reflective of annual data."  
+      }  
+    \],  
+    "Model": {  
+      "Model Development": "We first determined the variables we wanted to consider that may impact the homeless population in Seattle. We selected the number of housing units and the median listing price from Question 2\. These two factors previously showed a high correlation with homelessness in Seattle, so we investigated the potential causation of homelessness as a result of those factors. We also selected unemployment rates, since it is likely correlated with factors like income, which may affect homelessness. The final variable selected was deaths caused by opioid use, as a proxy for drug use in Seattle that is likely related to the increase in homelessness. We were sure to select factors that the government in Seattle can adjust accordingly through policy changes to reduce rates of homelessness in the city, instead of factors that they cannot feasibly control. Potential policies that could be passed to deal with these factors will be detailed in the discussion.",  
+        "Variables": \[  
+          {  
+          "Symbol": "u\_t",  
+          "Variable": "Unemployment rate (%) in Seattle area for year t",  
+          "Unit": "N/A"  
+        },  
+        {  
+          "Symbol": "d\_t",  
+          "Variable": "Number of opioid-related deaths in Washington for year t",  
+          "Unit": "People"  
+        },  
+         {  
+          "Symbol": "c\_t",  
+          "Variable": "Median household listing price for year t",  
+          "Unit": "$"  
+        },  
+        {  
+          "Symbol": "h\_t",  
+          "Variable": "Number of housing units for year t",  
+          "Unit": "Housing Units"  
+        }  
+       \],  
+      "Model Execution": "To use the datasets we collected for each factor, we first cleaned them so that they each only included years from 2010 through 2019, getting rid of any data points outside of that range to maintain consistency. We were then able to integrate the dataset for homelessness in Seattle with each of the datasets we collected and cleaned to perform a Granger causality test. We used the statsmodel Python library to do so, testing each of the four factors listed in 3.3.1 against the homelessness data.  After we obtained the F-statistics for different lag values, namely 1 and 2 years of lag, we conducted F-statistic tests to calculate the p-values for each test. We then compared these p-values with α, which was our benchmark for statistical significance. The results then showed evidence of causation between our selected factors and homelessness in Seattle over the corresponding lags.  After running our Granger causality tests, we then adjusted each of the significant factors: housing units, median listing price, and deaths by opioid use by 5% to see the impact it would have in reducing homelessness. Housing units were increased, median listing price was decreased, and deaths by opioid use were decreased. We did so by using a multiple regression model, as in our solution to Question 2, using the four factors from our Granger causality test as well as two other correlated factors for the sake of gaining more accurate estimates, total population and median household income, adjusting one factor at a time by 5% to see the impact it would have on homelessness."  
+    },  
+    "Results": "The table below lists the four factors we tested over the two lag values, as well as the F-statistics, p-values, and whether they were significant or not according to our benchmark of 0.05.",  
+    "Discussion": "Our Granger causality has provided evidence as to causation from our selected four factors to homelessness. The factors that produced significant evidence as to a causal relationship with",  
+    "Strengths & Weaknesses": "The primary strength of our model is that our usage of the Granger causality test allows us to test for causality of certain factors on homelessness in order to decide which factors policymakers should focus on to reduce homelessness. Moreover, our test on the impacts of significant factors when adjusted allows us to identify the factors that have the greater quantifiable impact on homelessness. That gives policymakers a clear direction to pursue active change that will have an impact. Moreover, by analyzing the impact of each factor separately, policymakers can decide which factors would be the easiest to implement in policies to reduce homelessness, as well as which would have the largest impact.  However, our model’s usage of the Granger causality test assumes that the relationship between variables is linear, which may not always be true. Further, while the purpose of this test is to suggest causation, it is impossible to confidently deduce that one variable directly causes another. Thus, the significance levels found may be trivial, as correlation does not imply causation."  
+  }  
+}

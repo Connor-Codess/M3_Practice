@@ -1,0 +1,59 @@
+{  
+  "Placement": "Runner Up",  
+  "Comments": \[  
+    "This was a highly regarded paper, and the team provided good models with a strong analysis of their models. There are some areas in which the paper could be improved, though. For example, the writing was not easy to follow in some places, and more consistent editing would have been beneficial. Related to this concern, in some places the calculations were presented in a way that was difficult to parse in places, and a more consistent presentation of the intermediate calculations would be an aid to the reader to better follow the team’s excellent efforts.",  
+    "The team did perform some excellent modeling, however, and it did come through in their presentation. The models were appropriate, and the team did a very good job reflecting on how the models could be improved. Additionally, the team had important insights into the relative balance and relationships between internal combustion vehicles and electric vehicles and were able to develop models consistent with those insights. Finally, the team recognized that trucks would unlikely be fully charged at each stop and created a model that accommodated that insight."  
+  \],  
+  "Q1": {  
+    "Definition": "Predict the percentage of semi-trucks that will be electric 5, 10, and 20 years from 2020.",  
+    "Assumption": \[  
+      "There are no electric semi-trucks currently in operation.",  
+      "The market for semi-trucks demands the production of 210,466 semi-trucks per year.",  
+      "Electric semi-trucks have the same life expectancy as diesel semi-trucks (12 years).",  
+      "The total difference in cost between electric and diesel semi-trucks is proportional to the probability that a diesel semi-truck will be replaced with an electric semi-truck."  
+    \],  
+    "Model": "Markov chain model. Semi-trucks are divided into short haul, regional haul, and long haul. Transition matrices are created for each type, with probabilities based on cost differences between electric and diesel trucks.",  
+    "Results": "Predicted percentages of electric semi-trucks for short haul, regional haul, and long haul in 5, 10, and 20 years.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "The Markov chain model allows for multiple factors to be accounted for.",  
+      "Accounts for new production rates, life expectancy, and cost differences.",  
+      "Implicitly accounts for the current fleet of operational semi-trucks.",  
+      "Probability values in the transition matrices are estimates.",  
+      "Does not account for hybrid vehicles."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Determine the most effective distribution of Electric Vehicle Supply Equipment (EVSE) along common shipping corridors in terms of money and time saved. Find the best charging schedule for drivers.",  
+    "Assumption": \[  
+      "The state of charge of a LiFePO4 rechargeable battery exponentially approaches 100%.",  
+      "The range of a semi truck is directly proportional to its state of charge.",  
+      "All EVSEs use Direct Current Fast Charging hardware.",  
+      "Semi-trucks will stop to recharge upon reaching a state of 20% or less.",  
+      "Charging follows a strict, fluid schedule."  
+    \],  
+    "Model": "Calculates the optimal charging value (Cf) to minimize total charging time. Uses Monte Carlo simulations to determine the optimal number of charging stops and the optimal number of charging stations per truck stop.",  
+    "Results": "Optimal charging interval of approximately 90 minutes. Optimal number of chargers per station for various corridors.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Models are fairly robust due to the nature of Monte Carlo simulations.",  
+      "Presence of significant outliers in the simulation results."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Create a model that ranks which trucking corridors should begin development of charging stations first.",  
+    "Assumption": \[  
+      "The cost per mile of Semi Shipping is $2.75.",  
+      "The cost is $22,626 to install one DCFC station.",  
+      "50% trucks using the corridors are long haul shipments."  
+    \],  
+    "Model": "Calculates an importance score for each corridor based on economic growth, environmental considerations, and total cost of installation. Economic growth is estimated based on time saved due to faster charging. Environmental considerations are based on state-level actions on electric vehicles. Total cost is based on the number of charging stations needed.",  
+    "Results": "Ranking of the five trucking corridors based on the calculated importance score.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Considers three different variables (economic growth, environmental considerations, cost).",  
+      "Other variables could be considered.",  
+      "Cost has a high standard deviation."  
+    \]  
+  }  
+}

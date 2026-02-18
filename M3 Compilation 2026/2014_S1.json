@@ -1,0 +1,83 @@
+{  
+  "Placement": "1",  
+  "Comments": "This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on an M3 Challenge submission is a rules violation.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "Since this problem concerns meal plans for students in school, we assume that refers to elementary through high schoolers; thus we are restricting our input ages from 6–18 years.",  
+      "To calculate how different activities affect caloric requirements, we assume that during physical activity or sleep the rate of caloric burn holds constant over the entire period of activity.",  
+      "Survey responses reflect daily habits that hold true on average.",  
+      "At each meal, an individual eats until he or she is fully satiated or until the food runs out.",  
+      "We assume that the calories consumed at a meal are equivalent to the calories burned since the last full meal (minus any snacks consumed in the interim period).",  
+      "The caloric consumption of an individual is equivalent to the number of calories burned per day."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Total Calories Burned \= (integral from 0 to 24 of R(t) dt) \* weight",  
+      "Total Calories Burned \= (λs(Q1) \+ λlA(Q3i \- Q1) \+ λA(Q3f \- Q3i) \+ λlA(Q5i \- Q3f) \+ λA(Q5f \- Q5i) \+ λlA(Q7 \- Q5f) \+ λs(24 \- Q7)) \* weight",  
+      "Lunch Calories \= (λs(Q1) \+ λlA(Q3i \- Q1) \+ λA(Q3f \- Q3i) \+ λlA(Q4 \- Q3f)) \* weight \- snacks  (if student eats breakfast)",  
+      "Lunch Calories \= (λs(Q1) \+ λlA(Q3i \- Q1) \+ λA(Q3f \- Q3i) \+ λlA(Q4 \- Q3f) \+ λs(Q6 \- Q4) \+ λlA(Q7 \- Q6) \+ λs(24 \- Q7)) \* weight \- snacks (if student does not eat breakfast)"  
+    \],  
+    "Results": \[  
+      "Model tested against EER method, with an average percent error of 11.51% over the data set."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "Model demonstrated highest sensitivity to breakfast behavior.",  
+      "Model was partially sensitive to weight, wake-up time, and bedtime.",  
+      "Model was least sensitive to the amount of exercise."  
+    \],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "A student eating the standard school meal consumes the entire meal which contains the maximum caloric content as regulated by federal guidelines. The maximum caloric content of a high school lunch is 850 calories (Yee 2012).",  
+      "As long as the caloric consumption of a student at lunch is within 15% of their calculated need, their dietary needs will be considered to be satisfied."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Lunchtime calorie needs calculated using the model from Part 1.",  
+      "Frequency distribution of lunchtime caloric needs generated from a sample of 11,458 high school students."  
+    \],  
+    "Results": \[  
+      "Only 37.3% of all students would be satisfied by an 850-calorie lunch.",  
+      "A 1,050-calorie meal would satisfy a greater number of students (49%).",  
+      "Breakfast eaters have a much higher satisfaction rate (68%) than breakfast skippers (0.07%)."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "Schools always strive to implement the recommendations of the USDA MyPlate to the best of their abilities. This consists of having 30% of each meal be composed of grains, 30% vegetables, 20% fruits, 20% proteins (by number of servings), and one serving of dairy (Moore).",  
+      "Schools choose to deliver the best meals possible given their budgets and may never exceed their budgets.",  
+      "Schools make meals that deliver the number of calories determined by our model in Part 1.",  
+      "Schools serve lunch five times a week.",  
+      "It is possible to give fractional servings of every menu item."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "0.3 \* Servings\_total \= Servings\_grains",  
+      "Calories\_total \= Servings\_grains \* Calories\_grain \+ Servings\_vegetables \* Calories\_vegetable \+ ...",  
+      "Calories\_total \= 0.3 \* Servings\_total \* Calories\_grain \+ 0.3 \* Servings\_total \* Calories\_vegetable \+ ...",  
+      "Costs\_total \= Costs\_grain \* Servings\_grains \+ ..., or Costs\_total \= Costs\_grain \* 0.3 \* Servings\_total \+ ...",  
+      "%Eating\_meal \= %Eating\_chicken \* %Eating\_corn \* %Eating\_pasta \* %Eating\_apples \* %Eating\_yogurt"  
+    \],  
+    "Results": \[  
+      "Algorithm generates meals that meet USDA MyPlate requirements, have the necessary number of calories, and fit the available school budget.",  
+      "Meals ranked based on student acceptance.",  
+      "Example meals and rankings provided for a simulated menu."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[  
+        "Our model specializes in determining the number of calories a student needs to consume for lunch, taking into account factors such as breakfast habits and snacking patterns that are often not considered in typical calorie calculators.",  
+        "Our model can be easily customized to local regions using the included survey.",  
+        "Our model is able to provide a set of meals to cafeterias that will be well liked by students while also meeting nutrition and budgetary restrictions.",  
+        "We assume that at each meal a student eats until they are fully satiated. However, due to time constraints a person might not always have enough time to consume as much as they’d like especially in the morning.",  
+        "We also assume that rates of metabolic activity are constant in time periods as determined by our questionnaire.",  
+        "Our meal-planning algorithm does not currently handle multicategory foods such as pizza (which contains grains, vegetables, and dairy).",  
+        "Meal choices were made based on nutritious factors including MyPlate food category percentages and caloric needs but not based on considerations such as fat and sugar content."  
+    \]  
+  }  
+}

@@ -1,0 +1,61 @@
+{  
+  "Placement": "Third Place",  
+  "Comments": \[  
+    "The summary is well written and clearly outlines the approach used to address each of the three issues for incorporating electric trucks into the national trucking network. Readers would be eager to continue reading the report if the summary included the results of the number of charging stations/chargers and the best corridor to first install charging stations.",  
+    "Using the Lotka-Volterra competition model was an interesting choice to explore the type of competition between diesel and electric trucks for the delivery of products. The parameters in the L-V model are very well explained and the selection of values for the parameters is well explained and justified by available data. The weaknesses of the model are clearly acknowledged and reasonable estimates are made with explanation and desire to modify as additional information is obtained."  
+  \],  
+    "Q1": {  
+    "Definition": "Predict the percentage of semi-trucks that will be electric 5, 10, and 20 years from 2020.",  
+    "Assumption": \[  
+      "The relationship between the number of diesel-powered semi-trucks and electric semi-trucks can be modeled as a competition model between two species.",  
+      "The purchase of electric semi-trucks will replace older diesel semi-trucks.",  
+      "There will be no new types of semi-trucks that will take a significant portion of the market in the next 20 years.",  
+      "Tesla’s electric semis will not encounter major competition in the realm of electric trucks.",  
+      "Tesla obtains their electricity from renewable energy sources.",  
+      "The carrying capacity of semi-trucks or correspondingly the number of consumers in the semi-truck market will remain constant.",  
+      "The birth rate for diesel and electric semis can be modeled using the probability density function of an exponential distribution.",  
+      "The birth rate for existing populations of semi-trucks will remain constant."  
+    \],  
+    "Model": "Lotka-Volterra competition model, modified to account for time-dependent birth rates and competitive factors. Separate models for short-haul and long-haul trucks.",  
+    "Results": "Predicted proportions of electric semi-trucks for short-haul and long-haul in 5, 10, and 20 years. Overall proportions of electric semi-trucks are 38.6%, 46.5%, and 59.9% for 2025, 2030, and 2040, respectively.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Model is adaptive, taking into account changing birth rates and competitive effects.",  
+      "Based on a valid modeling technique (Lotka-Volterra competition model).",  
+      "Relies on many assumptions due to lack of data.",  
+      "Does not explicitly account for maintenance costs."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Determine the most effective distribution of Electric Vehicle Supply Equipment (EVSE) along common shipping corridors in terms of money and time saved. Find the best charging schedule for drivers.",  
+    "Assumption": \[  
+      "All electric trucks are long-haul trucks.",  
+      "The truck flow at a certain point in the route is uniform across the different time intervals.",  
+      "Drivers will try to fuel up at 20% battery remaining."  
+    \],  
+    "Model": "Calculates the optimal charging value (Cf) to minimize total charging time. Uses Monte Carlo simulations to determine the optimal number of charging stops and the optimal number of charging stations per truck stop.",  
+    "Results": "Optimal charging interval of approximately 90 minutes. Optimal number of chargers per station for various corridors.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Models are fairly robust due to the nature of Monte Carlo simulations.",  
+      "Presence of significant outliers in the simulation results."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Create a model that ranks which trucking corridors should begin development of charging stations first.",  
+    "Assumption": \[  
+      "A state’s environmental budget accurately reflects the ability of a state to fund area-specific environmental projects.",  
+      "All four factors—Anticipated Usage (U), Greenhouse Gas Emissions (GHG), Community Motivation (M), and Cost (C)—are equally weighted in importance in determining the ranking of the five corridors.",  
+      "Fully charging a battery is charging the truck 80% of its original battery",  
+      "The states that encompass the corridor will help pay for another state’s lack of funding for the development of charging stations if needed."  
+    \],  
+    "Model": "Calculates an importance score for each corridor based on economic growth, environmental considerations, and total cost of installation. Economic growth is estimated based on time saved due to faster charging. Environmental considerations are based on state-level actions on electric vehicles. Total cost is based on the number of charging stations needed.",  
+    "Results": "Ranking of the five trucking corridors based on the calculated importance score.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Considers three different variables (economic growth, environmental considerations, cost).",  
+      "Other variables could be considered.",  
+      "Cost has a high standard deviation."  
+    \]  
+  }  
+}

@@ -1,0 +1,86 @@
+{  
+    "Placement": 3,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a MathWorks Math Modeling Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[  
+          "Wasted food is defined by edible food that is not being eaten."  
+      \],  
+      "Assumption": \[  
+        "Transportation (of food waste to the food-insecure) will not lead to spoilage of food and the cost of such transportation is not taken into account.",  
+        "The monetary value of food is representative of the amount of food.",  
+        "Children in the food-insecure population will consume as much food as adults.",  
+        "North American data is indicative of Texan data. Texas is in North America, and thus its data should be consistent with that of North America."  
+      \],  
+      "Model": \[  
+        "In the first model, we determined the total food waste directly relates to the price of food being wasted. The price of food needed to feed the hungry is then calculated, and ultimately the need can be subtracted from the waste to obtain a net surplus or deficit."  
+      \],  
+      "Results": \[  
+        "We determined that if all of the waste was transferred to feed all of the hungry, there would be a net surplus of food in the state of Texas. If Texas was then used as a model for the entire United States, this implies that the country's hungry population could be eliminated, if not severely diminished.",  
+        "Two of the five food groups had a surplus, meaning all of the hungry were fed with that food group. The remaining three, along with the overall analysis, showed a deficit."  
+      \],  
+      "Sensitivity Analysis": \[  
+          "A sensitivity analysis of the grain, produce, and the overall computations was performed by changing a parameter of the model. This was accomplished by removing the production waste in order to determine if the model would yield similar results."  
+      \],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "The strengths of this model are in its ability to combine a wide variety of factors within a comprehensive and simplistic approach. By simply subtracting need from want, either surplus of deficit of a food group may be determined. The model results in logical surpluses or deficits based on known production and consumption of each food category. It is also is easily adjustable by simply imputing slightly different numerical values for variables such as population size and a cost plan."  
+        \],  
+        "Weaknesses": \[  
+          "However, the model does have weaknesses. In the model, the percentage of each food group in a person's diet is based on the recommended diet \[3\], not what they would prefer nor are used to eating. In America, protein has a much higher percentage of an average individual's diet. Also, it is not taken into account that there are multiple sources of protein aside from just meat and fish. This can also be seen in the oil category. A second weakness of this model lies in that the storage and timely delivery of foods that can spoil may be inconceivable in some instances."  
+        \]  
+      }  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The proportion of food wasted for each food category is equal across all income brackets.",  
+        "A household occupant contributes the same amount to the household consumption and waste regardless of age or gender.",  
+        "All food not consumed in a restaurant is waste."  
+      \],  
+      "Model": \[  
+        "In the next model, the waste of an individual household, based on its traits, was determined in order to ascertain the effects personal choices have on consumption, or the lack there of. We determined income to be reflective of personal habits, and thus the waste produced. A monetary value of waste produced by an individual in the household was calculated, leading to the approximation of the total household waste based on both income and number of occupants."  
+      \],  
+      "Results": \[  
+        "With this, the logical conclusion was that the number of household occupants is the main determinant of waste, but income also had a moderate effect when the income exceeded $100,000. This was concluded to be a result of the times the wealthier households would eat out, a habit that produces more waste than in-home dining."  
+      \],  
+      "Sensitivity Analysis": \[  
+        "To test the sensitivity of this model, we considered three other sample household compositions:"  
+      \],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "The greatest strength of this model is that it allows for unique results on a case-by-case basis. It is able to create a more accurate representation of the amount of waste a household produces. This is done by evaluating the waste produced by each occupant in a household rather than by using a mean value. This creates a system in which an increase in the number of residents would have a resultant increase in the amount of waste that is generated."  
+        \],  
+        "Weaknesses": \[  
+          "Having said that, the model does have some weaknesses. The model relies solely on household income and the number of values only averages residents in a house to determine waste produced. This means that the amount of waste that a toddler produces is considered to be the same amount as that of an adult. This is due to the data failing to contain specific values for each age group, only averages per income bracket \[4\]. Additionally, restaurant eating is strictly dependent on income in this model, whereas in reality it is also contingent on time restraints and ability to cook for oneself. Another weakness is that this model did not take into account dietary restrictions and preferences of fresh versus frozen. With the ongoing organic movement, many people with higher incomes are opting to purchase fresh fruits and vegetables which spoil much faster than buying frozen produce."  
+        \]  
+      }  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The benefits earned from donating food is equal to the cost of the food and all food donated will used by the food bank.",  
+        "The population of our county is distributed according to a uniform random distribution.",  
+        "Food banks can be built anywhere in the county for the same price, regardless of zoning.",  
+        "The speed limit is thirty miles per hour."  
+      \],  
+      "Model": \[  
+        "In order to turn this effect into something positive, we created a model that would create a strategy for building drop-off centers in our very own county. Widespread change starts with an small step forward, and with a plan such as this implemented in our own community, a true difference in feeding the hungry could occur. By creating a Monte Carlo simulation that creates a hypothetical county with a certain number of food distribution centers and households that are randomly distributed, the total economic profit could be determined by taking the cumulative value of donations minus the cost of building the food donation centers."  
+      \],  
+      "Results": \[  
+        "Using this simulation, we sought to maximize economic profit."  
+      \],  
+      "Sensitivity Analysis": \[  
+         "The strength of this model lies in its ability to respond to small changes in parameters, such as the value of fuel economy for the average household motor vehicle. (For example, a 5 mile per gallon change in fuel economy produces a difference of approximately $200,000 in economic profit, but this value is insufficient to cause significant changes in the value which maximizes the economic profit) Since the number of donation centers is limited in interval, the number of donation centers which maximizes economic profits does not change for small differences in the global parameters."  
+      \],  
+      "Strength and Weakness": {  
+        "Strengths": \[\],  
+        "Weaknesses": \[  
+          "The greatest weaknesses of the model lie in that the area of the county was assumed to be perfectly square and that residents are randomly distributed. We limit the possible numbers of donation centers to integers with integer square roots, which severely constrains the interval over which numerical maximization is performed. In other words, the set is limited by the fact that we assume that the subdivided areas of the county are perfect square tracts of land. Although our simulation has the capacity to handle different donation center configurations within the county, we limit our analysis for the sake of brevity and completeness of the theoretical model in Subsection 5.4.",  
+          "The model assumes that residents of the authors' home county are randomly distributed according to a uniform random distribution with bounds corresponding to the boundaries of the simulated map. While this approximation seems to be the least objectionable means of simulating population distributions without detailed insight into the population densities within our county, it is nonetheless a limiting assumption of the model."  
+        \]  
+      }  
+    }  
+  }

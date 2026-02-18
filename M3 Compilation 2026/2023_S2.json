@@ -1,0 +1,78 @@
+{  
+  "Placement": "Runner Up",  
+  "Comments": \[  
+    "The paper is well written, providing a clear and detailed background alongside comprehensive model descriptions. Notably, the strengths and weaknesses of the models are explicitly stated and practical in nature. The author(s) have made great use of previous research and information, justifying the proposed models through reasonable assumptions. Throughout the paper, the data tables effectively demonstrate the necessity of the dataset for modeling purposes. Additionally, the model results are reasonably well explained and quantified through the use of tables.",  
+    "Your Executive Summary was well written\! However, it failed to stay within the 1 page limit. / Does it seem reasonable that the carrying capacity for e-bikes is the entire population of a country? That is, are they a viable transportation option for each individual? / You had a nice transition between Q1 and Q2. Well done\! I also enjoyed the heat maps you presented in Q2. They added a nice readability to your work in a compact way. / Do you know of any way to test for causation between variables? Remember, there may be confounding variables between two ideas, it might not be causation\! / It seems slightly strange that you were unable to locate a reference for Assumption 5 in 3.2. Did you try to find the average commute length for people? On the flip-side of this, It was nice to see the split of e-bike usage by age, as not all people's primary use of e-bikes is for commuting. / Overall, well done\! Your conclusion really highlights this as a report to someone in the transportation department. It was a nice way to end your discussion.",  
+    "Your summary is well-written and you do a good job of presenting your conclusions, but perhaps a few too many details for a summary concerning your methods. Nice job explaining your first model and you find the desired predictions. I particularly liked your inclusion of the inflection points of the models, and you might have commented on that in terms of what may be an interesting difference in future paths of the two countries. The graphics were appreciated but you should have selected a different vertical scale for your regression pictures as the points are grouped at the very bottom. Good explanation of your second model and well done to realize and state the limitations of correlation when it comes to making conclusions about causation. While you explain the process well it would have been nice to see some examples of the data you used for each factor. Nice graphics. It was fun to see many different model types employed throughout. Your third model had some strong assumptions built into it and again I would have liked to have seem more information about the data you \\"gathered\\", but you do a nice job of explaining the process and pointing out some potential weaknesses of your approach.",  
+    "This is an excellent essay, congratulations\! You provide plenty of sources to sustain your arguments and assumption. The structure and presentation are very sharp. Few remarks for improvement: you could achieve a higher precision in Q1 by distinguishing between rural and urban areas, also by taking part of the population rather than total population. In Q2 you seem to focus on values but do not refer to the statistical significance of each variable. In Q3 you could have included a sensitivity analysis."  
+  \],  
+  "Q1": {  
+    "Definition": "Predict the growth of e-bike sales that will be sold two and five years from now in the United States and United Kingdom.",  
+    "Assumption": \[  
+      "E-bikes are two-wheeled bicycles with electric motors that can assist or replace pedaling.",  
+      "The maximum number of people in a country who will buy an e-bike is equivalent to the total population of that country.",  
+      "The growth of e-bikes follows a logistic curve.",  
+      "People replace their bikes approximately as quickly as the batteries decay.",  
+      "E-bikes have an average battery lifespan of 5 years.",  
+      "The growth of e-bikes is independent of which types of e-bikes are purchased."  
+    \],  
+    "Model": "Logistic model of the sales of e-bikes in the UK and US to determine the projected future sales of e-bikes. Applied this model to past annual sales data from both nations to predict their respective annual e-bike sales within two and five years.",  
+    "Results": "Predicted that in 2025, 332, 824 new e-bikes would be purchased in the United Kingdom while 563,780 new e-bikes would be purchased in the United States. Additionally, in 2028, we found that an estimated 1,907, 964 and 3, 796, 118 e-bikes would be sold in the United Kingdom and United States respectively.",  
+    "Sensitivity Analysis": "Ran a sensitivity model of our logistic coefficient and determined that our sale predictions in the UK had an average variation of 0.266 percent, and our sale predictions in the US had an average variation of 0.018 percent.",  
+    "Strength and Weakness": \[  
+      "Simplicity. The model builds upon a basic exponential model, so it can easily be understood and expanded to consider additional data.",  
+      "Broadness. The model encapsulates a plethora of auxiliary factors. Nearly any trend, from private investment to social prominence, is reflected by the general development of e-bike sales.",  
+      "Thrift. The model is accurate with smaller datasets. A logistic regression provides an accurate prediction with sparse datasets. Since long-term e-bike sale data is difficult to find, logistic regressions are more reliable than alternative, more complex models.",  
+      "Generalization. Without the ability to weigh specific variables, the model assumes that the parameters which affected growth during 2012-2022 remain constant.",  
+      "Carrying Capacity. Our carrying capacity value is based on the total population and does not account for personal preferences or conditions that would prevent people from buying an e-bike. This limits the accuracy of our logistic curve.",  
+      "Specificity. Our model can only demarcate the overall trends in the market. External disruptions like recession or shifts in public sentiment cannot be isolated from the overall trend."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Evaluate the relative importance of factors that influence the number of sales of e-bikes: gas prices, environmental consciousness, GDP per capita, consumer spending, e-bike trendiness, attitude towards health and fitness, and median age.",  
+    "Assumption": \[  
+      "The price of e-bikes is proportional to the price of lithium batteries.",  
+      "The number of gym memberships within a population is a proxy for the attitudes towards health and wellness of that population.",  
+      "There is no significant correlation between the regressed independent variables.",  
+      "All examined historical trends continue for the next five years.",  
+      "Google search trends are reflective of the popularity of a certain subject within a certain population.",  
+      "There are no other factors besides those considered that significantly affect the growth of e-bike sales.",  
+      "The data for variables considered is homoscedastic.",  
+      "Subsidies have a negligible impact on sales.",  
+      "The independent variables in the regression have a causal relationship with annual bike sales in both countries.",  
+      "Staggering data values by year is negligible."  
+    \],  
+    "Model": "Multivariate linear regression of the seven variables on annual e-bike sales to determine the relative strength of causation of each variable.",  
+    "Results": "Concluded that in the US, economic factors related to increased spending propensity and decreased price had the most significant effect on e-bike sales. In the UK, the most significant factors were social, such as trendiness or attitude towards health and fitness.",  
+    "Sensitivity Analysis": "Jittered the values of all of our data points between a 5% decrease and a 5% increase and plugged the new values into the prior regression.",  
+    "Strength and Weakness": \[  
+      "Accessibility. Unlike machine learning models, regressive models are transparent and explain results in the form of regressed coefficients. Our correlation heat map also provides an understandable and intuitive visualization of the relationships between all variables.",  
+      "Predictive Power. While machine learning and other statistical methods require large amounts of data to accurately train, a linear regression uses empirical and logical reasoning about causal links to produce better predictions.",  
+      "Easily Extendable. Linear regression can incorporate any type of continuous variable and can flexibly expand to account for additional variables.",  
+      "Causality. Since a linear regression only explains correlation, the model does not explain why variables are related; rather, it provides insight into the existence and strength of a trend.",  
+      "Collinearity. Although we assumed that our factors were all independent of each other, many of the variables are likely corollaries of overall economic growth."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Quantified the impacts of increased e-bike sales in the US and UK on net carbon emissions and projected average lifespan in each country.",  
+    "Assumption": \[  
+      "The number of bike users is equal to the number of bikes sold.",  
+      "Each user only uses their e-bike for one use-case.",  
+      "The average car and e-bike emission per mile is representative of each rider's usage.",  
+      "The production emission of all e-bikes is .16 tons, or 145 kg, and remains constant over time.",  
+      "The average commute of people that switch to e-bikes is 10 miles.",  
+      "All e-bike riding is considered moderate exercise.",  
+      "Health improvements are directly proportional to increased exercise time.",  
+      "Net traffic changes are zero."  
+    \],  
+    "Model": "Used a Monte Carlo simulation to generate a distribution of e-bike owners based on their riding habits.",  
+    "Results": "In 2028, we project that the United States will save 143 million kilograms of CO2 per year and the UK will save 29 million per year due to e-bikes. In terms of health benefits, the United States will save 9.7 million life years and the United Kingdom will save 1.4 million life years prior to 2028.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Easily Extendable. Our Monte Carlo simulation can be easily expanded to account for more models by adding new factors to our rider's choices.",  
+      "Specificity. By randomly creating e-bike owners based on known probabilities, we can accurately generate a model for the situation and decisions of an e-bike owner.",  
+      "Emission Generalization. The probability variable for emissions does not consider individual cars, but rather average emissions per mile.",  
+      "Simplistic Riders. Most e-bike owners likely use their bikes for multiple use-cases. By limiting each owner to one use-case, we lose specificity about other potential uses."  
+    \]  
+  }  
+}

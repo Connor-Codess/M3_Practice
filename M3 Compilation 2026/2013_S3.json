@@ -1,0 +1,62 @@
+{  
+    "Placement": 3,  
+    "Comments": "This solution addresses both plastic waste prediction and optimal recycling program selection. It uses linear regression and a landfill density function to estimate plastic volume in landfills. For recycling programs, it considers participation rates based on socioeconomic factors and calculates costs for different program types (drop-off, curbside, single-stream, pre-sorted). The response is well-organized, detailed, and uses a variety of data sources.",  
+    "Q1": {  
+      "Definition": "Extrapolated to predict the amount of plastic that will be festering in landfills at the end of the next decade.",  
+      "Assumption": \[  
+        "Economic conditions will remain relatively stable for the next ten years.",  
+        "Calculations began at 1960.",  
+        "Linear growth of plastic waste.",  
+        "Constant recovery rate (13.5%).",  
+        "Combustion rate for total municipal waste has remained constant from 1960 to the present."  
+      \],  
+      "Model": "Linear regression for waste generation, combined with a non-constant landfill density function (p(d) \= .2485\*d lbs/ft^4+36.05 lbs/ft^3) derived from experimental data.  Calculates total municipal waste and plastic waste sent to landfills, then uses density to estimate volume.",  
+      "Results": "The volume of plastic alone in our country's landfills (assuming a uniform depth of 200 ft) will equal about 7.10\*10^9 cubic meters by 2023.",  
+      "Sensitivity Analysis": "Not explicitly performed, but the linearity assumption and constant recovery rate are potential sources of error.",  
+      "Strength and Weakness": \[  
+        "Strength: Uses a non-constant density function, which is more realistic than a simple density calculation.",  
+        "Strength: Considers both total municipal waste and plastic waste.",  
+        "Strength: Clearly explains the methodology and calculations.",  
+        "Weakness: Relies on several assumptions, including constant recovery and combustion rates.",  
+        "Weakness: Assumes a uniform landfill depth."  
+      \]  
+    },  
+    "Q2": {  
+      "Definition": "Identifies the optimal recycling program for any US city, working within the city' budget and the likelihood of its residents to participate in the recycling program.",  
+      "Assumption": \[  
+        "Population demographics such as race and age do not factor into the tendency to recycle.",  
+        "Only deals with municipal wastes.",  
+        "New program will be as effective as an older program.",  
+        "Average resident housing situation will be constant between cities.",  
+        "Data from St. Paul, MN is used as average data."  
+      \],  
+      "Model": "Predicts participation rate based on average home value and percentage of population with a bachelor's degree.  Uses weighted average of these two factors.  Then calculates program costs (drop-off, curbside single-stream weekly/biweekly, curbside pre-sorted weekly/biweekly) based on population, participation rate, and cost per ton. Compares costs to a predicted municipal budget for recycling ($6.64 per person).",  
+      "Results": \[  
+        "Wichita, KS: Drop off single-stream.",  
+        "Price, UT: Biweekly curbside single-stream.",  
+        "Fargo, ND: Biweekly curbside pre-sorted."  
+      \],  
+      "Sensitivity Analysis": "Not explicitly performed, but the model considers different program types and selects the best fit based on cost and participation.",  
+      "Strength and Weakness": \[  
+        "Strength: Considers both participation rate and cost.",  
+        "Strength: Uses real-world data to predict participation.",  
+        "Strength: Provides a clear methodology for selecting the optimal program.",  
+        "Weakness: Relies on several assumptions, including the representativeness of St. Paul data.",  
+        "Weakness: Limited by data availability.",  
+        "Weakness: Did not obtain data from single sources and single years."  
+      \]  
+    },  
+    "Q3": {  
+      "Definition": "Extending to a National Scale",  
+      "Assumption": "Implicit assumption that the model can be applied to any US city with accessible census data.",  
+      "Model": "Applies the model developed in Part II to any city, using population size, average home value, and percent of population with bachelor's degrees.",  
+      "Results": "Biweekly pickup is more efficient than weekly pickup for a curbside program. Small to midsized cities should consider drop off.",  
+      "Sensitivity Analysis": "Not performed.",  
+      "Strength and Weakness": \[  
+        "Strength: Provides general recommendations applicable to a wide range of cities.",  
+        "Strength: Highlights the importance of considering local factors.",  
+        "Weakness: Relies on the assumptions and limitations of the city-level model.",  
+        "Weakness: Does not address regional variations or specific implementation challenges."  
+      \]  
+    }  
+  }

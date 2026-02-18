@@ -1,0 +1,73 @@
+{  
+  "Placement": "Champion",  
+  "Comments": \[  
+    "You did a good job recognizing strengths and weaknesses of your model.",  
+    "Good assumption and variable definition; Error is large in Fig. 1.5.2; R2 is large in Table 1.5.1; Good appendix and code.",  
+    "Thorough engagement with the modeling process. Nice use of regression in part 1, but it's important to recognize the limitations of that model for some data. The financial-sector (graphed in the paper), fluctuates significantly in the late 2000s due to the financial crash, and data from 2020-21 will be impacted by the pandemic. How could you have accounted for some of these other factors in looking at the growth or decline in different industries? Really nice consideration of appropriate revisions and strengths and weaknesses overall. You acknowledge the difference standard deviation makes \- is there a way to create a submodel for estimating this parameter?",  
+    "The report is extremely well written, with information displayed clearly and labeled accordingly. The mathematics and the modeling is clear and easy to follow. This makes your results reproducible, which is a big advantage. Well done on doing a broad and detailed research, extra data sources are always useful and encouraged. In problem 1 \-- I wish you had commented a bit more on the problems with suing linear regression. Indeed, at some point the proportion will reach 100% (or 0%). In problem 2 \-- Your probabilities seem rather high, but the model is indeed well structured and well presented. For clarity and good understanding, it would have been beneficial to see an example of an individual who chooses to work from the office. In problem 3 \-- you have clearly considered a number of factors and combined your previous answers. Well done."  
+  \],  
+  "Q1": {  
+    "Definition": "Estimate the percentage of workers with remote-ready jobs. This includes both the workers who are currently working online and those who are able to work online but have not yet transitioned from in-person work. Predict the number of remote-ready jobs in 2024 and 2027 in Seattle, WA, Omaha NE, Scranton, PA, Liverpool, and Barry.",  
+    "Assumption": \[  
+      "There will not be any technological advancements that significantly change the ability of an industry to be remote.",  
+      "The trends for future job growth and decline are city specific.",  
+      "The trends for future job growth and decline are the same as past trends.",  
+      "The trends for job growth and decline for various industries are linear.",  
+      "Industries are made up of sub-industries.",  
+      "The percentage of remote-readiness for an industry will be an unweighted average of the percentage of remote-readiness of each sub-industry."  
+    \],  
+    "Model": "Performed linear extrapolations on the monthly number of employees in each industry for the metro area. Used these linear extrapolations to predict the number of employees in each industry for a given year.",  
+    "Results": "Predicted percentage of remote-ready jobs in each city for 2022, 2024, and 2027.",  
+    "Sensitivity Analysis": "Increased the predicted number of jobs in the professional and business services industry in Seattle by 10%.",  
+    "Strength and Weakness": \[  
+      "The model is very cost effective and can be easily scaled up to include more industries and sub-industries for a higher resolution model.",  
+      "Produces results similar to prior studies.",  
+      "Failed to account for the relative sizes of each sub-industry within their broader industries.",  
+      "Failed to account for potential major technological advancements that will impact job markets."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Estimate the probability that a remote-ready worker would have both the permission and desire to work from home.",  
+    "Assumption": \[  
+      "Hybrid workers are considered as working from home.",  
+      "The value of a worker's time during a commute is equal to the hourly rate that they are paid while working.",  
+      "The decision to work from home is based on the economic benefit to the worker and employer.",  
+      "Workers are able to work on-site.",  
+      "Workers who work from home do not need childcare for children not yet in school."  
+    \],  
+    "Model": "Monte Carlo simulation to determine the percent chance a worker is allowed to and chooses to work from home. The model takes multiple factors, including changes in productivity, time saved, childcare costs, and more.",  
+    "Results": "Applied the model to two imaginary workers: Mamma Mia and Basic Bill.",  
+    "Sensitivity Analysis": "Ran the model with different standard deviations with Basic Bill's information.",  
+    "Strength and Weakness": \[  
+      "The formula used to calculate whether a worker would choose to work from home is very modular, and additional (quantifiable) factors can be easily added if they need to be taken into account.",  
+      "The model can be tailored easily to a specific circumstance if needed.",  
+      "People are not economically rational, so the decision to work from home is not completely based on the economic benefits/costs of working from home.",  
+      "Our model did not account for the gasoline savings from working from home.",  
+      "Our model did not account for the impact of demographic differences such as gender.",  
+      "Our model did not account for coworker pressure to either work from home or stay in the office.",  
+      "Our model did not account for the impact of health-related factors on the decision to work from home.",  
+      "Productivity data was taken from an online survey."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Combine the two models above to predict the percentage of workers who would work remotely for a given city. Make predictions for 2024 and 2027; using these predictions, rank the previously mentioned cities in terms of how greatly the transition to remote work would impact them.",  
+    "Assumption": \[  
+      "The average commute distance will not change within the next five years, and remote workers will have no commute.",  
+      "The current trend of suburbanization will continue.",  
+      "The impact of remote workers moving out of a city will be equal to the loss of property tax.",  
+      "The environmental impact of remote workers will be equal to the carbon emissions from driving.",  
+      "The carbon tax will be the same in the United States and the United Kingdom."  
+    \],  
+    "Model": "Multiplied the percentage of workers who are remote-ready for a given year by the percentage of remote-ready workers who would actually work from home. Measured the impact of working from home on a city by subtracting the change in property taxes from the change in carbon emissions, then dividing by the GDP of that city.",  
+    "Results": "Percentages of workers who will work from home and impact factor for each city.",  
+    "Sensitivity Analysis": "Varied the impact of carbon emissions.",  
+    "Strength and Weakness": \[  
+      "The method of calculating the impact factor can easily be modified to include any monetarily quantifiable value.",  
+      "Money is an unbiased method of measuring impact that does not rely on weighted coefficients.",  
+      "The model normalizes total money change to the GDP of a city, so the impact is a relative factor that accounts for a city's size.",  
+      "Failed to account for local economic changes (restructuring within companies, large growth in ecommerce).",  
+      "Failed to account for differences in commute lengths among cities.",  
+      "Failed to account for alternative methods of travel such as busing, biking, walking, or taking the subway."  
+    \]  
+  }  
+}

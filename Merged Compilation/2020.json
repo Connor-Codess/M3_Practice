@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2020_S1_Q1_Assumption",
+    "text": "SECTION: 2020 Runner Up (S1) Question 1 Assumption\nCONTEXT: Transition to electric semi-trucks (Markov Chain).\nCONTENT: The Markov Chain assumes that the **purchase decision** for a truck is the **sole driver** of the market transition. It assumes that **infrastructure (charging stations) development** is sufficient to meet the demand of the predicted number of electric trucks.",
+    "metadata": {
+      "year": "2020",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Markov Chains, Infrastructure",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2020_S1_Q1_Model",
+    "text": "SECTION: 2020 Runner Up (S1) Question 1 Model\nCONTEXT: Transition to electric semi-trucks.\nCONTENT: A Markov Chain model was used. Transition matrices were created for short, regional, and long-haul trucks, where transition probabilities were based on the cost difference between electric and diesel trucks.",
+    "metadata": {
+      "year": "2020",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Markov Chain, Transition Matrix",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2020_S3_Q1_Model",
+    "text": "SECTION: 2020 Third Place (S3) Question 1 Model\nCONTEXT: Market competition between diesel and electric.\nCONTENT: A Lotka-Volterra Competition Model was adapted. Usually used for biological species competition, here it modeled the 'population' of diesel vs. electric trucks competing for the 'resource' of the freight market.",
+    "metadata": {
+      "year": "2020",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Lotka-Volterra Equations, Differential Equations",
+      "chunk_index": 1
+    }
+  }
+]

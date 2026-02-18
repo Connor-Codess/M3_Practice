@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2012_S1_Q1_Assumption",
+    "text": "SECTION: 2012 Champion (S1) Question 1 Assumption\nCONTEXT: Transportation mode choice (Multinomial Logit Model).\nCONTENT: The model assumes that the **traveler's choice is independent of the characteristics of the other choices** (IIA property of the Logit Model). It assumes that the **Gravity Model** accurately predicts the total volume of travelers.",
+    "metadata": {
+      "year": "2012",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Multinomial Logit Model, IIA Property",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2012_S1_Q1_Model",
+    "text": "SECTION: 2012 Champion (S1) Question 1 Model\nCONTEXT: Transportation mode choice.\nCONTENT: A Multinomial Logit Model was used to calculate the probability of a traveler choosing High Speed Rail vs Car vs Plane. It was calibrated using a Gravity Model for total intercity travel volume.",
+    "metadata": {
+      "year": "2012",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Multinomial Logit Model, Gravity Model",
+      "chunk_index": 1
+    }
+  }
+]

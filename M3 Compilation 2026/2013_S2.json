@@ -1,0 +1,58 @@
+{  
+    "Placement": 2,  
+    "Comments": "This solution presents a model for predicting plastic waste and determining the optimal recycling method for different cities. It uses linear regression for waste prediction and considers single-stream, dual-stream, and drop-off recycling. The model includes calculations for costs, budget, and truck fleet conversion. The response is well-structured and provides clear explanations.",  
+    "Q1": {  
+      "Definition": "Predict the amount of discarded plastic which will either be recycled or be placed in landfills.",  
+      "Assumption": \[  
+        "All plastic waste not recycled goes into a landfill. The amount that reaches other destinations is negligible.",  
+        "Plastic production and recycling increase at a linear rate as time passes, based on an extrapolation of the data found."  
+      \],  
+      "Model": "Linear regression models for plastic generated, recycled, and wasted.  F(x) \= 0.740762066x – 1459.11884 (for plastic waste ending up in landfills).  Integral of this function from 2013 to 2023 is used to estimate total waste.",  
+      "Results": "Approximately 357.39 million tons of plastic waste will go to landfills during the years 2013-2023. This would take up 2644.68668 million cubic yards of space.",  
+      "Sensitivity Analysis": "Not explicitly performed, but the linearity assumption is acknowledged as a potential source of error.",  
+      "Strength and Weakness": \[  
+        "Strength: Uses linear regression, a standard statistical technique.",  
+        "Strength: Clearly presents the equations and calculations.",  
+        "Weakness: Assumes a linear relationship, which may not be accurate over longer time periods.",  
+        "Weakness: Acknowledges that the actual value could be exponential or less than predicted."  
+      \]  
+    },  
+    "Q2": {  
+      "Definition": "Proposing a New Recycling Program in Three U.S. Cities (Fargo, North Dakota; Price, Utah; Wichita, Kansas).",  
+      "Assumption": \[  
+        "The easier the program is for the individual, the more likely he or she is to recycle regularly.",  
+        "Every person in any given city pays taxes as required by law.",  
+        "The transportation costs involved in any recycling plan are negligible compared to the costs of operation and the installation costs.",  
+        "The proposed recycling system will be designed independently of any existing system.",  
+        "The cost of travel between stops on a recycling truck's route is insignificant compared to the costs of running the program itself.",  
+        "The cost of processing the recycled material and the prices of both diesel and electronic trucks will remain constant over the years."  
+      \],  
+      "Model": "Calculates cumulative cost of running each program (single-stream, dual-stream, drop-off) based on population, waste generation, recycling rate, installation cost, and cost per ton. Compares this to a budget based on tax revenue. Calculates surplus budget and truck fleet size and conversion from diesel to electric.",  
+      "Results": \[  
+        "Price, Utah: Drop-off recycling, complete at year 15.",  
+        "Fargo, North Dakota: Dual-stream weekly recycling, complete at year 26.",  
+        "Wichita, Kansas: Single-stream weekly recycling, complete at year 17."  
+      \],  
+      "Sensitivity Analysis": "Not explicitly performed, but the model considers different program types and ranks them based on desirability.",  
+      "Strength and Weakness": \[  
+        "Strength: Comprehensive model considering various factors and costs.",  
+        "Strength: Includes a plan for converting to electric trucks.",  
+        "Strength: Provides specific recommendations for each city.",  
+        "Weakness: Several assumptions about costs and behavior.",  
+        "Weakness: Population density was not taken into account."  
+        , "Weakness: Bigger cities might need more than one facility"  
+      \]  
+    },  
+    "Q3": {  
+      "Definition": "Expanding the Propositions to Apply on a Nationwide Level",  
+      "Assumption": "Implicit assumption that the model developed for the three cities can be applied nationally.",  
+      "Model": "Applies the model to individual cities, using benchmarks for debt payoff, electric truck conversion, and program completion.",  
+      "Results": "The model can be used to select the most efficient program for any given U.S. city, with benchmarks for financial feasibility and environmental benefits.",  
+      "Sensitivity Analysis": "Not performed.",  
+      "Strength and Weakness": \[  
+        "Strength: Provides a clear plan for national application.",  
+        "Strength: Sets benchmarks for program success.",  
+        "Weakness: Relies on the assumptions and limitations of the city-level model.",  
+        "Weakness: Does not address regional variations or specific challenges of a national rollout."  
+      \]  
+    }

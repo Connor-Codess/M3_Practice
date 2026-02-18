@@ -1,0 +1,59 @@
+{  
+  "Team \#481": {  
+    "Placement": "Champions (Summa Cum Laude Team Prize)",  
+    "Comments": "This solution focuses on modeling the effects of drought on Lake Powell, including water volume, power generation, and the regional agricultural economy. It uses a geometric model for the lake, considers inflow and outflow, and analyzes the impact on power generation. The solution also examines the relationship between water allocation and agricultural GDP. The response is well-organized and provides a clear methodology.",  
+    "Q1": {  
+      "Definition": "Developed a simplified geometric model of the shape of Lake Powell in order to more easily simulate the effects of the drought on the volume of the water in the reservoir.",  
+      "Assumption": \[  
+        "The efficiency of dam is assumed to be a constant.",  
+        "The average inflow rate of Lake Powell is 12.0 million acre-feet per year.",  
+        "For modeling purposes, the shape of the lake will be assumed to be a cone.",  
+        "The pressure of the water absorbed in the rocks below the Lake Powell reservoir is proportional to but less than the pressure of the water in the lake itself.",  
+        "After being processed through a hydroelectric power plant, the entire volume of water utilized is included as part of the total outflow."  
+      \],  
+      "Model": "Simplified geometric model (cone) of Lake Powell.  Differential equation for water volume: dV/dt \= I(t) \- \[E(t) \+ S(t) \+ O(t)\], where I is inflow, E is evaporation, S is seepage, and O is outflow.  Evaporation is proportional to surface area. Seepage is proportional to volume.",  
+      "Results": \[  
+        "Worst-case scenario (39% inflow): Lake runs dry in 3.5 years.",  
+        "Probable scenario (83% inflow): Lake almost reaches capacity.",  
+        "High inflow scenario (137% inflow): Lake reaches maximum capacity."  
+      \],  
+      "Sensitivity Analysis": "Tested the effect of a small increase in inflow (84% instead of 83%). Found that slight changes in water flow do not result in large increases in the lake's volume.",  
+      "Strength and Weakness": \[  
+        "Strength: Uses a differential equation to model the change in water volume.",  
+        "Strength: Considers various factors such as inflow, outflow, evaporation, and seepage.",  
+        "Strength: Tests the model with different inflow scenarios.",  
+        "Weakness: Simplifies the shape of the lake as a cone.",  
+        "Weakness: Model fluctuates more rapidly than actual volume in testing with historical data."  
+      \]  
+    },  
+    "Q2": {  
+      "Definition": "Addressing the Effect of the Height of the Lake on Power Generation",  
+      "Assumption": "The efficiency of the dam is constant.",  
+      "Model": "Calculates power generation based on the potential energy of the water: E \= (49/18000) \* O \* (√(636.931V^(2/3)) \+ 55.619), where E is energy in kilowatt-hours, O is outflow, and V is volume. Efficiency is estimated from historical data.",  
+      "Results": \[  
+        "Power generation is significantly affected by the water level.",  
+        "Large difference in power generated between the three provided scenarios."  
+      \],  
+      "Sensitivity Analysis": "Tested the effect of a slight change in inflow on electric production. Found a small change.",  
+      "Strength and Weakness": \[  
+        "Strength: Clearly relates water level to power generation.",  
+        "Strength: Uses historical data to estimate efficiency.",  
+        "Weakness: Assumes constant efficiency.",  
+        "Weakness: Simplifies the relationship between water level and power generation."  
+      \]  
+    },  
+    "Q3": {  
+      "Definition": "Addressing the Effect of Colorado River Water on the Regional Agricultural Economy",  
+      "Assumption": "Implicit assumption that water allocation and agricultural GDP are correlated.",  
+      "Model": "Analyzes the relationship between water allocated to each state (based on the 1922 Compact) and the agricultural GDP of each state. Calculates the percentage of agricultural GDP related to Colorado River water.",  
+      "Results": "Quantifies the economic impact of reduced water availability on agricultural GDP.",  
+      "Sensitivity Analysis": "Not explicitly performed.",  
+      "Strength and Weakness": \[  
+        "Strength: Considers the economic impact of drought on agriculture.",  
+        "Strength: Uses real-world data on water allocation and agricultural GDP.",  
+        "Weakness: Simplifies the relationship between water availability and agricultural output.",  
+        "Weakness: Does not consider other factors that may influence agricultural GDP."  
+      \]  
+    }  
+  }  
+}

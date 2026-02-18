@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2019_S2_Q1_Assumption",
+    "text": "SECTION: 2019 Runner Up (S2) Question 1 Assumption\nCONTEXT: Spread of nicotine vaping (SIRS).\nCONTENT: The SIRS model assumes a **closed population** (no migration in or out). It assumes that the **recovery probability** (quitting the substance) and the **loss of immunity probability** (relapse) are **constant rates** over time.",
+    "metadata": {
+      "year": "2019",
+      "placement": "S2",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "SIRS Model, Constant Rates, Closed System",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2019_S2_Q1_Model",
+    "text": "SECTION: 2019 Runner Up (S2) Question 1 Model\nCONTEXT: Spread of nicotine vaping.\nCONTENT: A Modified SIRS Epidemiology Model (Susceptible-Infected-Recovered-Susceptible) was used. 'Infected' represented addicted users. The model used differential equations to track flow between these states, treating vaping as a contagion.",
+    "metadata": {
+      "year": "2019",
+      "placement": "S2",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "SIRS Model, Differential Equations, Epidemiology",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2019_S2_Q2_Model",
+    "text": "SECTION: 2019 Runner Up (S2) Question 2 Model\nCONTEXT: Probability of student drug use.\nCONTENT: A Binary Multivariate Logistic Model was used. It calculated the probability of an individual using a substance based on a weighted sum of demographic factors (race, gender, SES).",
+    "metadata": {
+      "year": "2019",
+      "placement": "S2",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Logistic Regression, Probability",
+      "chunk_index": 1
+    }
+  }
+]

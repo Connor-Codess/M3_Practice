@@ -1,0 +1,76 @@
+{  
+  "Placement": "2",  
+  "Comments": "This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on an M3 Challenge submission is a rules violation.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "We can discount the segment of the population that suffers from disorders which stunt or accelerate the normal rate of growth.",  
+      "Rate of growth in children is assumed to follow average growth charts provided by the World Health Organization (WHO).",  
+      "Larger and smaller rates of growth occur with similar frequency.",  
+      "Age in children does not change energy requirements for tissue growth. Therefore, average energy expenditure for growth is constant relative to age.",  
+      "Growth rate at a certain age can be summarized on a yearly basis.",  
+      "Growth rate follows height trends seen in the World Health Organization height-to-age charts.",  
+      "The calories burned by a set amount of lean body mass is the same between genders. Thus, the difference between genders is accounted for by the difference in average body fat.",  
+      "A mean value for average body fat percentage is constant and unaffected by age."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "BMR\_men \= 66.4730 \+ (13.7516 \* weight(kg)) \+ (5.0033 \* height(cm)) \- (6.7550 \* age)",  
+      "BMR\_women \= 655.0955 \+ (9.5634 \* weight(kg)) \+ (1.8496 \* height(cm)) \- (4.6756 \* age)",  
+      "BMR\_f(1) \= GR\_f(1) \* E / h \= 191 / h (Female Age Group 1)",  
+      "BMR\_f(2) \= GR\_f(2) \* E / h (Female Age Group 2)",  
+      "BMR\_m(1) \= GR\_m(1) \* E / h \= 178 / h (Male Age Group 1)",  
+      "BMR\_m(2) \= GR\_m(2) \* E / h (Male Age Group 2)",  
+      "BMR\_m(3) \= GR\_m(3) \* E/h \=32/h (Male Age Group 3)",  
+      "BMR\_height \= 540 \* h (females)",  
+      "BMR\_height \= 726 \* h (males)",  
+      "BMR\_weight \= 15.91 \* w (females)",  
+      "BMR\_weight \= 9.36 \* w (males)",  
+      "BMR\_LBM \= 4.5 \* LBM \= 4.5 \* w \* (0.175 \- BFP/100) (females)",  
+      "BMR\_LBM \= 4.5 \* LBM \= 4.5 \* w \* (0.120 \- BFP/100) (males)",  
+      "BMR \= BMR\_f(n) or m(n) \+ BMR\_height \+ BMR\_weight \+ BMR\_LBM"  
+    \],  
+    "Results": \[  
+      "Average caloric intake for males and females, ages 10-19"  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[\],  
+      "Simplification":\[\],  
+    "Model": \[\],  
+    "Results": \[  
+      "More high-schoolers are sleep deprived than not.",  
+      "None of the students in high school can be supported with the 750-850-calorie meal plan proposed by the HHFKA."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "Schools will comply with the federal mandate to adopt the new lunch plans.",  
+      "Students all over the country are, on average, only marginally different; there are no major cultural or dietary variations.",  
+      "The unit cost of each dish is fixed per location and per portion size."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Constrained linear optimization model.",  
+      "Constraints based on USDA guidelines for food groups and sodium.",  
+      "Budget constraint of $7.00 per week per student.",  
+      "Objective function: maximize the amount of calories distributed.",  
+      "Caloric scaling factor P \= 1 \- e^(-taste)",  
+      "Taste \= A \* (sugar/cup) \+ B \* (sodium/cup) \+ C \* (calcium/cup)"  
+    \],  
+    "Results": \[  
+      "Generated weekly food plans for K-5 and 9-12 grade ranges with $6 and $7 budgets.",  
+      "The largest deficit was 832 calories for the high school $6-per-week-per-student budget."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "The two variables with the greatest constraining factors on the model are the USDA minimum grains and maximum sodium requirements."  
+    \],  
+    "Strength and Weakness": \[\]  
+  }  
+}

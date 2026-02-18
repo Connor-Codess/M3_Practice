@@ -1,0 +1,74 @@
+{  
+    "Placement": 1,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a Moody's Mega Math Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The sea level rate of change found over the past 100 years will continue to be constant over the next 100 years as well.",  
+        "Increasing sea level is directly correlated with increasing risk of flood.",  
+        "All sites start at a baseline of having no predisposed greater risk than another.",  
+        "Temperature will not affect our model on sea level change over the duration which our model operates."  
+      \],  
+      "Model": \[  
+        "For each location, we created a probabilistic model of the sea level height in the next t years. We determined whether a site had high, medium, or low risk levels based on the damage that we would expect to occur based on the change in sea level."  
+      \],  
+      "Results": \[  
+        "Our findings show that Cape Hatteras and the Padre Island possess the greatest risk of all 5 national parks."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {}  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Temperature is not included in the model.",  
+        "Wildfires are not included in the model.",  
+        "Kenai Fjords National Park's average temperature and relative humidity are 62°F and 97%.",  
+        "The number and severity of hurricanes remain constant for the next 50 years."  
+      \],  
+      "Model": \[  
+        "We selected our criteria to be the heat index, which consists of temperature and humidity; hurricane intensity and frequency; and the air quality index. These criteria were then used to construct a model that generated the vulnerability score by first assigning a subscore for each of the individual criteria and then taking a weighted average of these subscores."  
+      \],  
+      "Results": \[  
+        "We found that Padre Island National Seashore and Acadia National Park are in critical condition, with Padre Island being in a worse condition than Acadia National Park. Furthermore, Olympic National Park and Cape Hatteras National Seashore are still safe but almost in a critical condition, and Kenai Fjords National Park is the safest of all five."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {}  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "There is a fixed budget for the funds assigned to be distributed among the 5 sites.",  
+        "Unless adjusted vulnerability is higher than a certain threshold, it plays no role in affecting the number of visitors per year.",  
+        "The benchmark adjusted vulnerability score is 1.",  
+        "Growth in number of visitors each year for a given site is approximately linear.",  
+        "The two main factors in determining the amount of money that should be allocated to a site are adjusted vulnerability score and number of visitors.",  
+        "Number of visitors is more important to consider than adjusted vulnerability score.",  
+        "We use the predicted adjusted vulnerability scores of the sites in 20 years rather than the present adjusted vulnerability scores to determine how the NPS should allocate funds."  
+      \],  
+      "Model": \[  
+        "Finally, we created a model to determine how to allocate limited funds to the parks based on factors including the adjusted vulnerability score we calculated in part two, as well as the number of visitors for each park. We accomplished this by first determining the expected number of visitors for the future based on data from previous years and vulnerability score."  
+      \],  
+      "Results": \[  
+        "Based on our results, we found that the percentage of funds would be allocated as follows from most to least: Acadia National Park (30.48%), Olympic National Park (28.27%), Cape Hatteras (21.49%), Padre Island (10.94%), Kenai Fjords (8.82%)."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "Our model addresses a variety of criteria that have significant influences on sea level, safety, visitor count, and the distribution of funding.",  
+          "Our model outputs a number of intermediate values, making troubleshooting easier when presented with faulty errors.",  
+          "Our model relies heavily on prior data and utilizes that data to make projections for the future, which lends credibility.",  
+          "Assuming we have sufficient information, our models can be extended to more national parks."  
+        \],  
+        "Weaknesses": \[  
+          "While multiple intermediate steps makes troubleshooting easier, there would be more steps to rework in the case of an early error.",  
+          "Our projections weren't completely in correlation with the data (moderately low R^2 values).",  
+          "Our third model made a significant number of assumptions which—while not logically incorrect—may introduce unaccounted variation.",  
+          "The first and second models we developed cannot be reasonably extended to more than one century."  
+        \]  
+      }  
+    }  
+  }

@@ -1,0 +1,65 @@
+{  
+  "Placement": "3",  
+  "Comments": \[  
+    "Very well-written summary and a nice job of making a compelling case for the conclusions of your work while still making clear they are projections. Good presentation and explanation of your first model. Your discussion of strengths/weaknesses of your model choice was appreciated. You might have tested for correlation of your factors rather than assuming they are correlated. You might also have commented on the R values in your regressions to see if other choices might have been better for the data shape. Nice idea for your second model and you again explained it well. Good job connecting your final model to your previous work. Some of the values you used, such as 15% of people recovering, would have been better if you had cited external sources for them or made it clear that you were simply making a guess. Particularly for the second case you might have also considered sensitivity of your model to these values. Impressive work overall\!",  
+    "Great executive summary. For Q1, this could have been stronger with more justification for the logistic model (log may have worked here also). Q2 is well done, good consideration of potential variables. Q3 could have used more details about other potential causes for homelessness and other ways to home them, other than only treat/care for them. Good work overall\!",  
+    "You've answered these questions with lots of details. Well done.",  
+    "The paper stands out for its innovative use of sophisticated mathematical modeling techniques, particularly random forest regression models for housing predictions and a state machine approach for homelessness, to tackle the pressing issues of housing shortage and homelessness in Albuquerque and Seattle. The team's effort to integrate critical variables such as population, unemployment rate, and median income showcases a commendable attempt to capture the complexities of urban planning and provides detailed projections that are invaluable for policymakers. It is particularly impressive how the models not only offer strong predictive capabilities but also maintain a high level of methodological transparency, making these findings both reliable and reproducible. While the paper already makes reasonable contribution, it has the potential to offer even richer insights by exploring nonlinear dynamics and broadening its data sources.",  
+    "Your paper was neat, organized and very well written, and the mathematical models were clearly explained."  
+  \],  
+  "Q1": {  
+    "Definition": "Create a model that will predict the housing supply in Albuquerque, New Mexico and Seattle, Washington. Utilize this model to examine and foresee the changes in housing supply in these two cities in the next 10, 20, and 50 years.",  
+    "Assumption": \[  
+      "There are no new technological advancements or government policies that significantly impact any of our variables.",  
+      "Our independent variables can be expressed as a function in terms of time.",  
+      "The number of housing units can be used as a proxy for the housing supply.",  
+      "There is access to sufficient natural resources to construct new housing units and maintain existing ones."  
+    \],  
+    "Model": "Random Forest Regression. Historical data from the US census was used with either a polynomial or logistic regression to predict values for population, unemployment rate, and median income for the next 50 years. A logistic function was used for population related variables such as P because it considers the principle of exponential growth, but slows down as it reaches the carrying capacity.",  
+    "Results": "The random forest regressor obtained a root mean squared error of 2,376 for Albuquerque and 3,123 for Seattle on its test data predictions of total housing units, which represents the average difference between predicted and actual values.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "The random forest model allows us to make predictions by effectively combining numerous factors. The model doesn't require linear data, and is robust to skewed or non-linear data, which makes it an ideal choice for predicting based on our data. Additionally, random forest models are generally unaffected by multicollinearity, which is important in this case since our variables (such as unemployment rate and median income) are likely correlated with each other. Furthermore, the random forest model minimizes the chance of overfitting, which is an issue in many machine learning models.",  
+      "The random first model is not easily interpretable due to its “black box\\" nature, in which it employs many decision trees. In other words, the algorithm undergoes a complex decision process, making it difficult to pinpoint how exactly the model is built when it is training."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Predict the rise in homeless populations for increments of 10, 20, and 50 years in the cities Seattle and Albuquerque. By analyzing four factors we were able to determine the rate of homelessness.",  
+    "Assumption": \[  
+      "Drug addicts and people with serious mental illnesses will not be able to purchase a home, but unafflicted homeless people with jobs may be able to purchase affordable housing.",  
+      "Everyone who did drugs before being homeless is homeless because of their drug use.",  
+      "People who are seriously mentally ill, but not drug addicts, that become homeless, are homeless because of mental illness.",  
+      "There are few drug-addicted and mentally ill victims who are able to escape domestic abuse situations that they can be neglected; only unafflicted escapees need to be considered.",  
+      "Sheltered homeless people do not do drugs and have help in managing any mental illnesses.",  
+      "The distribution of drug addicted, mentally ill, and unafflicted migrant homeless people is the same as the distribution of Alburquerque or Seattle natives.",  
+      "Homeless people can only die from drug-related causes.",  
+      "Escapees of domestic violence immediately become homeless.",  
+      "Someone below the poverty line who loses their job will immediately become homeless.",  
+      "The proportion of drug-addicted homeless people, mentally ill homeless people, unafflicted homeless people, domestic abuse victims, and poor people is independent of the total population.",  
+      "People become homeless only as a result of drug use, mental illness, domestic abuse, or poverty."  
+    \],  
+    "Model": "Markovian transition matrix based on the probability of each state to go to the next. The model accounts for the mentally ill and drug addict portions of homeless people, which make up a big percentage of homeless people in both cities. We were also able to account for domestic abuse victims and those in poverty, which are two of the other largest causes of homelessness.",  
+    "Results": "Projected homeless populations for Albuquerque and Seattle at 10, 20, and 50 years in the future.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "This Markov chain-like state function is a stochastic model that allows us to predict the number of homeless people in the future. The model we built accounts for the mentally ill and drug addict portions of homeless people, which make up a big percentage of homeless people in both cities. We were also able to account for domestic abuse victims and those in poverty, which are two of the other largest causes of homelessness. Additionally, the state-change form of the model allows us to conveniently output the long-run proportions of mentally ill people, drug addicts, those in poverty, and homeless people. Drug-related deaths, which are the bulk of deaths in homeless populations, are also shown.",  
+      "The largest limitation of this model is that it does not account for every possible factor of homelessness. It only accounts for four: drug addiction, mental illness, domestic violence, and poverty. Other factors that cause homelessness are not accounted for, and could play a role in determining the number of homeless people 10, 20, and 50 years into the future. Finally, population growth is not accounted for directly in the function, and is rather multiplied on manually after the code is outputted. If population growth were worked directly into the function, it would be reflected more accurately."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Create a robust model that could aid a city, chosen to be Albuquerque, NM, in creating a long-term plan addressing homelessness. Test the stability of this model against unpredictable factors such as natural disasters, economic recessions, and increased migration.",  
+    "Assumption": \[  
+      "A natural disaster will cause an increase in the homeless population equal to 30% of the poor population.",  
+      "The government can only help around 20% of the homeless population during any given year.",  
+      "A government policy to reduce mental illness will help 15% of people with mental illness every year.",  
+      "A government policy to help those with substance abuse problems will help 8% of people with substance abuse problems."  
+    \],  
+    "Model": "Implement the Markov Chain model from part 2, but change some values around to simulate different government policies. Examine 2 government policies: the government helps people with substance abuse problems overcome their addiction and the government helps people with mental health issues get treatment. Also examine 1 unforeseen circumstances: Natural Disasters",  
+    "Results": "Projected homeless populations for Albuquerque after 50 years under different government policies and with/without natural disasters.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "An advantage of our model is that it is easy to manipulate. A change in government policy only results in a change to 2 values in our transition matrix, while an unexpected event just results in the addition of one if statement for when the event occurs and the change to be implemented because of it.",  
+      "Our model is limited in scope because it does not account for all possible variables. For instance, there are other external variables that cannot be explained. Additionally, the model doesn't consider people who fall through the policy. It's impossible for everyone who participates in the established initiatives to make a full recovery. We can't account for the number of people who have tried to participate and are unable to recuperate."  
+    \]  
+  }  
+}

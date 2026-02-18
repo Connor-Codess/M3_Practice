@@ -1,0 +1,62 @@
+{  
+  "Placement": "Third Place",  
+  "Comments": \[  
+    "Very nice narrative here.",  
+    "Your summary is well-written and does a good job of stating your motivations and conclusions. In general, try to avoid technical references, such as to data sets (“the data in D4”) in an executive summary in favor of more general explanations of your work. Nice job presenting your first model. The model evaluation section was also appreciated, although more could have been said about the possible limitations of your assumption of using exponential functions, particularly with respect to long-term behavior. Good overall work on your second model: you give a through explanation of your methodology, present the conclusions clearly, and then discuss possible limitations. You present an excellent analysis in your third model of how the given regions influenced your model construction and how it may have changed if you needed to apply it to different population densities.",  
+    "This was quite simply an excellent paper. You did an excellent job with your summary. It both summarizes your results and your approaches to each problem. With each problem you did an excellent job with your assumptions and then you also documented/supported those assumptions. Your models were very well developed and explained. Your graphs were crystal clear along with your conclusions. Excellent job with the sensitivity analysis and strengths/weakness. This is easily the best paper I read this year\!"  
+  \],  
+  "Q1": {  
+    "Definition": "Predict the cost per unit of bandwidth in dollars or pounds per Mbps over the next 10 years for consumers in the United States and the United Kingdom.",  
+    "Assumption": \[  
+      "No major disruptive technology will be introduced within the next 10 years.",  
+      "The only sources of Internet are wired—including DSL, cable, and fiber-optic—mobile, and satellite.",  
+      "Most wired Internet service providers essentially have a monopoly over their consumers.",  
+      "The demand for high-speed Internet does not significantly affect the cost per Megabit per second.",  
+      "The level of infrastructure and average Internet speed will not affect the cost of an Internet plan.",  
+      "Satellite data speed will be roughly similar in the US and the UK."  
+    \],  
+    "Model": "Model the average internet speed over time using a logistic curve. The cost per unit bandwidth is calculated based on the predicted speed and an assumption of constant plan prices.",  
+    "Results": "Predicted average monthly costs per Mbps for wired, mobile, and satellite internet in the US and UK for 2020-2030. Costs are predicted to decrease.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by changing constants in the logistic curve equations by \+5% and \-5%.",  
+    "Strength and Weakness": \[  
+      "Bases changes in price on changes in price plans rather than individual variables.",  
+      "Centered around historical trends (real data).",  
+      "Accurate in the short-term.",  
+      "Used a ratio factor to determine US wireless prices due to lack of data.",  
+      "Model is not resistant to changes in constants.",  
+      "Exponential model may not be accurate for long-term predictions."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Create a flexible mathematical model to predict a given household’s need for the internet over the course of a year. Apply your model to the example households listed below and determine the minimum amount of required bandwidth that would cover their total internet needs 90% of the time. What about 99% of the time?",  
+    "Assumption": \[  
+      "Individuals will require the same amount of bandwidth consumption from week to week.",  
+      "All households have their desired level of access to the internet.",  
+      "Cable television does not affect the bandwidth consumption of a household.",  
+      "The demographic information of age group and household income are the best predictors of how an individual will interact with the internet."  
+    \],  
+    "Model": "Calculates the total data usage for a household based on the time spent on various internet activities and the bandwidth required for those activities.  Uses a normal distribution to determine the minimum bandwidth needed to cover 90% and 99% of usage.",  
+    "Results": "Minimum bandwidth required for each of the three example households to cover 90% and 99% of their internet needs.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by changing the hours per week for each activity based on income.",  
+    "Strength and Weakness": \[  
+      "Model takes into account different income levels and the hours spent on each activity for different age groups.",  
+      "Model is not sensitive to changes.",  
+      "Model assumes that all jobs and college classes will be online for the next year due to COVID-19."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Develop a model that produces an optimal plan for distributing/placing cellular nodes in a region.",  
+    "Assumption": \[  
+      "All nodes in each region will be placed at locations throughout each subregion which will cover the maximum distance possible.",  
+      "The population is spread evenly over every subregion.",  
+      "The median age and median household will be representative of the entire population."  
+    \],  
+    "Model": "Calculates the bandwidth demand of an individual in a particular subregion. Multiplies this value by the total population of the subregion to approximate the bandwidth requirement for the entire subregion. The model will then determine the minimum number of nodes required outputting low band for each subregion which will cover the total area of each subregion, returning the value N\_A. Next, it will calculate the minimum number of nodes outputting low band required to meet the bandwidth requirement of each subregion returning the value N\_B.",  
+    "Results": "Optimal number and type of cellular towers (low-band, mid-band, high-band) for each subregion in the three given regions.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Model was able to recognize that a high population density would result in the implementation of high band nodes.",  
+      "Ideally on a smaller scale one would want a model to consider how a particular node could interface over multiple regions."  
+    \]  
+  }  
+}

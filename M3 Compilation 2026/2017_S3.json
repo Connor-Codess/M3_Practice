@@ -1,0 +1,72 @@
+{  
+    "Placement": 3,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a Moody's Mega Math Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The only three factors that account for a significant change in global sea levels are thermal expansion, addition of water mass (through melting glaciers), and changing depths from movement in the Earth's crust, as per \[3\].",  
+        "We assume that effects of tectonic plate movement on sea levels are negligible, because it takes millions of years for a noticeable impact in ocean basins \[19\].",  
+        "Area of the national park is a uniform conical shape with base equal to the total acreage of the park and height equal to the height of the highest peak of the park. This is a valid assumption because although distribution of the land area and heights is often variable and unpredictable, parks generally follow a conical form from border to peak, given insufficient topographical maps and park surface measurements.",  
+        "Mean sea level change for the five national parks given is constant, based on the past 30 years of given station data.",  
+        "Data obtained from the NPS provided an accurate measurement of mean sea levels and acreage.",  
+        "Data obtained from the National Weather Service provided an accurate measurement of monetary damage from flooding.",  
+        "The parks each have an equal inherent value to the nation based on the idea that their designation as a national park justifies their value to the country."  
+      \],  
+      "Model": \[  
+        "Our model was based on a conical design that allowed us to determine the land area of each national park destroyed by rising sea levels using the surface area of the conical figure."  
+      \],  
+      "Results": \[  
+        "After 10 years, Acadia National Park, Kenai Fjords National Park, and Olympic National Park are at low risk. Padre National Seashore is at medium risk. Cape Hatteras National Seashore is at high risk.",  
+        "After 20 years, Acadia National Park, Kenai Fjords National Park, and Olympic National Park are at low risk. There are no parks at medium risk. Cape Hatteras National Seashore and Padre National Seashore are at high risk.",  
+        "After 50 years, Kenai Fjords National Park and Olympic National Park are at low risk. Acadia National Park is at medium risk. Cape Hatteras National Seashore and Padre National Seashore are at high risk."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {}  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Damages are mainly a result of flooding from sea level rise, wildfires, and hurricanes. All other disaster impacts as a result of climate change are negligible. This is a valid assumption because they occur more frequently with a rise in global temperatures and cause the majority of land damage (i.e., national park resources) \[13\].",  
+        "The five different national parks are representative of the wide diversity in landscapes and environments because of their wide berth across the United States, covering all coasts.",  
+        "We assume that effects of tectonic plate movement on sea levels are negligible, because it takes millions of years for a noticeable impact in ocean basins \[19\].",  
+        "Wildfire-Specific Assumptions",  
+        "a) A Class G fire has an upper bound of 10,000 acres of damage, since an infinite upper bound is statistically impossible, given countermeasures.",  
+        "b) All wildfires within their class are uniform, which is given through the law of large numbers.",  
+        "c) A Class A wildfire does .125 acres of damage (the midpoint of the \[0, .25\] interval), a Class B wildfire does 4.875 acres of damage (the midpoint of the (.25, 10\] interval), a Class C wildfire does 55 acres of damage (10, 100\], a Class D wildfire does 200 acres of damage \[100, 300\], a Class E wildfire does 650 acres of damage (100, 1000\], a Class F wildfire does 3000 acres of damage (1000, 5000\], and a Class G wildfire does 7500 acres of damage (5000, 10000\].",  
+        "d) Land is not reused after being burned down within our 50-year time period, due to factors including the inherent risk of repeated deforestation and the time required for reforestation to occur. That is, we assume forests to be a non-renewable resource in our time frame.",  
+        "Hurricane-Specific Assumptions",  
+        "a) Damage caused by hurricanes directly corresponds to their level on the Saffir– Simpson scale by the potential damage factors given by the NOAA \[11\].",  
+        "i) These factors are scaled down based on monetary values of Hurricane Arthur's destruction of Cape Hatteras related to the monetary values of median damages from category 2 hurricanes given by the NOAA \[21,11\]. That is, a category 2 hurricane will be said to damage .4% of a given national park.",  
+        "b) Tropical storms and all other sub-category 1 hurricanes do a minimal amount of damage, making their potential impact 0 \[11,12\].",  
+        "c) The number of hurricanes of per year have increased linearly since the base year 1851\. \[14\]",  
+        "If the sea level recedes (MLS negative), then the newly exposed park land is used by the park; since not all national park land is monitored and tidied, any land exposed is now part of that park."  
+      \],  
+      "Model": \[  
+        "To establish a vulnerability index, we first establish expectations of risk by considering lost surface area. We took into account three main factors: flooding (from Part 1), wildfires, and hurricanes, which are all applicable to these coastal parks. These parks are more susceptible to hurricanes and flooding since they are on the coast."  
+      \],  
+      "Results": \[  
+        "Padre Island National Seashore needs the highest proportion of financial funds (86.87%) and the Kenai Fjords National Park will not be allocated any of the funds."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {}  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "NPS will allocate revenue to the places with the most visitors and most vulnerability.",  
+        "We assume that all national park services accumulate their revenue and the NPS has full discretion on where to allocate revenue.",  
+        "Assume the division of funds are for funds beyond standard fixed operation costs.",  
+        "Valuable assets and resources are uniformly distributed across the national park.",  
+        "All national parks are chosen arbitrarily based on value to people, so we assume all parks are equal in intrinsic value."  
+      \],  
+      "Model": \[  
+        "Considering the previously formed vulnerability scale, we developed a model to establish appropriate investment levels for the NPS based on visitation to each of the five parks for the next 50 years."  
+      \],  
+      "Results": \[\],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {}  
+    }  
+}

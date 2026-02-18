@@ -1,0 +1,69 @@
+{  
+  "Placement": "1",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "The age of the older parent of the student is 45.",  
+      "When calculating the amount of money that a household is expected to contribute, we assume the student's income and assets to be $0.",  
+      "When looking at data for household income and contributing assets, we used median values instead of mean values.",  
+      "Only 25% of the average household's assets are actually factored into the EFC calculation."  
+    \],  
+    "Simplification": \[  
+      "Families hold contributing assets equal to 60% of their family income."  
+    \],  
+    "Model": \[  
+      "Average yearly cost \= EFC \+ Loans \+ Opportunity Cost \= EFC \+ 0.8(1.03P – EFC per year) \+ $15, 750.",  
+      "Tuition and Fees over 4 Years \= summation from i=1 to 4 of (P \* 1.02^(i-1)) ≈ 4.12P"  
+    \],  
+    "Results": \[  
+      "Tables showing the calculated average yearly cost for various scenarios (single parent/one child, two parents/three children) and different household incomes, for both public and private 4-year institutions."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "The probability that an employed graduate stays employed, p, is a logistic function in E, the amount of job experience the graduate has."  
+    \],  
+    "Simplification": \[  
+      "In our computational model for earnings by degree type, we assumed the probability of an unemployed person to become employed in any given month to be constant.",  
+      "The salaries of employed graduates are always the average salary of the field that they are in and does not change over time."  
+    \],  
+    "Model": \[  
+      "Markov Chains to model employment-unemployment dynamics.",  
+      "p \= 1 / (1 \+ k1 \* e^(-E/t1))",  
+      "(EMt, UMt) \= (EMt-1, UMt-1) \* \[\[p, 1-p\], \[1-q, q\]\]^t"  
+    \],  
+    "Results": \[  
+      "Graphs showing the earnings of 1000 simulated people over 240 months for each degree type (Associate, 4-year non-STEM, 4-year STEM) relative to a high school graduate.",  
+      "Most people with Associate degrees break even within 200 months.",  
+      "4-year non-STEM graduates break even later than Associate degree holders but generally earn more in the long run.",  
+      "STEM graduates break even the earliest and earn the most in the long run."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "Graphs and analysis showing the effect of a 10% change in initial college and opportunity costs on the median time to break even for STEM graduates.",  
+      "A 10% decrease in costs leads to a 12% decrease in median time before breaking even, while a 10% increase leads to a 8% increase in median time."  
+    \],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+    "Definition": \[\],  
+    "Assumption": \[\],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "J\_Field \= (sum from i=1 to 10 of C\_i \* R\_i) / 55, where J\_Field is the Job Satisfaction score, C\_i is the scaling constant for factor i, and R\_i is the ranking of factor i."  
+    \],  
+    "Results": \[  
+      "A case study example is provided to illustrate how the Job Satisfaction metric works."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[  
+        "Our career decision tool includes not only personal career preference but also job satisfaction elements such as level of responsibility, opportunity for advancement, location, and contribution to society.",  
+        "Our Markov chain model is discrete and not continuous. Real-world job hirings and firings are not discrete processes since employees are being hired and fired at any given time while our model assumes that hirings and firings happen monthly.",  
+        "We assumed that there is no significant change in the availability of jobs in the chosen field over time. This was due to the unpredictability of economic recessions and to maintain the simplicity of the model.",  
+        "Our model assumes that as job experience increases, so does the probability that a STEM major will retain his or her job or become employed if they become unemployed."  
+    \]  
+  }  
+}

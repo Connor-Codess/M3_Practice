@@ -1,0 +1,50 @@
+{  
+  "Placement": 2,  
+  "Comments": \[  
+    "COMMENT 1: You presented good critical and analytical thinking. Your summary is exceptional and well-explained. Good job\!",  
+    "COMMENT 2: Good job on this paper\!",  
+    "COMMENT 3: Your paper is nicely written and well organized. I like how you perform sensitivity analyses.",  
+    "COMMENT 4: Nice job describing your models and stating answers in the summary, and good job with references and citations. You do a nice job explaining the logic behind logistic regression in Part 1\. Your paper would be stronger with better explanations of the model used in Part 2.",  
+    "COMMENT 5: This is a well-organized presentation. Questions were answered and supporting information for each was provided. Assumption statements and justifications were clearly presented and explained."  
+  \],  
+  "Q1": {  
+    "Definition": "The first problem asks us to predict changes in the housing supply in either the two given U.S. regions or the two given U.K. regions in the next 10, 20, and 50 years. To allow for better generalizability for the following questions, we chose to analyze the U.S. regions of Seattle, Washington, and Albuquerque, New Mexico.",  
+    "Assumption": \[  
+      "1-1. Every region has a carrying capacity for the number of houses built.",  
+      "1-2. The housing supply in Seattle and Albuquerque grew the fastest in 2021.",  
+      "1-3. External factors, such as weather and government policies, do not drastically impact the housing supply on a yearly basis.",  
+      "1-4. Seattle and Albuquerque's household unit growth capacity is proportional to its current housing units."  
+    \],  
+    "Model": "We utilized a logistic regression model to predict changes in the housing supply of Seattle and Albuquerque. Logistic growth often represents variables with resource constraints, making it suitable for housing supply, which is limited by land available for residential development. Furthermore, logistic models are fairly resistant to outliers and can address variations in the housing market resulting from the COVID-19 pandemic. To predict the housing supply S in year t, we used the formula for the logistic function:\\n S \= L / (1 \+ e^(-k(t-t0)))\\nEquation 1: Logistic function",  
+    "Results": "Our logistic function predicts that Seattle will have a housing supply of 451,164 in 2034, 489,908 in 2044, and 529,251 in 2074\. In Albuquerque, our model forecasts a housing supply of 312,107 in 2034, 339,504 in 2044, and 368,391 in 2074\. As expected, the housing supply increases slower in later years for both cities. The housing supply grows at similar rates for",  
+    "Sensitivity Analysis": "To perform a sensitivity analysis on our model, we chose to analyze the impact of changing the carrying capacity of the housing supply in Seattle (L5) on our predictions. We increased the carrying capacity by 5% from 535,249 houses to 562,011 houses.",  
+    "Strength and Weakness": "Since the housing supply is constrained by available land, it is natural to incorporate the carrying capacity of the housing supply into a housing growth model. By implementing a logistic growth model we incorporated the carrying capacity of housing units and showed the intuitive evolution of housing growth rate through our graph...However, our model may not be entirely accurate due to the unreliability of long-term forecasting. We only had 12 years of data to predict the housing supply in 50 years, which is a large extrapolation. Our results highlight this uncertainty, as our confidence intervals were fairly wide for both Seattle and Albuquerque..."  
+  },  
+  "Q2": {  
+    "Definition": "The second problem asks us to forecast changes in the homeless population in the next 10, 20, and 50 years in the two cities we chose in question one: Seattle and Albuquerque.",  
+    "Assumption": \[  
+      "2-1 Changes in the housing market are the largest factor behind changes in homelessness.",  
+      "2-2 Natural disasters, economic crashes, and increased migration do not significantly impact rates of homelessness.",  
+      "2-3 The ratio of income required for housing, mortgage rate, and population are correlated with each other."  
+    \],  
+    "Model": "We chose a vector autoregressive (VAR) model to predict changes in the homeless population of Seattle and Albuquerque. We considered univariate methods, including simple regression, but determined that they would not account for the multifaceted nature of the housing market. Homelessness is a complex issue with no single cause, so it is important to examine different factors driving homelessness. We utilized the VAR model because of its flexibility and ability to analyze multivariate time series data\[8\]. The VAR model has widespread applications in econometrics, making it suitable for predicting the rate of homelessness, which depends on financial factors in the housing market\[9\]...",  
+    "Results": "The vector autoregressive model finds that the homeless population is expected to increase in both Seattle and Albuquerque, which aligns with the current trend of high cost housing. The graphs reveal that growth in homeless populations is logarithmic for both cities. Seattle's homeless population seems to increase more rapidly and to a greater extent...",  
+    "Sensitivity Analysis": "None",  
+    "Strength and Weakness": "As a multivariate time series model, vector autoregression models are well suited to modeling the movements of various time-series data simultaneously while also taking into account feedback between variables in the model\[16\]. VAR models are known to be effective in modeling and forecasting the dynamics of macroeconomic time series and are regarded as efficient alternatives to the traditional system involving several equations\[17\]...However, the utility of VAR becomes limited with higher dimensionality. This is due to the increase in the number of parameters in the VAR model, which can lead to increased uncertainty..."  
+  },  
+  "Q3": {  
+    "Definition": "The third problem asks us to create a model that helps a city determine a long-term plan to address homelessness. Our previous results exhibit a higher reliability for Seattle, so we will be focusing on Seattle.",  
+    "Assumption": \[  
+      "3-1 Migrants purchase vacant housing when moving into their city. Those who migrate, but are unable to attain housing, will be considered as part of the homeless population.",  
+      "3-2 The price to build one unit of affordable housing is constant across a given region.",  
+      "3-3 Sheltered and unsheltered homeless individuals are both considered homeless, as they neither own nor rent a property.",  
+      "3-4 We assume a constant price of $373,285 to build one affordable housing unit in Seattle.",  
+      "3-5 During economic recessions, Seattle's budget and government spending will significantly decrease for affordable housing projects.",  
+      "3-6 During natural disasters, Seattle's affordable housing units and total housing units will decrease due to damages."  
+    \],  
+    "Model": "Our model uses several factors to determine the smallest percentage of Seattle's housing budget needed to build new affordable housing units each year so that all homeless people above a given threshold can gain affordable housing in a given timeline.",  
+    "Results": "To simulate our novel affordable housing optimization model, we tested our model/ We considered 1,000 admissible homeless individuals across an ideal timeline of 15 years. The model produced the following plan for the next 15 years.",  
+    "Sensitivity Analysis": "To test if our model could account for economic recessions, natural disasters, and migrant influx, we set up temporary datasets at an 800-homeless-person threshold and a 20-year development period. The dataset without perturbation succeeded with a 75% budget usage...This analysis showed that our optimization model can holistically account for unforeseen events.",  
+    "Strength and Weakness": "One of the strongest qualities of this model is its inherent reproducibility across several cities given the proper data. Our model is reproducible with a myriad of starting conditions, making it incredibly robust and adaptable to various housing scenarios, and will help housing and urban development planners weigh the different approaches to their policy agenda...However, we only considered three unforeseen circumstances on affordable housing development (economic recessions, natural disasters, migrant influx) which leaves out several other factors that may influence affordable housing development..."  
+  }  
+}

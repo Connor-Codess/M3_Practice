@@ -1,0 +1,76 @@
+{  
+  "Placement": "3",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "Students will contribute 20% of their assets and 50% of their income, while parents will contribute 12% of their assets. (These constants could be changed in our model; however, our data assumes these values.)",  
+      "The amount of money for college available to the student from parents depends only on income, taxes, caring for dependents, and a broad category of other expenses (including house and car payments, utilities, etc.) that account for an amount proportional to the total income (which is a viable assumption, according to CNN Money).",  
+      "If a parent has multiple children in college, they will contribute to their children’s college expenses equally. A student will only contribute to his/her own college fund."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "P \= C \- A",  
+      "X \= P \+ I",  
+      "FC\_total \= min(α(AI\_parents) \+ α(AI\_children) \+ α(AA\_parents) \+ α(AA\_children), P)",  
+      "parents income after taxes ≈ income \- 4.699ln(income) \+ 25.867",  
+      "cost per child per year ≈ 6027 \+ 0.127(income)",  
+      "cost per child per year ≈ 6027 \+ 0.127(income) \+ 4800(2 \- \#Parents)  (for single parent households)",  
+      "FC\_yearly \= min((α(AI\_parents) \+ AA\_parents \* 0.12) / \# kids in college \+ 0.5AI\_student \+ 0.2AA\_student, P/years)",  
+      "L \= P \- FC\_yearly \* years",  
+      "A \= Pell \+ S",  
+      "X \= P \+ ((1.0328)^t \- 1)(max(0, P \- (α(AI\_parents) \+ AA\_parents \* 0.12) / \# kids in college \+ 0.5AI\_student \+ 0.2AA\_student) \* years))"  
+    \],  
+    "Results": \[  
+      "Tables showing the total cost (X) for six sample students to attend three typical colleges (2-year, 4-year public, 4-year private)."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[  
+        "Our model displayed a weakness in determining costs for large, upper class families"  
+    \]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "The jobs chosen to be averaged for all STEM fields, non-STEM fields, Associate’s Degree, and High School Diploma are representative of jobs held by all individuals with their respective education level, ignoring outliers.",  
+      "Income is race and gender neutral.",  
+      "Any major life events, such as getting married, having children, or suffering an unexpected illness, will affect all educational paths approximately equally.",  
+      "The individual will get an average job with an average income immediately upon graduation, and will not change jobs.",  
+      "The individual will not have a job or draw any form of income while receiving their education.",  
+      "Real income remains relatively the same during the individual’s entire life. In other words, the relationship between cost of living and income will remain the same, and changes to this relationship are negligible."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Economic Standing \= Net Worth \* Employment Rate",  
+      "N \= ∫(salary \- cost of living)dt \- (Initial Debt \+ Interest Accrued) \- ∫(yearly debt payment)dt  (integrals from a to b)",  
+      "Er \= Total employed in field / Total people in field",  
+      "S \= \[(∫(salary \- cost of living)dt \- (Initial Debt \+ Interest Accrued) \- ∫(yearly debt payment)dt)\] \* (Total employed in field) / (Total people in field)   (integrals from a to b)",  
+      "yearly debt payment \= salary \* β",  
+      "β \= Payment to income ratio"  
+    \],  
+    "Results": \[  
+      "Table showing Median Annual Income, Employment Rate, and Economic Standing at 10 and 25 years for various career paths (STEM Bachelor's, Non-STEM Bachelor's, Associate's, No Degree).",  
+      "Graph showing Economic Standing over time for the different career paths."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "An unskilled worker will be able to find and work a job which pays $10.00/hour directly out of high school, and will work 40 hours/week for 50 weeks/year",  
+      "An individual will sleep on average 8 hours per night every night"  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Q(C\_im) \= 0.3571 \* W\_im \+ 0.6429 \* O\_im",  
+      "O\_im \= 16.562 \* ln(S\_im \- Loan\_yearly) \- 91.785",  
+      "W\_im \= self assessment of satisfaction from 0% to 100%"  
+    \],  
+    "Results": \[  
+      "Examples of how to use the model with different student scenarios."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  }  
+}

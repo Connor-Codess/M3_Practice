@@ -1,0 +1,72 @@
+{  
+  "Placement": "3",  
+  "Comments": "This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on an M3 Challenge submission is a rules violation.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "Children eat 3 meals per day.",  
+      "Each meal (breakfast, lunch, dinner) contains one third of a child’s daily calorie intake.",  
+      "Eating breakfast has a significant impact on metabolic rate."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Multivariate regression models using machine-learning, based on IOM equations, but incorporating sleep and breakfast consumption."  
+    \],  
+    "Results": \[  
+      "Equations for EER (Estimated Energy Requirement) based on age, gender, weight, height, physical activity, sleep, and breakfast consumption."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "Students in 9th grade are fourteen years old, in 10th grade are fifteen, and so on.",  
+      "Distributions within specific attributes are even.",  
+      "The standard school lunch contains around 850 calories \[3\].",  
+      "The grade distributions for high schools are even, with 25% of the student body being in each grade."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Iterated through a large data set (20 million simulated students) representing the distribution of attributes (age, weight, height, physical activity, sleep, breakfast consumption) in the US population.",  
+      "Calculated the required caloric intake for each simulated student using the model from Part 1.",  
+      "Determined the percentage of students whose caloric needs would be met by an 850-calorie lunch."  
+    \],  
+    "Results": \[  
+      "Nationwide, approximately 60% of high school students would have their caloric needs met by a standard 850-calorie lunch.",  
+      "Satisfaction rates varied significantly by geographic region.",  
+      "Higher rates of obesity/overweight and physical activity correlated with lower satisfaction rates."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "All necessary oils are provided through the cooking oils used when preparing other foods.",  
+      "Suggested portions are appropriate for moderately active students."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Used USDA MyPlate guidelines for nutritional balance.",  
+      "Calculated average cost per ounce for each food group.",  
+      "Created meal plans that met nutritional requirements and stayed within a $6/week/student budget.",  
+      "Considered increasing the budget to $7/week/student to improve taste and quality."  
+    \],  
+    "Results": \[  
+      "Developed a meal plan that met nutritional requirements and stayed within the $6 budget.",  
+      "Suggested using the extra $1 (if the budget is increased to $7) to improve taste by purchasing more fruits, unprocessed meats, and larger portion sizes."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[  
+        "Our equations for calculating lunch caloric intake takes into account several additional factors that current equations do not, namely ethnicity, amount of sleep, and breakfast consumption. This allows for more inclusive and accurate results for lunchtime calorie needs.",  
+        "We indicate that our calorie intake model is in fact better than the IOM model by showing that our model has a lower cost function.",  
+        "Our distributions were created using an extremely large amount of data (20 million) and essentially factors were considered (gender, age, physical activity multiplier, height, weight, time slept, and breakfast consumption)",  
+        "Our meal plan is very inclusive and flexible because we use average costs for a food group rather than individual food costs.",  
+        "Our meal plan is able to satisfy the interests of all thre stakeholders.",  
+        "When individuals are hungry and are consuming food, a lag period exists in which the brain needs to communicate to the rest of the body that it is “full.”",  
+        "In creating our distributions, we did not take into account race because it was not as available for state and regional data.",  
+        "In part 2, our model develops discrete values for all of the variables rather than utilizing probabilistic distributions."  
+    \]  
+  }  
+}

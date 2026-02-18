@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2016_S1_Q2_Assumption",
+    "text": "SECTION: 2016 Champion (S1) Question 2 Assumption\nCONTEXT: User choice for car sharing (Utility).\nCONTENT: The **Utility Function** assumes that all components of the utility (time value, money saved) are **linearly additive**. It assumes that the **perceived value of time** (salary) is the primary driver of transport choice.",
+    "metadata": {
+      "year": "2016",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Utility Function, Linearity",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2016_S1_Q1_Model",
+    "text": "SECTION: 2016 Champion (S1) Question 1 Model\nCONTEXT: Traffic density and speed.\nCONTENT: An Exponential Decay function T(p) = K - e^(-rP) was used to model the 'Traffic Factor' as a function of population density (P). This linked higher density to lower average driving speeds.",
+    "metadata": {
+      "year": "2016",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Exponential Decay Function",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2016_S1_Q2_Model",
+    "text": "SECTION: 2016 Champion (S1) Question 2 Model\nCONTEXT: User choice for car sharing.\nCONTENT: A Utility Function UP = T*S + M was defined, where T is time value, S is salary (opportunity cost), and M is money saved. Users maximized this utility to choose between driving and car-sharing.",
+    "metadata": {
+      "year": "2016",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Utility Function, Optimization",
+      "chunk_index": 1
+    }
+  }
+]

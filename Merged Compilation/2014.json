@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2014_S2_Q3_Assumption",
+    "text": "SECTION: 2014 Runner Up (S2) Question 3 Assumption\nCONTEXT: Optimizing school lunches (Linear Optimization).\nCONTENT: The **linear optimization model** assumes that **all nutritional requirements can be met simultaneously** and that there is a **perfect substitution** between different food sources (e.g., all sources of protein are equally effective).",
+    "metadata": {
+      "year": "2014",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Assumption",
+      "topic": "Linear Optimization, Perfect Substitutability",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2014_S1_Q1_Model",
+    "text": "SECTION: 2014 Champion (S1) Question 1 Model\nCONTEXT: Daily caloric burn.\nCONTENT: An Integral Calculus model was used. The metabolic rate R(t) was integrated over a 24-hour period (integral from 0 to 24) to calculate total calories burned, accounting for variations in activity levels throughout the day.",
+    "metadata": {
+      "year": "2014",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Integral Calculus",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2014_S2_Q3_Model",
+    "text": "SECTION: 2014 Runner Up (S2) Question 3 Model\nCONTEXT: Optimizing school lunches.\nCONTENT: Constrained Linear Optimization was used. The objective was to maximize calories subject to constraints on budget ($7/week) and USDA nutritional guidelines (sodium, grains limits).",
+    "metadata": {
+      "year": "2014",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Linear Optimization, Constraints",
+      "chunk_index": 1
+    }
+  }
+]

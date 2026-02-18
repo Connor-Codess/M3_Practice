@@ -1,0 +1,81 @@
+{  
+  "Placement": "3",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[  
+      "less than 20.548 miles per day to be low, between 20.548 and 41.096 miles to be medium, and greater than 41.096 miles to be high",  
+      "low as less than 0.71 hours per day, medium being between 0.71 and 1.42 hours, and high as above 1.42 hours"  
+    \],  
+    "Assumption": \[  
+      "The probability of a driver being in the low, medium, or high time group given that the driver is already in the low, medium or high mileage group is equal to the probability that the driver is in the same time group as their mileage group multiplied by 1/3 for every time group that they are “away” from being in the time group corresponding to their mileage group.",  
+      "Data from the NHTS 2009 is applicable to today with reasonable accuracy."  
+    \],  
+    "Model": \[  
+      "P(A\&B) \= P(A) \* P(B|A)",  
+      "P(m) \= 96.565e^(-0.027m), where m is the miles driven, and P(m) is a percentage."  
+    \],  
+    "Results": \[  
+      "P(High) \= 31.84%",  
+      "P(Medium) \= 23.61%",  
+      "P(Low) \= 44.55%",  
+      "Medium Mileage, Medium Time: 14.17%",  
+      "Medium Mileage, High/Low Time: 4.72%",  
+      "Low Mileage, Low Time: 30.84%",  
+      "Low Mileage, Medium Time: 10.28%",  
+      "Low Mileage, High Time: 3.43%",  
+      "High Mileage, High Time: 22.04%",  
+      "High Mileage, Medium Time: 7.35%",  
+      "High Mileage, Low Time: 2.45%"  
+    \],  
+    "Sensitivity Analysis": \[  
+      "We tested the sensitivity of this model with the ratio of probabilities being 1/2 and 1/4.",  
+      "Changing the ratio to 1/2 produced no changes in the values greater than 5%, and changing the ratio to 1/4 produced no errors greater than 4%. Because these changes are fairly small, slight errors in the assumed ratio do not significantly affected the final data."  
+    \],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "Everyone who drives will drive more than 6 times a month.",  
+      "The price of gasoline will be held constant.",  
+      "Switching from a round-trip model to a one-way model makes little to no difference to the predicted values.",  
+      "Jockeys will be paid minimum wage. (Floating Car-Sharing Program with Jockeys)",  
+      "Each jockey can move 2 cars per hour. (Floating Car-Sharing Program with Jockeys)",  
+      "People will not be willing to walk more than 15 minutes from a car-sharing station to reach their workplace or home. (Car-Sharing Station Program)",  
+      "No more than two people will share a car. (Fractional Ownership)",  
+      "The real value for car shares is equivalent to 30% of the output of our model. (Fractional Ownership)"  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "S \= 1258.987 \+ 47.385p \+ 30.208t \- 16.524c \- 9.213h \- 80.953i \+ 59.742j (Round Trip Model)",  
+      "S \= 1258.987 \+ 47.385p \+ 30.208t \- 16.524(c \+ P) \- 9.213h \- 80.953i \+ 59.742j, where P \= 0.5M (Floating Car-Sharing Program with Jockeys)",  
+      "S \= 1258.987 \+ 47.385p \+ 30.208t \- 16.52(c \+ l) \- 9.213h \- 80.953i \+ 59.742j, where l is the amount of wages lost. (Car Sharing Station Program)",  
+      "S \= 1258.987 \+ 47.385p \+ 30.208t \- 16.524D \- 9.213h \- 80.953i \+ 59.742j, D \= A/(Eyr.\*365days/yr) \+ M/365\*2 (Fractional Ownership)"  
+    \],  
+    "Results": \[  
+      "Plan 1 consistently outperforms other plans in most cities, except for Knoxville, where Plan 4 is better.",  
+      "Car Shares Index values for each city and plan are provided in Figure 6 and the accompanying graph."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "For the \\"floating\\" one-way system that uses jockeys: Key Assumption: One jockey can move 2 cars per hour. Now Assume If: (A) One jockey can move 1.5 cars per hour (-25% assumption) (B) One jockey can move 2.5 cars every hour (+25% assumption)",  
+      "Overall, the model shows strong resistance to changes in the assumption of the jockey's production rate. The 25% change in the jockey's efficiency resulted in a percent error of less than 7 % for all cities except Knoxville. However, the alarming figure for Knoxville can be attributed to its position on the extrema of the distribution of car shares; because its car shares index is so low, its percent error is magnified and exaggerated."  
+    \],  
+    "Strength and Weakness": \[  
+        "Overall, our model was very strong, with an R^2 value of 0.9769, which indicates that 97.69 % of the variation in the car shares values is accounted for by our model. Furthermore, all of our key variables have strong t-stats and p-values."  
+    \]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[\],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "The same models from Part 2 are used, but the cost variable (c) is adjusted to reflect the change in fuel costs (using electricity instead of gasoline)."  
+    \],  
+    "Results": \[  
+      "Switching to electric cars increases participation in Poughkeepsie, Richmond, and Riverside, but decreases participation in Knoxville.",  
+      "Self-driving cars were not explicitly modeled, but they effectively eliminate the need for jockeys (Plan 2\) and make Plan 2 equivalent to Plan 3."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[\]  
+  }  
+}

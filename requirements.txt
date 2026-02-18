@@ -1,0 +1,32 @@
+# M3_RAG Dependencies
+
+# API requests
+requests>=2.28.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# RAG pipeline
+chromadb>=0.4.22
+openai>=1.12.0
+
+# Data models
+pydantic>=2.0.0
+
+# Token counting for chunking
+tiktoken>=0.5.0
+
+# Agent orchestration
+langgraph>=0.0.1
+langchain>=0.1.0
+anthropic>=0.18.0
+google-generativeai>=0.4.0
+
+# PDF parsing
+pypdf>=3.0.0
+
+# Numerical computing (for implementations)
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+matplotlib>=3.7.0

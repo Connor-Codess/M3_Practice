@@ -1,0 +1,62 @@
+{  
+  "Placement": "Runner Up",  
+  "Comments": \[  
+    "The assumptions were nicely explained and the sensitivity analysis was a nice in conclusion. Try spending a little more time in the discussions of each model especially where the result may be counterintuitive, for example with the negative percent changes in question 1\. The comparison of the overall percentages and actual number of workers in question 3 was very nice.",  
+    "Great job answering all parts of the Challenge\! Not an easy feat\! I especially appreciated the writing. I appreciated knowing your thought process.",  
+    "Your paper is very well done. You provide a strong justification for the use of linear regression in the first part of the problem as well as for the use of weights in the second part and the need to adapt the Bass Diffusion Model in the third part. All parts have a strong section on strengths and weaknesses and a thorough sensitivity analysis. In the third part, the sensitivity analysis would benefit from a. written analysis of the results in addition to the table. Overall, your paper has a great level of detail- there is enough to follow all of your work but you (appropriately) skip over the nitty-gritty of your calculations.",  
+    "Good leverage of data to drive model development, and sensitivity analysis was great to see."  
+  \],  
+  "Q1": {  
+    "Definition": "Create a model to estimate the percentage of workers whose jobs are currently remote-ready. Then apply the model to the cities below to make predictions for the percentage of remote-ready jobs in 2024 and 2027, while accounting for how the inputs to the model will change over time.",  
+    "Assumption": \[  
+      "“Remote-ready” jobs are defined as the set of occupations that could theoretically be done from home without significant loss in efficiency.",  
+      "Technological advancements will not significantly increase the proportion of remote-ready jobs.",  
+      "The number of employees in an industry increases or decreases linearly.",  
+      "The percentage of employees in a specific industry who are working remotely is independent of the city that they work in.",  
+      "The entire workforce of each city is the sum of the number of people employed in the following industries: Mining, logging, construction (MCL), Manufacturing, Trade, transportation, and utilities (TTU), Information, Financial activities (Financial), Professional and business services (ProfessionalBusiness), Education and health services, Leisure and hospitality, Government, Other services"  
+    \],  
+    "Model": "Predicts the total number of employees in a diverse group of industries in each city in 2022, 2024, and 2027 by applying a linear regression to past data. From there we multiply the number of people employed by each industry in each city by the percentage of jobs that can be done remotely.",  
+    "Results": "Portion of jobs that will be remote-workable in Seattle, Omaha, Scranton, Liverpool, and Barry over the next two and five years.",  
+    "Sensitivity Analysis": "Adjusting the theoretical maximum percentage of work that can be done remotely in each industry by ±10%.",  
+    "Strength and Weakness": \[  
+      "By taking into account a comprehensive list of industries, our model nearly eliminates the possibility of industries being erroneously unaccounted for.",  
+      "Our model also gives us the flexibility to apply it to additional cities, given only the prior employment data for each industry that composes its labor force.",  
+      "Our sensitivity analysis shows that the results from our model are not dramatically affected by changes in the theoretical fraction of an individual industry that can be done remotely.",  
+      "The model is also adaptable in the sense that observed changes in the future",  
+      "Our model is based on linear growth over a short time period, and thus would not adapt well to more complex scenarios, such as a rapid exponential change in an industry, or under any long time periods.",  
+      "Our model only uses a handful of data points to make future predictions."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Create a model that predicts whether an individual worker whose job is remote-ready will be allowed to and will choose to work from home.",  
+    "Assumption": \[  
+      "Being permitted to work from home is only dependent on a worker’s industry and independent of demographics.",  
+      "Wanting to work from home rests entirely on six attributes: age, household income, education level, custody of children, and commute time.",  
+      "The six factors are weighted unequally."  
+    \],  
+    "Model": "Compute the probability that an employer will allow their employee to work from home. Then compute the probability that a worker with certain demographic traits would like to work from home.",  
+    "Results": "Probability of an individual both being allowed to work remotely or choosing to work remotely given data on their age, gender, industry, household income, level of education, whether they have children, and the length of their commute.",  
+    "Sensitivity Analysis": "Sensitivity analysis on our model for individual interest in remote work based of demographic factors",  
+    "Strength and Weakness": \[  
+      "The advantage of our approach is that we can take a wide variety of individual factors into account.",  
+      "The weighted averages we computed may not accurately represent the intersections of the demographic traits.",  
+      "Only considering the industry category in the probability of an individual being allowed to work overlooks the large variety of jobs present within the industry"  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Synthesize the first two models to create a model which, for a given city, estimates the percentage of workers who will actually work remotely in 2024 and 2027\. Use these predictions to rank the cities in terms of the magnitude of impact that remote work will have on the city.",  
+    "Assumption": \[  
+      "Adoption of remote work spreads through a combination of word of mouth and technological improvement.",  
+      "The theoretical number of jobs that can reasonably be done remotely will not change significantly in the next five years.",  
+      "The pandemic will last for approximately one more year.",  
+      "The largest impacts on a city will be the positive impacts of having more commute time and more time with one’s children."  
+    \],  
+    "Model": "Predict the total number of jobs that can be done remotely in the given cities in 2024 and 2027\. However, not every job that can be done remotely in the future will be done remotely. This is due to a multitude of reasons, including societal perceptions of remote work and limiting factors such as individuals lacking internet or with complicated home situations.",  
+    "Results": "Fraction of Remote Workers by City and Total Remote Workers by City",  
+    "Sensitivity Analysis": "Adjusting the constants by 10% does not result in a significant change in the final remote fraction.",  
+    "Strength and Weakness": \[  
+      "The weakness is that it is difficult to arrive at an exact value for our constants",  
+      "Another weakness of our model is that it only accounts for two of the effects that remote work has on a city."  
+    \]  
+  }  
+}

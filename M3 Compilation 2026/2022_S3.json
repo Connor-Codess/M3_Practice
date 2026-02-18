@@ -1,0 +1,71 @@
+{  
+  "Placement": "Finalist",  
+  "Comments": \[  
+    "Very nice executive summary. It had a good combination of approach and a summary of results. Very nice job of clearly stating your assumptions through out the paper, and giving detailed justifications along with citations. Excellent job with the strengths and weaknesses. This was a great paper. Well written, clear, and easy to follow. Well done\!",  
+    "The summary was well-written and provided a nice overview of the approached used. The team presented a well thought out discussion of their assumptions and the corresponding justifications. The paper provided a nice discussion of each of the models incorporated. In particular, the model for question 2 showed nice insights. The paper would have benefited from a broader discussion ( with regards to definition) of the impact of remote working on particular cities.",  
+    "Summary is present and adequate but missing some insight into the approaches employed to construct the models. Models are presented and some valid reasoning behind models is provided. Well-written.",  
+    "This is an excellent essay, congratulations\! You provide plenty of sources to sustain your arguments and assumption. The structure and presentation are very sharp. Some things that could be improved. In Q1, it isn’t really clear how the pandemic enters into the model. Demographics could have been considered in Q2. Still, you have done a great job\!"  
+  \],  
+  "Q1": {  
+    "Definition": "Formulate a model that predicts the remote-readiness of jobs in five different cities: Seattle, WA; Omaha, NE; Scranton, PA; Liverpool, England; and Barry, Wales. Using this model, we determine the percentage of jobs that will be remote-ready in 2024 and 2027 for each of these cities.",  
+    "Assumption": \[  
+      "All jobs lie within the following 3 industries: Manual Labor, Human Services, and Corporate.",  
+      "The remote-readiness within each primary industry is the same among all jobs within that industry.",  
+      "All minor industries can be placed within each of the three primary industries as secondary and tertiary industries.",  
+      "The initial proportion of jobs that are remote-ready in a secondary industry is equivalent to the average of the initial proportions of jobs that are remote-ready in its corresponding tertiary industries.",  
+      "Manual labor jobs have already reached their limit of remote readiness.",  
+      "Citizens of the US and the UK share a similar opinion regarding healthcare and education.",  
+      "The number of jobs within the corporate industry that are remote-ready is proportional to the number of remote workers in the corporate industry.",  
+      "The ratios in which secondary industries comprise a primary industry remain constant after 2021."  
+    \],  
+    "Model": "Predict the proportion of workers that each primary industry will have in 2024 and 2027\. Predict how remote-readiness changes within each primary industry. Combine both predictions to arrive at our final prediction of remote-readiness percentage in these five cities.",  
+    "Results": "Percentage of remote-ready jobs in 2024 and 2027 for each city.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Linear model was a strong choice to model job growth across industries because it was able to ignore economic fluctuation to determine the overall trend of industry growth.",  
+      "Utilized the principle of derived demand extensively with healthcare and education.",  
+      "The linear correlation for Barry’s industry growth was lower than expected.",  
+      "Our healthcare Markov chain’s transition weightings may have been biased towards remote healthcare."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Predict whether or not a worker whose job is remote-ready will actually work from home. Consider an employee’s own choice as well as their employer’s choice.",  
+    "Assumption": \[  
+      "An employee’s willingness to work remotely is determined by their happiness gain from staying home.",  
+      "A person’s waking hours are divided into 2 main portions: active work and free time.",  
+      "A person is maximally happy during free time.",  
+      "The factors influencing a person’s happiness at work are job satisfaction, anxiety of COVID infection, the need to look after family members, and the desire to socialize with others",  
+      "The only factor that employers consider when deciding whether to give their employees the choice to work remotely is worker productivity.",  
+      "The only factors that impact an employee’s work output are their WiFi speed, their care taking responsibilities, and overall happiness.",  
+      "Employees sleep for 7 hours each day, leaving 17 working hours per day.",  
+      "Employers will not prevent in-person work.",  
+      "The amount of work that a remote worker does is the same as an in-person worker.",  
+      "Company WiFi speeds are always adequately high."  
+    \],  
+    "Model": "Compute the probability that an employer will allow their employee to work from home. Compute the probability that a worker with certain demographic traits would like to work from home.",  
+    "Results": "Probability of an individual both being allowed to work remotely or choosing to work remotely given data on their age, gender, industry, household income, level of education, whether they have children, and the length of their commute.",  
+    "Sensitivity Analysis": "Sensitivity analysis on our model for individual interest in remote work based of demographic factors",  
+    "Strength and Weakness": \[  
+      "The advantage of our approach is that we can take a wide variety of individual factors into account.",  
+      "The weighted averages we computed may not accurately represent the intersections of the demographic traits.",  
+      "Only considering the industry category in the probability of an individual being allowed to work overlooks the large variety of jobs present within the industry"  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Synthesize our answers from Parts 1 and 2 to create a model which will predict the percentage of workers that will work remotely in a given city. Predict the percentage of employees that will work remotely in 2024 and 2027 in the cities that we assessed in Part 1\. Rank these cities by the extent of the impact that remote work will have on each city.",  
+    "Assumption": \[  
+      "Only children aged 0-3 need care-giving time.",  
+      "The average number of children per family is constant regardless of city.",  
+      "Each employee works 8 hours a day.",  
+      "Employees’ WiFi speed relative to the WiFi speed required by their jobs stays constant.",  
+      "COVID-19 will have negligible impact in 2024 and 2027."  
+    \],  
+    "Model": "Monte Carlo simulation to predict the percentage of workers who will work remotely in each city.",  
+    "Results": "Graphs of Monte Carlo simulations for remote worker percentage in each of the five cities for 2024 and 2027.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "The Monte Carlo simulation was able to successfully synthesize the models developed by the previous two parts to create a final projection.",  
+      "A weakness of our model was that we weren’t able to find data on the variance of some factors."  
+    \]  
+  }  
+}

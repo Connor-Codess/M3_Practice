@@ -1,0 +1,22 @@
+﻿Local governments aim to provide the best possible recreational services to their residents.
+However, competing demands, limited funds, and space constraints often lead to debate about what is “best” to develop for residents [1,2]. For this question, the city of Boston, Massachusetts has asked your team to help them navigate the challenge of how to best invest in a future recreational development project.
+As of 2025, Boston manages more than 800 recreational facilities overseen by its Parks and Recreation Department, including baseball fields, playgrounds, swimming pools, skate parks, and more. The city is planning to develop a new facility on a plot of land and is considering six options: splash pad, swimming pool, dog park, skate park, tennis/pickleball facility, or a combined recreation and senior center. The Boston Parks and Recreation Department is seeking your input in developing a quantitative assessment and ranking of these options.
+In addition to development, building, and maintenance costs, they want to consider other major factors in their ranking and ultimate decision, such as: What is the current and potential future popularity of the activities supported by each facility? Are there any possible health or social impacts of the activity, including unforeseen positive or negative consequences?
+Using the data set provided, and any other data you discover and wish to include, address the three questions below to help the Parks and Recreation Department quantify and rank the options according to the factors above, as well as any others that your team deems important.
+Q1: Predict the demand for each of the development options (splash pad, swimming pool, dog park, skate park, tennis/pickleball facility, or combined recreation and senior center) over the next 10 years.
+Q2: Quantify the social and health impacts of each of the six options.
+Q3: Synthesize your results from Q1 and Q2 to create a ranking system for the Boston Parks and Recreation Department to help them determine how to allocate their resources for the development of a new recreational facility. You may want to consider costs associated with development, building, and maintenance, as well as any other factors your team deems important.
+Note: One goal of this problem is to gain experience with the mathematics behind ranking. Ranking questions have appeared in past M3 Challenges, and a well-justified ranking is often the goal of real-world modeling problems. As you work on this practice problem, we encourage your team to devote significant time to Q3, which asks you to synthesize the results of Q1 and Q2 into a final ranking. Think about each decision you made to create this ranking and do your best to mathematically justify those choices. Explain all variables that you included, any weights you used, and any other mechanics instrumental to your ranking. Are they appropriate and do they mathematically accomplish what your team intends them to?
+Data: Some data for Boston parks has been provided from source 3 below for you to use if you choose. Source 3 contains data for many cities and many types of recreational facilities.
+Sources
+1. Planning a Park: From Concept to Reality, National Recreation and Park Association. https://www.nrpa.org/parks-recreation-magazine/2017/march/from-concept-to-reality/
+2. Planning for Future Parks, City of Boston. https://www.boston.gov/departments/parks-and-recreation/planning-for-future-parks
+3. Data Source: Park Data Downloads, Trust for Public Land.  https://www.tpl.org/park-data-downloads
+________________
+
+
+This problem was written by members of the Problem Development Committee: Dr. Jennifer Gorman, Lake Superior State University; Dr. Neil Nicholson, University of Notre Dame; Dr. Chris Musco, New York University.
+________________
+
+
+Reference and other links included on this page were current and valid at time of original posting; if they are no longer valid or live please look for similar or updated links in context with the referenced topic.

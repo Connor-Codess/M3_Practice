@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2022_S1_Q2_Assumption",
+    "text": "SECTION: 2022 Champion (S1) Question 2 Assumption\nCONTEXT: Individual choice for remote work.\nCONTENT: The model assumes that a worker's choice is **purely rational and economic**, driven only by maximizing utility (Economic Benefit), and ignores social or cultural factors. It assumes that **individual productivity** is either unchanged or can be accurately quantified despite being remote.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Rational Choice, Productivity",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2022_S2_Q2_Assumption",
+    "text": "SECTION: 2022 Runner Up (S2) Question 2 Assumption\nCONTEXT: Probability of remote work.\nCONTENT: The model assumes that the probability of being allowed to work remotely (P(Allowed)) is **independent** of the probability of the worker wanting to work remotely (P(Want)). It assumes all demographic factors are **linearly weighted**.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S2",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Independence, Linear Weighting",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2022_S1_Q1_Model",
+    "text": "SECTION: 2022 Champion (S1) Question 1 Model\nCONTEXT: Predicting remote-ready jobs.\nCONTENT: Linear Extrapolation was used on historical employment data for specific industries. The model assumed that future job growth/decline would follow the linear trends observed in city-specific data.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Linear Extrapolation, Regression",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2022_S1_Q2_Model",
+    "text": "SECTION: 2022 Champion (S1) Question 2 Model\nCONTEXT: Individual choice to work from home.\nCONTENT: A Monte Carlo Simulation modeled the probability of a worker choosing remote work. It calculated the 'Economic Benefit' for thousands of simulated individuals based on variables like commute time, productivity, and childcare costs.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Monte Carlo Simulation, Probabilistic Modeling",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2022_S2_Q2_Model",
+    "text": "SECTION: 2022 Runner Up (S2) Question 2 Model\nCONTEXT: Probability of remote work.\nCONTENT: The team computed a Weighted Probability. They calculated P(Allowed) based on industry and P(Want) based on demographics (age, income, commute). The final probability was the product of these two independent probabilities.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S2",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Weighted Probability, Independent Events",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2022_S3_Q1_Model",
+    "text": "SECTION: 2022 Third Place (S3) Question 1 Model\nCONTEXT: Remote readiness prediction.\nCONTENT: A Hybrid Linear/Markov approach. Linear regression predicted general industry growth, while a Markov Chain was used specifically to model the transition of healthcare jobs towards remote readiness.",
+    "metadata": {
+      "year": "2022",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Linear Regression, Markov Chain",
+      "chunk_index": 1
+    }
+  }
+]

@@ -1,0 +1,80 @@
+{  
+  "Placement": "2",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "There are no significantly impactful economic crises.",  
+      "The cost of school over the course of four years does not change, and the student loan interest rate does not change over time.",  
+      "The college students will pursue one major, and will not have external sources of income while in school (i.e., part-time jobs).",  
+      "All community college students in our model transfer over to a 4-year institution for their final two years of the Bachelor's degree.",  
+      "A student who receives two free years of education under President Obama's plan will not also receive other aid such as scholarships for those two years.",  
+      "Students otherwise attempt to minimize costs (i.e., they will not waste money on buying gourmet food, cars, luxuries, etc.); similarly, students accept all offers of financial aid.",  
+      "Need-based financial aid comes solely from the government. The typical college does not provide need-based financial aid to students.",  
+      "Students pay off their government loans according to the 10-year plan for repayment as proposed by the U.S. Department of Education."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "Z \= Σ(Ci \- Fi) from i=1 to 4",  
+      "Fi \= G(I, E, D) \+ Wi \+ Si",  
+      "A \= P \* (r(1+r)^n) / ((1+r)^n \- 1)",  
+      "Total \= Oavg \+ 120 \* A \= Oavg \+ 120 \* \[(Σ(Ci \- G(I, E, D) \- Wi \- Si) \- Oavg) \* (r(1+r)^n) / ((1+r)^n \- 1)\] from i=1 to 4"  
+    \],  
+    "Results": \[  
+      "Tables showing total costs for different household situations (income, family size, type of college) with and without two years of free community college."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "10% changes in variables generally producing small percent changes in total cost. Model was most sensitive to changes in tuition (around 20% resulting change in T)."  
+    \],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "Personal finances are budgeted according to the 50/30/20 rule of thumb (WSJ).",  
+      "Unemployment rate is kept constant.",  
+      "The rate at which income increases is constant."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "αn+1 \= .2 \* (In \- Tn/10) \+ αn",  
+      "FSn \= (1 \- u) \* (2 \* αn / I)",  
+      "FBn \= (1 \- u) \* α"  
+    \],  
+    "Results": \[  
+      "Graph showing Financial Benefit over time for five different career paths: HS, STEM CC, STEM CC+UG, STEM UG, and non-STEM UG.",  
+      "Individuals with Bachelor's degrees in STEM fields eventually make more money, with their net financial benefit eclipsing those of working high school graduates about 10 years after high school."  
+    \],  
+    "Sensitivity Analysis": \[  
+      "No sensitivity analysis was performed, but potential methods are discussed."  
+    \],  
+    "Strength and Weakness": \[\]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "The six traits we use are comprehensive enough give a good educational fit for the student.",  
+      "The student is not aiming for any education beyond the undergraduate level."  
+    \],  
+      "Simplification":\[  
+          "We only need to use two traits to create the dominant strategy."  
+      \],  
+    "Model": \[  
+      "Borda count method to quantify preferences from a personal preference survey.",  
+      "Creation of a key-matrix based on a survey of the general public.",  
+      "Use of game theory (2xN payoff matrix) to determine the best academic path based on the student's preferences and the key-matrix."  
+    \],  
+    "Results": \[  
+      "Example of how the model works with a sample student survey and key-matrix."  
+    \],  
+    "Sensitivity Analysis": \[\],  
+    "Strength and Weakness": \[  
+        "Our methods are highly customizable and adaptable. We consider a wide variety of factors (e.g., family income, household size, cost of attendance, etc.) to give a result tailored to the individual or household’s preferences and characteristics.",  
+        "Our model is both original and realistic. Our computations (except for federal aid, which is not calculable using any publicly available formula) are developed from our assumptions and fundamental mathematical/economic principles but are still relatively close to values from other studies.",  
+        "Our model is robust. Moderate changes in initial parameters produce relatively small (at most moderate) changes in our results.",  
+        "The flexibility of our model is double-sided—though it is adaptable and well tailored to individual circumstances, a large amount of input is required to obtain the best results. This could be potentially tedious for the user.",  
+        "We made the simplifying assumption that several factors, such as tuition, loan rates, and unemployment rate, do not change. In reality, these factors are not constant.",  
+        "Due to computational limitations, we could not analytically find the optimal strategies for payoff matrices with more than two columns."  
+    \]  
+  }  
+}

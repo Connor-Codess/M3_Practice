@@ -1,0 +1,66 @@
+{  
+  "Placement": "Champion",  
+  "Comments": \[  
+    "The report begins with an excellent Executive Summary. Its introduction sparks curiosity and makes the reader eager to see what you did. One suggestion might be to tailor the specific mathematical language in the summary to be more readable for the non-mathematician. Moreover, could they be written more in your language than that of your sources? Keep in mind that you’re often writing for those completely detached from the process (and even more likely not at all “mathy\!”). The approaches your took for the questions are each appropriate and advanced. The paper is very easy to follow: organized, labelled, and having good flow. You brought in and considered important things for your assumptions and justifications. You assessed your work with strengths and weaknesses.",  
+    "A particular weakness in Q1 (“difficult to pinpoint the exact decision process”) needs to be expanded upon; the client you’re writing for would question this mightily. You seem to have a great feel for the process—justify your work—it’s good\! Simulations are a great way to attack Q2 and your histograms are easily interpreted. Visuals in Q3, and the inclusion of grids, population densities, and centers of mass, are all excellent choices.",  
+    "It seems your probability of internet usage is uniformly distributed with respect to time. A good improvement would be to weight the probability to high-internet usage times. Nevertheless, I thought this was a very well written paper. Good job\!",  
+    "You have a gift for clearly explaining the interesting processes you followed. Your graphs and sketches are well placed."  
+  \],  
+  "Q1": {  
+    "Definition": "Predicting the cost per unit of bandwidth (Mbps) over the next decade for consumers in the United States and the United Kingdom.",  
+    "Assumption": \[  
+      "There will be no significant policy changes regarding standards for internet speed, cost, and availability in the next 10 years.",  
+      "The amount of internet provided in Mbps per US dollar will be constant regardless of how much money is spent.",  
+      "Future internet usage and cost trends in the UK are comparable to those in US states and depend on the same factors.",  
+      "The population density and cost of living index in a given area increase by 1.31% and 2.20% respectively, which are sensible rates for the United States."  
+    \],  
+    "Model": "Random forest regression, a supervised machine learning algorithm that combines the predictions of multiple decision trees to give accurate forecasts.",  
+    "Results": "Model predicts a decrease of $0.57 (from $4.33 to $3.76) in the average price per Mbps in the US and a decrease of $0.57 (from $3.18 to $2.61) in the UK.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "The random forest model allows us to effectively combine multiple factors to make a prediction.",  
+      "The algorithm is robust to skewed, non-linear data which makes it ideal for processing features such as population density.",  
+      "The ensembling process minimizes the risk of overfitting.",  
+      "It is difficult to pinpoint the exact decision process that the algorithm undergoes to arrive at its prediction."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Finding what minimum bandwidth households would need to cover their internet usage 90% and 99% of the time.",  
+    "Assumption": \[  
+      "Each day and week will have the same probabilities.",  
+      "Each day’s usage (Sunday vs. Saturday vs. Monday etc.) does not differ substantially",  
+      "The people in the given situations are in the US and not the UK.",  
+      "People will always use best quality streaming for Youtube (HD) and Netflix (Ultra HD)",  
+      "Each pre-college school day is 5 hours, giving a total of 25 hrs/week. Every class will also be on a video conference format.",  
+      "College students also leverage online platforms for their classes in the wake of a pandemic.",  
+      "Teachers’ work hours are the same as students (5 hours) and they do not work after school hours.",  
+      "People are awake to use the internet 16 hours a day.",  
+      "People only access the internet through one medium at a time and do not multitask."  
+    \],  
+    "Model": "Simulated the bandwidth demand for each scenario for every single hour for an entire week. Given that people are awake around 16 hours a day, we simulated 7 · 16 \= 112 hours of internet usage. For each hour, the probability that a person would be performing a given internet activity is proportional to the percentage of time they spend on that activity over the entire week.",  
+    "Results": "Required bandwidth to satisfy 90% of bandwidth demand and 99% of demand for each scenario.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "This model is accurate at predicting bandwidth usages and the amount of bandwidth required in order to satisfy those demands.",  
+      "This model is very flexible in considering multiple factors and internet usage caused by various internet activities.",  
+      "The data utilized to calculate the probabilities was from the first quarter of 2020.",  
+      "People usually have activities they will perform at a certain time"  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Develop a model for optimally placing cellular nodes in a given region using population, demographic, and bandwidth usage data.",  
+    "Assumption": \[  
+      "The price of 5G internet plans will remain constant across different regions.",  
+      "The population densities remain constant across the hypothetical subregions created by M3",  
+      "A majority of households that have annual incomes ≥ $103,689.32 and are located in a subregion with a minimum population density of 777 people per square mile will naturally choose the 5G plan",  
+      "Walls and other natural barriers will not hinder 5G speeds inside the effective signal range."  
+    \],  
+    "Model": "Mathematical model calculates the center of mass for each region, where mass refers to population, using the assumption that the population density is uniformly distributed throughout the region. By utilizing a small tiling of the region, we can approximate the moments of the x-axis and y-axis and obtain the coordinates of the center of mass.",  
+    "Results": "Coordinates for 4G internet node placement for subregion B2, and 5G internet node placement for subregion C2.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Our model is particularly accurate at determining the optimal point for placing 4G and 5G nodes due to our thorough mathematical approach.",  
+      "Our model does not deem 4G and 5G networks in a given region as mutually exclusive; therefore, there is a chance for overlap between the two networks."  
+    \]  
+  }  
+}

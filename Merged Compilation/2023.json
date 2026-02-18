@@ -1,0 +1,98 @@
+[
+  {
+    "id": "2023_S1_Q1_Assumption",
+    "text": "SECTION: 2023 Champion (S1) Question 1 Assumption\nCONTEXT: Predicting E-bike sales (ARIMA).\nCONTENT: The model assumes that the market has **no carrying capacity** (limit on total possible sales) for the next 10 years. It also assumes that the **proportional relationship** between e-bike sales and Plug-in Hybrid Electric Vehicles (PHEVs) will continue to hold true, allowing PHEVs to be used as a proxy variable.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Market Limits, Proxy Variables",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S1_Q3_Assumption",
+    "text": "SECTION: 2023 Champion (S1) Question 3 Assumption\nCONTEXT: Markov Chain transport modeling.\nCONTENT: The Markov Chain assumes that the **transition probabilities** (e.g., the likelihood of switching from car to e-bike) remain **constant** over the entire simulation period. It also assumes that the **choices of individuals are independent** of one another.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Assumption",
+      "topic": "Markov Chains, Constant Probability",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S1_Q1_Model",
+    "text": "SECTION: 2023 Champion (S1) Question 1 Model\nCONTEXT: Predicting E-bike sales.\nCONTENT: The team used an Autoregressive Integrated Moving Average (ARIMA) model. Due to lack of direct monthly e-bike data, they inferred sales based on the proportional relationship with Plug-in Hybrid Electric Vehicles (PHEVs) and seasonality.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "ARIMA (Time Series), Proxy Variable Inference",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S1_Q2_Model",
+    "text": "SECTION: 2023 Champion (S1) Question 2 Model\nCONTEXT: Analyzing factors influencing sales.\nCONTENT: A Granger Causality Test was performed to determine if time series of factors (gas prices, environmental awareness) could forecast e-bike sales. This method statistically differentiated between mere correlation and predictive 'causality' based on time lags.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Granger Causality Test, Statistical Hypothesis Testing",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S1_Q3_Model",
+    "text": "SECTION: 2023 Champion (S1) Question 3 Model\nCONTEXT: Impact of switching transport modes.\nCONTENT: A Markov Chain analysis modeled the migration of commuters between different modes of transport (cars, public transit, bikes, e-bikes) over time. A transition matrix defined the probabilities of switching from one mode to another.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Markov Chain, Transition Matrix",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S2_Q1_Model",
+    "text": "SECTION: 2023 Runner Up (S2) Question 1 Model\nCONTEXT: E-bike sales prediction.\nCONTENT: A Logistic Growth Model was used, assuming the market has a carrying capacity equal to the total population. The function S = L / (1 + e^-k(t-t0)) was fitted to historical data.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S2",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Logistic Growth Model",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S2_Q3_Model",
+    "text": "SECTION: 2023 Runner Up (S2) Question 3 Model\nCONTEXT: Environmental impact quantification.\nCONTENT: A Monte Carlo Simulation was used to generate a distribution of e-bike owners and their riding habits. This allowed the team to aggregate individual impacts (CO2 saved, life years gained) into a total population estimate while accounting for variance.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Monte Carlo Simulation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2023_S3_Q1_Model",
+    "text": "SECTION: 2023 Third Place (S3) Question 1 Model\nCONTEXT: Market adoption of e-bikes.\nCONTENT: The Bass Diffusion Model was applied. This differential equation model categorizes consumers into 'Innovators' (early adopters) and 'Imitators' (influenced by others), which is ideal for new technology adoption curves.",
+    "metadata": {
+      "year": "2023",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Bass Diffusion Model, Differential Equations",
+      "chunk_index": 1
+    }
+  }
+]

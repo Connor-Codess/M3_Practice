@@ -1,0 +1,57 @@
+{  
+  "Placement": "Runner Up",  
+  "Comments": \[  
+    "Good that you provided some results in your summary. Summaries are the first thing read and set an indication of what is to come. Model 1 good, but present and discuss R^2. Need to include all 10 years, not just a few. Why a normal distribution for Model 2—did you analyze the data? The idea of SNR is excellent but you misused it. Overall better than average.",  
+    "The choice of a logistic curve for modeling internet bandwidth in problem 1 is an interesting choice, but one that could benefit from closer scrutiny. Tables, such as 2.2.1, would benefit from labeling the units of numbers provided. The extrapolation to a logistic curve in Figure 2.2.1 is curious; it seems the data would better support a linear relationship which would be more conservative. The sensitivity analysis to provide 80% confidence intervals was original and fresh, for parts 1 and 3."  
+  \],  
+  "Q1": {  
+    "Definition": "Predict the percentage of semi-trucks that will be electric 5, 10, and 20 years from 2020.",  
+    "Assumption": \[  
+      "There are no electric semi-trucks currently in operation.",  
+      "The market for semi-trucks demands the production of 210,466 semi-trucks per year.",  
+      "Electric semi-trucks have the same life expectancy as diesel semi-trucks (12 years).",  
+      "The total difference in cost between electric and diesel semi-trucks is proportional to the probability that a diesel semi-truck will be replaced with an electric semi-truck."  
+    \],  
+    "Model": "Markov chain model. Semi-trucks are divided into short haul, regional haul, and long haul. Transition matrices are created for each type, with probabilities based on cost differences between electric and diesel trucks.",  
+    "Results": "Predicted percentages of electric semi-trucks for short haul, regional haul, and long haul in 5, 10, and 20 years.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "The Markov chain model allows for multiple factors to be accounted for.",  
+      "Accounts for new production rates, life expectancy, and cost differences.",  
+      "Implicitly accounts for the current fleet of operational semi-trucks.",  
+      "Probability values in the transition matrices are estimates.",  
+      "Does not account for hybrid vehicles."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Determine the most effective distribution of Electric Vehicle Supply Equipment (EVSE) along common shipping corridors in terms of money and time saved. Find the best charging schedule for drivers.",  
+    "Assumption": \[  
+      "The state of charge of a LiFePO4 rechargeable battery exponentially approaches 100%.",  
+      "The range of a semi truck is directly proportional to its state of charge.",  
+      "All EVSEs use Direct Current Fast Charging hardware.",  
+      "Semi-trucks will stop to recharge upon reaching a state of 20% or less."  
+    \],  
+    "Model": "Calculates the optimal charging value (Cf) to minimize total charging time. Uses Monte Carlo simulations to determine the optimal number of charging stops and the optimal number of charging stations per truck stop.",  
+    "Results": "Optimal charging interval of approximately 90 minutes. Optimal number of chargers per station for various corridors.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Models are fairly robust due to the nature of Monte Carlo simulations.",  
+      "Presence of significant outliers in the simulation results."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Create a model that ranks which trucking corridors should begin development of charging stations first.",  
+    "Assumption": \[  
+      "The cost per mile of Semi Shipping is $2.75.",  
+      "The cost is $22,626 to install one DCFC station."  
+    \],  
+    "Model": "Calculates an importance score for each corridor based on economic growth, environmental considerations, and total cost of installation.  Economic growth is estimated based on time saved due to faster charging. Environmental considerations are based on state-level actions on electric vehicles. Total cost is based on the number of charging stations needed.",  
+    "Results": "Ranking of the five trucking corridors based on the calculated importance score.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Considers three different variables (economic growth, environmental considerations, cost).",  
+      "Other variables could be considered.",  
+      "Cost has a high standard deviation."  
+    \]  
+  }  
+}

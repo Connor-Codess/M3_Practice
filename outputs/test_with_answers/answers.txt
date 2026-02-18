@@ -1,0 +1,47 @@
+M3 SOLUTION - ANSWERS TO QUESTIONS
+==================================================
+
+QUESTION 1:
+----------------------------------------
+Develop a mathematical model to predict EV adoption rates over the next decade for a state of your choice. Your model should account for economic factors, infrastructure, and technological improvements.
+
+ANSWER:
+----------------------------------------
+[Answer not explicitly captured from code output]
+
+Note: The solution code may address this question,
+but no explicit answer section was generated.
+Check solution.py and execution_log for details.
+
+==================================================
+
+QUESTION 2:
+----------------------------------------
+Analyze how changes in key parameters (such as battery cost, charging infrastructure, and gas prices) affect your adoption predictions. Which factors are most influential?
+
+ANSWER:
+----------------------------------------
+[Answer not explicitly captured from code output]
+
+Note: The solution code may address this question,
+but no explicit answer section was generated.
+Check solution.py and execution_log for details.
+
+==================================================
+
+QUESTION 3:
+----------------------------------------
+Recommend policies that a state government could implement to accelerate EV adoption while considering budget constraints and equity concerns.
+
+ANSWER:
+----------------------------------------
+[Answer not explicitly captured from code output]
+
+Note: The solution code may address this question,
+but no explicit answer section was generated.
+Check solution.py and execution_log for details.
+
+==================================================
+
+ANSWER COVERAGE: 0/3 questions explicitly answered
+Missing explicit answers for: Q1, Q2, Q3

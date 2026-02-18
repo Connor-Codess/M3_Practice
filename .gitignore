@@ -1,0 +1,32 @@
+# Environment files with secrets
+keyholder.env
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vector DB (will be large)
+chroma_db/
+*.chromadb
+
+# Claude Code local settings
+.claude/

@@ -1,0 +1,64 @@
+{  
+  "Placement": 3,  
+  "Comments": \[\],  
+  "Q1": {  
+    "Definition": "Predict the spread of nicotine use due to vaping over the next 10 years. Analyze how this growth compares to that of cigarettes.",  
+    "Assumption": \[  
+      "Every person has the same probability of addiction, regardless of individual factors.",  
+      "Addiction is not a spectrum. One can only be quantified as addicted or not addicted.",  
+      "The United States is representative of more economically developed countries’ (MEDCs) nicotine use through vaping."  
+    \],  
+    "Model": "Modified SIRS epidemiology model (SIRI model) to account for relapse to the infected state. Uses differential equations to model the flow between compartments (Susceptible, Infected, Recovered, Not Susceptible).",  
+    "Results": "Predicted proportions of susceptible, infected, and recovered individuals for both vaping and cigarettes over a 10-year period. Vaping is predicted to increase significantly, surpassing cigarette use.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by varying the interaction rate (γ) between susceptible and infected individuals.",  
+    "Strength and Weakness": \[  
+      "Model is realistic and makes sense in context.",  
+      "Model is flexible and can be adapted to changing parameters.",  
+      "Assumes every human is equally likely to engage with nicotine vaping.",  
+      "Model does not account for long-term trends.",  
+      "Lacks data for recovery rates from nicotine-vaping addiction."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Create a model that simulates the likelihood that a given individual will use a given substance, accounting for social influence, characteristic traits, and properties of the drug itself. Demonstrate the model by predicting how many students among a class of 300 high school seniors with varying characteristics will use nicotine, marijuana, alcohol, and unprescribed opioids.",  
+    "Assumption": \[  
+      "High school seniors are 17 years old.",  
+      "The 2005-2006 HBSC survey sample is representative of U.S. high school seniors.",  
+      "All tobacco products contain nicotine.",  
+      "The only opioids considered in the model are heroin and morphine.",  
+      "Race and gender distributions in high schools are roughly the same as their distributions in the United States as a whole.",  
+      "Academic success should not be used as a quantifiable measurement of drug usage.",  
+      "Income can be used as a representative measure of socioeconomic status.",  
+      "The 300 high school seniors are composed of an average distribution of traits."  
+    \],  
+    "Model": "Binary multivariate logistic model. Uses a weighted average system to combine the effects of race, gender, and socioeconomic status on the probability of substance use.",  
+    "Results": "Predicted number of students in a class of 300 who will use nicotine, marijuana, alcohol, and opioids.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by comparing model predictions with different age ranges (12-17 vs. total population).",  
+    "Strength and Weakness": \[  
+      "Model is specific to the situation of high school seniors.",  
+      "Uses a weighted average system to combine multiple factors.",  
+      "Model is resilient to changes in input parameters.",  
+      "Model is not applicable to the general population.",  
+      "Data used is from 2005-2006.",  
+      "Model does not account for all possible factors influencing drug use.",  
+      "Model assumes independence between factors (e.g., race and socioeconomic status)."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Develop a metric for the impact of substance use, considering both financial and nonfinancial factors. Use the metric to rank the substances listed in Part II.",  
+    "Assumption": \[  
+      "Each of the four categories of drug harm are weighted equally.",  
+      "The model applies only to substance abusers.",  
+      "Unprescribed opioids consist solely of heroin."  
+    \],  
+    "Model": "Calculates a harm score based on physical harm, dependence, social harm, and economic impact. Physical harm, dependence, and social harm are based on expert surveys. Economic impact is based on GDP loss due to reduced lifespan. The harm score is multiplied by a risk scaler (based on the number of users) to obtain a total impact score.",  
+    "Results": "Ranking of substances based on total impact score: Alcohol, Cigarettes, Opioids, Marijuana.",  
+    "Sensitivity Analysis": "Sensitivity analysis performed by changing the weights of the different harm categories.",  
+    "Strength and Weakness": \[  
+      "Model considers multiple factors and their interactions.",  
+      "Model is resilient to changes in input parameters.",  
+      "Based on expert surveys, which may be subjective.",  
+      "Weights assigned to different factors are subjective."  
+    \]  
+  }  
+}

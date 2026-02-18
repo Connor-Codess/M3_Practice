@@ -1,0 +1,118 @@
+{  
+    "Placement": 1,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a MathWorks Math Modeling Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[  
+        "Food waste: \\"Food waste is part of food loss and refers to discarding or alternative (non-food) use of food that is safe and nutritious for human consumption along the entire food supply chain, from primary production to end household consumer level\\" \[3\]",  
+        "Recoverability: Food waste is recoverable if it can be repurposed from waste to human-grade food."  
+      \],  
+      "Assumption": \[  
+        "Consumption waste is irrecoverable.",  
+        "Production waste is only recoverable in postharvest handling, storage, processing and packaging, and distribution (e.g. supermarkets).",  
+        "The problem statement asks us to “determine if \[a state\] could feed its food-insecure population using the wasted food generated in that state.” We interpret “using the wasted food” to mean directly feeding food-insecure people with the wasted food, and not indirect solutions such as using the food waste as biofuel and exporting energy in exchange for high-quality food.",  
+        "Calories are an accurate measure of the nutritional value of food.",  
+        "A year has 365 days (as opposed to 366)."  
+      \],  
+      "Model": \[  
+        "Ultimately, our model will evaluate the quantity of food waste compared to the necessary food for food-insecure individuals. As per assumption G.1, we will be using calories to compare the net amount of food that can be reallocated."  
+      \],  
+      "Results": \[  
+        "Out of the 4.32 million food-insecure individuals in Texas, only 1.95 million could be served by food waste at 2,000 kcal/day. Alternatively, the entire food-insecure population could be sustained at just 905 kcal/day."  
+        , "Performing this calculation for the state of Texas, the results for TPWi, as well as the total are shown below.",  
+        "Comparing to the cited number of food-insecure individuals in the state of Texas, it is clear that even if all food waste that was fit for human consumption was to be repurposed for consumption by food-insecure individuals, it would not be sufficient to guarantee nutrition for those individuals \[7\]. Optimally, the food waste in question could provide for all individuals, but only at a level of 905 kcal/day (calculated by taking the sum of TPWtot and dividing by the total number of people multiplied by 365)."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "Simplicity: Our model assumes maximum efficiency, and only looks at whether there is enough food waste to feed the food-insecure population, regardless of whether it can feasibly reach them or not. By taking a simplistic and general approach, we are able to show that under no circumstances would the food waste be enough to feed the entire food-insecure population",  
+          "Realism of Recovery"  
+        \],  
+        "Weaknesses": \[  
+          "Price estimates: The price estimates we used were generalizations based on indicative data researched thoroughly. Despite this, prices may vary by region, store, distance to store, etc. In general, these are factors which would increase food prices, and further lower our estimate for the number of people fed by food waste.",  
+          "Caloric intake: As opposed to our models in parts II and III, we did not factor in different caloric intakes. For the sake of simplicity, generality, and “safety” of the model, we used a conservative estimate of 2,000 kcal/day."  
+        \]  
+      }  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Activity levels can be divided into sedentary (involving only physical activity required for daily life), moderately active (comparable to walking at 3 to 4 miles per hour for 1.5 to 3 miles), and active (equivalent to walking at 3 to 4 miles per hour for more than 3 miles).",  
+        "If the activity level of an individual is not specified, we assume that they are “moderately active.\\"",  
+        "People in the same income bracket spend equal proportions of money in the food types.",  
+    "The food consumption of each individual is independent of the company they keep.",  
+       "The caloric needs for a person are calculated by averaging the values for male and females of that person's age and activity levels.",  
+       "We assume that the average age of the single parent of the toddler is 26 (average first-time mother/father age) \+ 2 (average age of a toddler) \= 28 years old. Further, we assume the average age of the teenagers' two parents is 42 years old. It is calculated by: 26 (average first-time mother/father age) \+ 16 (average age of teenager) \= 42 years old. \[10\]",  
+      "\\"The amount of food waste a household generates in a year” refers to only the consumer waste, not the production waste necessary to bring the food to the household.",  
+      "The percentage of food wasted (by food type) is constant and independent of household income.",  
+      "Food's cost is regressive, and its demand is that of a normal good.",  
+        "Differences between the ConsumerBehaviorBasedonIncome and Texas\_food\_data datasets (such as a lack of data on “roots and tubers” in the former) are negligible.",  
+       "Texas' expenditures on different food types are representative of the US's food spending."  
+      \],  
+      "Model": \[  
+        "In our model, we consider three main factors to significantly affect required calories: age, gender, and activity level."  
+      \],  
+      "Results": \[  
+        "For the single parent with a toddler, family of four, elderly couple, and single 23-year-old, the total amount of food wasted per year was 256.4, 839.9, 366.8, and 217.2 pounds, respectively."  
+      \],  
+      "Sensitivity Analysis": \[  
+        "Next, we performed a sensitivity analysis on annual household income. Keeping our methodology the same, we calculate the pounds of food wasted per year for each of the four family types and incomes ($20,500, $45,000, $55,000, and $135,000). The plot below shows the surprising result that, contrary to what we expected, household income has little effect on the amount food wasted. It does, however, support our assumption that the amount of food wasted varies between different households. Thus, our model is successful in correlating food waste to household type."  
+      \],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "The strength of our model is that it is simple in its final form. While the intermediate calculations are not basic, the final model closely resembles a function with the number and types of people in the household as its input and the yearly food waste as its output.",  
+          "The model acts as we would expect: seniors waste less than a 23-year-old, and babies waste the least of all. Families waste the most because they are the largest households. It also takes into account the important aspects of these households: income, age, and activity."  
+        \],  
+        "Weaknesses": \[  
+          "We do not take into account different activity levels. Instead, we assume that all people are moderately active. While this is a reasonable assumption, the caloric needs between the levels of activity can differ by a few hundred calories. This weakness is due to a lack of specificity on the part of the problem statement.",  
+          "We assumed that all people within an income bracket eat the same proportion of food types. However, this is not quite accurate. For example, babies likely consume less protein than bodybuilders in the same income bracket."  
+        \]  
+      }  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Freezing (and transportation of frozen food via refrigeration trucks) enables food to safely be stored for more than a month \[12\]. So, for the purposes of our problem, we don't consider that wasted food may expire (in transit or storage, for example) before reaching its food-insecure recipient.",  
+        "The distribution of types of food at a distribution center will be similar to the distribution of food types in an average diet.",  
+       "The population of Santa Clara County is uniformly distributed.",  
+        "The price of gasoline per mile for a car is about $0.15, based on data from 2006, adjusted for inflation (KcarTravel= $0.19/mile) \[13\].",  
+        "The price of gasoline per mile for a truck is $0.31. The price of gasoline per hour for a truck is $18.25 \[14\] \[15\].",  
+       "Food-insecure people earn about $13.50 an hour, or the Santa Clara minimum wage \[16\].",  
+       "The truck we will use for the purposes of this part is the 2016 ISUZU NPR refrigerated truck. Its initial cost is $38,000, its maximum load is approximately 9,000 lbs, and its city mileage is 8 mpg with a tank of 30 gallons \[17\]\[18\]\[19\]\[20\].",  
+        "A hot meal has a monetary value of $1.16 \[21\].",  
+        "A truck driver earns about $13.65 per hour \[22\].",  
+      "The food distribution center will be small in scale; thus, it can only service one person at a time and loading takes 12 minutes per person.",  
+      "To incentivize food manufactures to donate food waste, 15% of the cost of the food will be paid for by the food banks through the state. This comes from the markup on wholesale groceries, which is assumed to approximately cover the cost of transportation and distribution \[23\].",  
+      "People are rational; they will weigh the costs and benefits of each action in terms of monetary amounts. If the benefit exceeds the cost, they will perform the action.",  
+       "A distribution center costs approximately $1,500,000 \[24\].",  
+      "The operation of distribution centers is free because of state subsidies. Everybody who is operating the distribution center is a volunteer who will not be paid, and the distribution center requires little maintenance.",  
+       "The center is open 8 hours a day, 5 days a week when distribution centers are fixed.",  
+       "The percentage of food-insecure people in the U.S. (12.3%) approximates the percentage of food-insecure people in Santa Clara County \[25\].",  
+      "According to the U.S. Census Bureau, the population of Santa Clara County in 2015 was 1.918 million; this is a relatively accurate representation of the population today \[26\].",  
+        "All food at center gets used up."
+
+      \],  
+      "Model": \[  
+        "We decided to experiment with various solutions to the problem of food delivery. Our three strategies were: one central distribution center for our county, multiple distribution centers, and one central distribution center with mobile distribution centers arranged with freezer trucks. We used a computational simulation to estimate the efficacy of these models on the side of consumers.",  
+        "Using basic economic principles, we assumed that individuals would only make the trip from their houses to centers if the value of the food they receive is greater than the cost of travelling and the opportunity cost of not working during the time spent collecting food."  
+      \],  
+      "Results": \[  
+        "Using this, we found the percentage of food-insecure individuals in our simulation who would actually go and get food from centers to be about 70% for the one-center model and 90% for the multi-hub model. Ultimately, we found a model with multiple distribution centers to be the most effective in the long-run (after 4.8 years)."  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "Realistic driving time and distances",  
+          "Extendability",  
+          "Long-term strategy"  
+        \],  
+        "Weaknesses": \[  
+          "Uniform population density",  
+         "Uniform distribution of food amongst mobile centers",  
+          "Low sample size"  
+        \]  
+      }  
+    }  
+  }

@@ -1,0 +1,85 @@
+{  
+    "Placement": 2,  
+    "Comments": \[  
+      "\*\*\*Note: This cover sheet has been added by SIAM to identify the winning team after judging was completed. Any identifying information other than team \# on a MathWorks Math Modeling Challenge submission is a rules violation.",  
+      "\*\*\*Note: This paper underwent a light edit by SIAM staff prior to posting."  
+    \],  
+    "Q1": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The average number of meals needed to bring a person from food insecurity to food security is constant across all states. The difference in cost needed to achieve food security across states arises from the different costs of meals in different states.",  
+        "The cost of food is directly proportional to its weight.",  
+        "Food lost via agricultural production, post-harvest handling and storage, and processing cannot be redistributed as it is not fit for human consumption. Food lost via distribution and consumption can be redistribution as it is simply not purchased or consumed, respectively."  
+      \],  
+      "Model": \[  
+        "First, we developed a composite model which predicts total food waste and total food need for a given state (both in terms of dollars). The model uses data on food production to determine the total value of food wasted during distribution and consumption, and demographic data to calculate the total dollar worth of need required to lift the food-insecure population to a state of food security. Finally, the model subtracts need from wastage to determine whether the state wastes enough food to meet the needs of its food-insecure population, thus making a food redistribution strategy viable."  
+      \],  
+      "Results": \[  
+        "The results of the model for various states are shown in the table below."  
+      \],  
+      "Sensitivity Analysis": \[  
+          "Below is a sensitivity analysis showing how small changes in the variables affect the overall surplus food calculation for Texas."  
+      \],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "Our model's strengths lie in its simplicity and accuracy. It takes a simple list of parameters which are readily available through FeedAmerica and the US Department of Agriculture's Economic Research Service, and easily generates estimates of the value of food waste, food security need, and surplus food. Estimates of food security need match state-reported values closely. The model is also easy to interpret; a positive surplus food value means that a state could feed its food-insecure residents using its current food waste."  
+        \],  
+        "Weaknesses": \[  
+          "One limitation of our model's limitations is its moderate sensitivity to variations in certain parameters. For example, if the estimated proportion of a state's population is that is food-insecure is off by 10%, food surplus changes by 18.5%. However, this sensitivity arises from inaccuracy in data reported by states and not from flaws in the model. Additionally, even major changes in model parameters do not come close to changing the sign of the food surplus."  
+        \]  
+      }  
+    },  
+    "Q2": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "The proportion of food that an individual wastes outside the home is constant across various demographics.",  
+        "The proportion of food wasted within a given category (cereals, meats, etc.) is constant.",  
+        "Individual food waste is proportional to caloric consumption."  
+      \],  
+      "Model": \[  
+        "We then used data on food wastage by demographic to create a multivariate regression model to predict dollar worth of annual food wastage per household based on characteristics such as income and family composition. A multiplier based on individual caloric intake was also added to adjust waste estimates for household member ages. This model was created in Mathematica, and it can be used to identify key demographics which waste large amounts of food."  
+      \],  
+      "Results": \[  
+          "Here are the predictions of household waste for the households given in the problem:"  
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "One of the strengths of our model is its predictive accuracy. Based on the standard error of the residuals, our predictions are typically within one standard deviation of the mean for a given category. Of course, some of this predictive power is lost when the categories are combined, but the overall standard error remains less than the overall standard deviation of the original data. Another strength is the model's ease of use; taking simple inputs of household income, number of family members, and age of family members, it automatically computes an estimate of total household income."  
+        \],  
+        "Weaknesses": \[  
+          "One limitation of the model is that it is based on average data about the behaviors of various demographics rather than individual behavior, so it may not account for individual variations. Additionally, it operates on the assumption that food waste proportions within a given category of food are constant."  
+        \]  
+      }  
+    },  
+    "Q3": {  
+      "Definition": \[\],  
+      "Assumption": \[  
+        "Every grocery store in Union County makes $14,000,000 per year, the national average annual sales income for grocery stores in the US\[9\].",  
+        "Grocery stores in Union County North Carolina are unable to sell 10% of their inventory, representing the 10% average wastage by grocery stores in the United States\[10\].",  
+        "The cost of diesel fuel is constant at $2.55/gallon\[11\].",  
+        "All of the food that is marked down by the grocery or collected by our employees is bought or utilized, respectively.",  
+        "All food that would have been thrown out of the grocery store is now donated.",  
+        "The farthest that any truck driver would drive in one day is the length of the perimeter of Union County and a diagonal across union county"
+
+      \],  
+      "Model": \[  
+        "Finally, we developed a set of strategies to address the problem of food insecurity within our community, and compared their effectiveness using a benefit/cost ratio of each strategy. Information about grocery stores, food consumption, and food insecurity in our county were used to create strategies that maximized redistribution at minimum cost."
+
+      \],  
+      "Results": \[  
+        "As shown by the graph, grocery salvage is superior to food redistribution at all levels of p within 0 \< p ≤ 1\. However, both strategies are very similar when p \> .9. Before this point, grocery salvage has considerably increased benefit/cost ratios."
+
+      \],  
+      "Sensitivity Analysis": \[\],  
+      "Strength and Weakness": {  
+        "Strengths": \[  
+          "The Salvaging Groceries strategy is strong due to its ability to have a net positive impact on both local grocery firms and consumers, especially those who are food insecure. The strategy effectively redistributes retail waste due to expiration dates by marking down prices, thereby increasing revenue for grocery retailers and increasing savings for consumers requiring financial aid. It also has extremely low costs, consisting only of decreased revenue."  
+        \],  
+        "Weaknesses": \[  
+          "The strategy's limitations lie in its inability to effectively convert wasted product into complete revenue for retailers. While having the prospect of making a revenue of $37,333,000, retailers are only able to convert revenue of about $25,013,000 in Union County. Another limitation is the strategy's impact on food insecure groups. While resolving the minimum need in regards to food, the strategy fails to enable food insecure groups to achieve sustainable food security. Further, the strategy relies on the assumption that all food is sold, which is unlikely.",  
+          "One limitation faced by this strategy is its ability to please grocery stores. With nearly wasted food being picked up by the county for free, grocery stores receive no additional revenue on the food resulting in the same amount of revenue as if they were wasting 10% of the product they put on sale. Another limitation faced by this strategy is its reliance on a transport system coordinated by two individuals in order to maximize the net benefit to society. With two individuals being the sole workers responsible for the proper flow of the acquiring and distributing food system, it is somewhat unreliable in the real world due to high expectations for a small workforce in the county's Food and Nutrition Service. Lastly, this solution has many running costs, which make it significantly more expensive for the county."  
+        \]  
+      }  
+    }  
+  }

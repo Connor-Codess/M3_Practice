@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2015_S1_Q2_Assumption",
+    "text": "SECTION: 2015 Champion (S1) Question 2 Assumption\nCONTEXT: Employment dynamics (Markov Chains).\nCONTENT: The Markov Chain assumes that the **future employment status** depends *only* on the **current status** (memoryless property) and not on the history of employment. It assumes that the **job market** remains stable over the 20-year period.",
+    "metadata": {
+      "year": "2015",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Markov Chains, Memoryless Property",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2015_S1_Q2_Model",
+    "text": "SECTION: 2015 Champion (S1) Question 2 Model\nCONTEXT: Employment dynamics over 20 years.\nCONTENT: Markov Chains were used to model the monthly transition of graduates between 'Employed' and 'Unemployed' states. The probability of staying employed was modeled as a logistic function of experience.",
+    "metadata": {
+      "year": "2015",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Markov Chain, Logistic Function",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2015_S2_Q3_Model",
+    "text": "SECTION: 2015 Runner Up (S2) Question 3 Model\nCONTEXT: Choosing an academic path.\nCONTENT: Game Theory was applied using a payoff matrix. The student's preferences (quantified via Borda Count) were pitted against different academic paths to find the dominant strategy.",
+    "metadata": {
+      "year": "2015",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Game Theory, Payoff Matrix, Borda Count",
+      "chunk_index": 1
+    }
+  }
+]

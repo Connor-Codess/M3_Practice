@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2011_S1_Q1_Assumption",
+    "text": "SECTION: 2011 Champion (S1) Question 1 Assumption\nCONTEXT: Lake volume during drought.\nCONTENT: The model assumes that the **shape of the lake is a perfect geometric cone**, allowing a simple relationship between volume and surface area. It assumes that **evaporation and seepage rates** are constant despite changing surface area.",
+    "metadata": {
+      "year": "2011",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Geometric Simplification, Constant Rates",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2011_S1_Q1_Model",
+    "text": "SECTION: 2011 Champion (S1) Question 1 Model\nCONTEXT: Lake volume during drought.\nCONTENT: A Differential Equation dV/dt = I - (E + S + O) was used. The lake shape was modeled as a Geometric Cone to relate volume to surface area (for evaporation calculations).",
+    "metadata": {
+      "year": "2011",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Differential Equations, Geometric Modeling",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2011_S3_Q1_Model",
+    "text": "SECTION: 2011 Third Place (S3) Question 1 Model\nCONTEXT: Coupled lake system.\nCONTENT: A Coupled System of Equations modeled Lake Powell and Lake Mead simultaneously. The outflow of Powell became the inflow of Mead, allowing for system-wide sensitivity analysis.",
+    "metadata": {
+      "year": "2011",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "System of Equations, Coupled Modeling",
+      "chunk_index": 1
+    }
+  }
+]

@@ -1,0 +1,32 @@
+Framework: Logistic Growth ODE with Socio-Economic Extensions
+
+Equations:
+\[
+      \frac{dE(t)}{dt} = r(t)\,E(t)\left(1 - \frac{E(t)}{K}\right),
+    \]
+\[
+      r(t) = r_0 + \alpha_1\,[C(t) - C_0] + \alpha_2\,[S(t) - S_0] - \alpha_3\,[B(t) - B_0] - \alpha_4\,[P(t) - P_0],
+    \]
+
+Variables:
+t: Time in years from the start of 2024
+E(t): Cumulative number of EVs (or proportion of total vehicles) at time t
+C(t): Charging infrastructure capacity or density at time t
+S(t): Socio-economic factor (e.g., median income index) at time t
+B(t): Total budgeted subsidy or incentive offset at time t
+P(t): Average vehicle price relative to a baseline gasoline vehicle at time t
+
+Parameters:
+K: Carrying capacity representing the maximum achievable EV adoption
+r_0: Baseline intrinsic growth rate of EV adoption
+alpha_1: Coefficient capturing effect of charging infrastructure improvements
+alpha_2: Coefficient capturing effect of socio-economic factors (e.g., income level)
+alpha_3: Coefficient capturing negative impact when incentives expire or diminish
+alpha_4: Coefficient related to relative vehicle prices
+C_0: Reference value of charging infrastructure at t=0 (start of 2024)
+S_0: Reference socio-economic baseline at t=0
+B_0: Reference budget or incentive level at t=0
+P_0: Reference relative vehicle price at t=0
+
+Rationale:
+This refined logistic growth model incorporates novel socio-economic and economic factors, such as median income, pricing, and evolving infrastructure, to better capture the complexity of EV adoption dynamics in California. By including these driving forces and allowing the intrinsic growth rate to be influenced by time-dependent variables, the model more realistically represents changing market conditions, addresses previous critiques about under-parameterization, and enables a richer sensitivity analysis. Additionally, leveraging updated data sources on infrastructure, demographics, and pricing ensures more accurate and context-specific simulations.

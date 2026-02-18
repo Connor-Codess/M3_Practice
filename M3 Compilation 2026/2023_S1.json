@@ -1,0 +1,66 @@
+{  
+  "Placement": "Champion and Technical Computing Runner-Up",  
+  "Comments": \[  
+    "Summary is exceptional; it is concise yet it entices the reader. You presented good critical and analytical thinking. You have fresh and creative ideas. Need work on references section. Highly creative\!",  
+    "Nice presentation with good formula preparation and figures; clear assumption and justification; ARIMA model is used; Granger causality is used in Section 2.",  
+    "Your answer to Q1 is very well done. You provide a very thorough analysis of easier models and give sound reasoning for disregarding them. Your attempt to source other data and relate them is a fantastic initiative and shows your engagement with the problem. The use of ARIMA models is unusual, but well justified and explained. Congratulations also on a strong sensitivity analysis and error quantification. You do mention three parameters, however, (p, d, q) as those specifying your model, but the values of those parameters are nowhere to be found—this is essential for your models to be replicable.",  
+    "Your answer to Question 2 is very creative and strong. Your methods are well justified and results clearly stated. It is, however, a bit more difficult to follow (and thus reproduce). For example, Figure 2 is essential in understanding the Granger causality test—it should be stated as an equation (not a figure) and the variables there should be explained. Similarly, the significance (or use) of the equation on p. 11 is not fully explained.",  
+    "I thoroughly enjoyed your answer to Q3. The methods and individual steps are very well explained here, hence the applicability of your model is great. Your results are sound and well justified. One thing you could consider here is the changes in the population size in future years, but the results are already very good.",  
+    "The report is very well written, with figures and tables appropriately labelled and references properly cited. The tone is professional and reads very well. You clearly took a lot of effort to implement multiple methods from across the disciplines. Hats off\!",  
+    "This team used well-structured Python code for almost all aspect of modeling. Their code allowed them to easily manipulate and preprocess data. For example, in Part 1, they effectively filled in missing data on e-bike sales via inference from data on electric vehicle sales. Their ARIMA time series model for Part 1 as well as the Granger causality tests used in Part 2 effectively leveraged existing statistical libraries, which left the team time to add sensitivity analysis, and to compare to baseline models like simple linear regression. Judges were impressed with this team's solution for Part 2, as it was one of very few papers to differentiate between causation and correlation. That said, the judges would have liked to see a somewhat more in-depth discussion of the built-in statistical methods used to make it clear that the team understood the methods in full. Finally, the judges felt that the Markov chain model for Part 3 effectively used coding, although we would have liked to see the model better incorporated into other parts of the paper. Overall, this was a very solid paper, both in terms of modeling and computing."  
+  \],  
+  "Q1": {  
+    "Definition": "Develop a model to predict U.S. e-bike sales in 2025 and 2028\. Our model will take into consideration previous sales data from the U.S. in related markets.",  
+    "Assumption": \[  
+      "The growth of plug-in hybrid electric vehicle (PHEV) sales and e-bike sales will be proportional to each other by an adjustable multiplier.",  
+      "Electric bike sales and PHEV sales both peak during the summer months on average every year.",  
+      "COVID-19 will have no effect on the e-bike market after 2023.",  
+      "Current e-bike manufacturers will not undergo any drastic changes in the next decade.",  
+      "Annual e-bike sales from 2018 to 2022 in the U.S. is sufficient to determine annual e-bike sales in the future."  
+          \],  
+    "Model": "Autoregressive integrated moving average (ARIMA) model to predict the growth of e-bike sales. Because seasonal sales are necessary for an ARIMA model, we used estimated monthly sales instead. Due to the lack of data provided for monthly e-bike sales in the US, we chose to relate the number of sales between PHEVs and e-bikes instead.",  
+    "Results": "Model predicts that there will be 1.409 and 1.912 million e-bikes sold in the U.S. in 2025 and 2028, respectively.",  
+    "Sensitivity Analysis": "Performed a sensitivity analysis using a percent error comparing the predicted sales of January 2023 compared to the actual sales of 2023 as per the dataset used. Percent error of 4.1%.",  
+    "Strength and Weakness": \[  
+      "The use of an ARIMA model takes advantage of the seasonal time series expected of electric vehicle sales. ARIMA combats the issue of auto-correlation, which arises when observations rely on factors other than time. Additionally, given that our data exhibits a clear increasing trend and that the problem only asks for short-term predictions of two years and five years, ARIMA allows us to model the data while also accounting for seasonal fluctuations.",  
+      "Our model may not be completely accurate, as it requires assuming a relationship between the PHEV and the electric bike market. Along with this crucial assumption, the ARIMA model has a limited ability to handle any missing data or outliers, which can drastically decrease the effectiveness of our ARIMA model. Our model will also be unable to predict in the long term, as it is based on historical data and parameters that may be affected by human bias."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Interpret the significance of several underlying factors that may have contributed to e-bike growth. Chose four factors to analyze against the monthly e-bike sales in the US by determining which causes could potentially significantly contribute to e-bike growth.",  
+    "Assumption": \[  
+      "Correlations between e-bike sales and a potential underlying factor will be completely independent of other factors.",  
+      "Buying rationale is similar among all consumers in the United States.",  
+      "Real disposable personal income per capita can be used as a representative measure of personal finance in the United States.",  
+      "The market of inferior and substitute goods for e-bikes does not have a statistically significant effect on factors contributing to e-bike sales.",  
+      "Sentiments of American adults towards global warming are representative of overall opinions towards environmental awareness."  
+    \],  
+    "Model": "Granger causality test. The Granger causality test is a statistical test that helps determine whether a single-time series is useful in forecasting another, providing evidence for causality between the two variables. It is commonly used in econometrics and finance to investigate causal relationships between variables over time.",  
+    "Results": "Gas prices and environmental awareness only impact e-bike sales after 1 month, whereas transportation distance only impacts sales after 12 months. Changes in median disposable income did not ever significantly impact e-bike sales.",  
+    "Sensitivity Analysis": null,  
+    "Strength and Weakness": \[  
+      "Given that electric bike sales represent a time series, the Granger causality model is a flexible choice in accounting for non-stationary and non-linear data. In its capacity to compare various time series with respect to the different factors we want to analyze, the Granger causality model is effective in being able to compare the significance of different variables, especially in the scope of this problem.",  
+      "While significance is interpreted as causality in this problem, correlation does not necessarily equate to causality, meaning that the factors analyzed may not be linked to the electric bike sales in a strictly cause-and-effect relationship. Furthermore, the data we used for environmental awareness lacked data for certain months, so we fit a line between the nearest data points to predict these values."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Evaluate the impacts of people switching to e-bikes from alternative modes of transportation on carbon emissions, traffic congestion, and health and wellness. Quantify these impacts by assigning a relative score in each of the categories over time based on the distribution of primary modes of transportation.",  
+    "Assumption": \[  
+      "Society's values and emphasis on the environment will remain constant in the future.",  
+      "Cars, public transportation, and bicycles make up all primary modes of transportation.",  
+      "The percentage of people who switch from using any type of bike to another mode of transportation is negligible.",  
+      "The larger category of electric vehicles consists only of electric cars and electric bikes.",  
+      "The probability of someone switching from electric vehicles to public transportation & bikes will be the same as someone switching from gas vehicles to public transportation & bikes.",  
+      "Gas car users would only switch to electric bikes if they moved from a rural area to an urban area.",  
+      "Currently, no one uses e-bikes to commute to work.",  
+      "Calories burned while using transportation are directly correlated to a user's health and wellness."  
+    \],  
+    "Model": "Markov chain analysis to model the changes in people's preferred modes of transportation. Our migration matrix will take into account changes in car, public transportation, and bike usage. To more accurately measure environmental impacts, we split cars into gas-powered cars and electric cars and bicycles into regular bikes and e-bikes.",  
+    "Results": "After two years, carbon emissions will decrease by 3.85%, traffic congestion will decrease by 0.644%, and health and wellness will increase by 0.0891%. After five years, carbon emissions will decrease by 9.52%, traffic congestion will decrease by 1.60%, and health and wellness will increase by 1.60%.",  
+    "Sensitivity Analysis": "Changed the original migration matrix by increasing the probability of a user staying with a gas car by 1% and decreasing the probability that one switched from gas to electric cars by 1%.",  
+    "Strength and Weakness": \[  
+      "The use of Markov chains allows us to be able to model complex relationships and changes between various modes of transportation. This also allows us to take advantage of past trends and \\"migrations” found between transport transitions, making our model better suited to account for different changes over time.",  
+      "In using the Markov chain model, we assume that the initially observed trend would always be constant, making our model inflexible to more drastic changes that can be found in the long term. Additionally, the more minute relationships between the different modes of transportation, and the various factors that can influence them, may be impossible to be able to account for in our model."  
+    \]  
+  }  
+}

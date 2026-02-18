@@ -1,0 +1,67 @@
+{  
+  "Placement": "Third Place",  
+  "Comments": \[  
+    "Very nice paper. Your executive summary was well done and included results, as well as your detailed set of assumptions with justifications. Nice use of sensitivity analysis \-- you didn't just say what you modified but its impact on the results. I like how you broke up and analyzed the UK and the US separately \-- perhaps one would be a predictor of the other.",  
+    "This was an excellent contribution\! The executive summary was informative and well written. The response to the first and third portions were particularly impressive. Similarly, the response to the second component represented strong critical and analytical thinking skills. The sensitivity analysis and strengths and weaknesses subsections were also nice portions of the project, and the conclusion was well-formed. Fantastic job\!",  
+    "Use of a Bass diffusion model sounds interesting, but is not well explained and I was hoping for some more justification. It looks like a logistic model, based on the Figures. Among the predictors, surely imitation and innovation are not the only relevant features \- what about the costs of the technology and other economic/feasibility measures? Overall, this is a highly creative proposal.",  
+    "Your use of Bass Diffusion Model seems interesting. Team predicted that electric bike sales in the US will be 1.57 million in 2025 and 2.223 million in 2028, while sales in the UK will be 479 thousand in 2025 and 260 thousand in 2028\. The factors guiding the e-bike sales being urban population and electricity prices. You also quantified the CO2 emission, time savings and health benefits. Looks like appropriate assumptions and justifications are made for the model. Graphs shown in fig 2.2.1 fits beautifully with the data. Glad to see the evaluations and calculations provided. Thanks for the sensitivity analysis and the showing the strength and weaknesses of the models. Excellent work."  
+  \],  
+  "Q1": {  
+    "Definition": "Create a mathematical model to predict growth of e-bike sales two and five years from now in the US and UK.",  
+    "Assumption": \[  
+      "No one who already bought an e-bike will need to buy a new e-bike.",  
+      "Consumers that do not use a bike will not buy the e-bike technology over the next five years.",  
+      "Information about electric bikes spreads via word-of-mouth and advertising.",  
+      "All people who regularly use bicycles as a mode of transportation will eventually buy an e-bike.",  
+      "The proportion of bicycle users who use e-bikes in the UK is equal to the proportion of bicycle users who use e-bikes in Europe.",  
+      "A person buying an e-bike is equivalent to that person adopting e-bikes and replacing bicycles as their new mode of transportation."  
+    \],  
+    "Model": "Bass Diffusion Model, which categorizes consumers of the population as “innovators” and “imitators.”",  
+    "Results": "Predict that electric bike sales in the US will be 1.57 million in 2025 and 2.223 million in 2028, while sales in the UK will be 479 thousand in 2025 and 260 thousand in 2028.",  
+    "Sensitivity Analysis": "Adjust the values of p and q individually by 10%.",  
+    "Strength and Weakness": \[  
+      "With the coefficients of innovation and imitation, Bass Diffusion models information spread via word-of-mouth and advertising, incorporating both external and internal growth factors in the model. In addition, the Bass Diffusion model can be scaled up or down to fit different market sizes, such as the US and UK markets for electric bicycles.",  
+      "One weakness of the model is that it assumes the all regular bike users will eventually adopt the new technology, which is not necessarily the case in the real world. It also does not account for new e-bike users who were not initially bike users. Another weakness of our Bass Diffusion model is that it does not extrapolate well in the long-term. The number of bike users, or “market cap,” was assumed to stay constant over the next five years, but with rising populations and bike production, this would not be the case many years down the line. Finally, the Bass diffusion itself has a limited scope. It assumes that the only two factors in the adoption process are innovation and imitation, failing to take into consideration other influences such as social norms and regulatory barriers."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": "Use mathematical modeling to determine the significance of several factors in the growth of e-bike usage in the US and UK.",  
+    "Assumption": \[  
+      "US State policies offering incentive for buying e-bikes are insignificant compared to national policies in the US.",  
+      "There are no government policies in the UK that significantly impact e-bike usage.",  
+      "The US inflation rate is equal to the UK inflation rate.",  
+      "The growth in bike usage can be measured by the growth in bike sales."  
+    \],  
+    "Model": "Determine key factors that influence the growth of e-bike usage and use a random forest algorithm to order their significance by feature importance.",  
+    "Results": "Urban population and electricity prices emerged as the most influential variables in driving the adoption of e-bikes in both the US and UK. Interestingly, the impact of disposable income varied between the two countries under consideration, with a significant effect observed in the United States, but not in the UK. On the other hand, the perception of the environment was found to have very little impact on e-bike adoption in either country.",  
+    "Sensitivity Analysis": "Dropped each input feature one at a time and retrained our model with the remaining features only. We ranked the factors by their feature importances and subtracted the new ranks from the old ranks.",  
+    "Strength and Weakness": \[  
+      "The model has several strengths, including a low mean absolute error and the ability to effectively compare the relative influence of different factors on the decision to choose e-bikes.",  
+      "It also has notable weaknesses, such as the inability to evaluate the magnitude of each factor and the lack of transparency in the black box nature of the Random Forest algorithm."  
+    \]  
+  },  
+  "Q3": {  
+    "Definition": "Develop a model to quantify the impacts of reduced usage of other modes of transportation due to the increase of e-bikes in the US and UK.",  
+    "Assumption": \[  
+      "The average number of miles for each mode of transportation taken per person is the same for both the US and the UK.",  
+      "The fuel efficiency of each mode of transportation are constant in the US and UK.",  
+      "The fuel used in each mode of transportation yields the same amount of carbon emissions per gallon.",  
+      "The percent of people working from home in UK is equal to that in the US.",  
+      "People who work from home do not do any traveling outside of their house, as the main reason for people to travel is to commute to their jobs.",  
+      "A consumer who switches from their preferred transportation method to e-bikes will travel the same number of miles per day.",  
+      "When making decisions between transportation methods, consumers tend to want more convenience and lower cost.",  
+      "The average cost of a vehicle is the same in the US and the UK.",  
+      "Motorcyclists and rail riders do not switch to e-bikes.",  
+      "People who walk as their primary mode of transportation do not switch to e-bikes.",  
+      "The speed drop due to congestion is constant for both the US and the UK.",  
+      "There is no traffic no matter the number of bicycles on the road."  
+    \],  
+    "Model": "Estimate the likelihood of commuters switching from driving cars, using public transportation, walking, or traditional cycling to e-biking based on convenience and cost. Using a formula to measure carbon emission savings.",  
+    "Results": "Predict that the US could save approximately 105, 336, 765.5 metric tons of carbon emissions per year, while the UK could save 19, 311, 022.86 metric tons. Because there will be less congestion, an average commuter in the US can save 4.425 minutes, and an average commuter in the UK can save 4.982 minutes. E-biking also has considerable health benefits for commuters, with an average of 482 more calories burned per day for US commuters and 369 more calories burned per day for UK commuters.",  
+    "Sensitivity Analysis": "Perturb the model, decrease the amount of car users by 5% arbitrarily, and increase the amount of other modes of transportation equally to make their total stay at 100%.",  
+    "Strength and Weakness": \[  
+      "One strength of the model is that it is extremely flexible and scaleable with the population. Adjusting the percentages of the commuter populations for each mode of transportation is quite simple to do with our transparent formulas.",  
+      "A weakness of the model is that there is a lack of prior data on the percentage of people that switch from each transportation to e-bikes."  
+    \]  
+  }  
+}

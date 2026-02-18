@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2021_S1_Q2_Assumption",
+    "text": "SECTION: 2021 Champion (S1) Question 2 Assumption\nCONTEXT: Bandwidth requirements.\nCONTENT: The **temporal simulation** assumes that all households in a given demographic follow the **same activity distribution profile**. It assumes that peak usage hours for all activities (streaming, gaming, work) are **perfectly correlated**.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Temporal Correlation, Uniform Behavior",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2021_S1_Q3_Assumption",
+    "text": "SECTION: 2021 Champion (S1) Question 3 Assumption\nCONTEXT: Optimal cellular node placement.\nCONTENT: The **center of mass model** assumes that **coverage area is perfectly circular** and uniform for all cellular nodes, regardless of terrain or physical obstructions. It assumes that maximizing coverage for **population density** is the sole objective.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Assumption",
+      "topic": "Geometric Simplification, Single Objective",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2021_S1_Q1_Model",
+    "text": "SECTION: 2021 Champion (S1) Question 1 Model\nCONTEXT: Predicting internet bandwidth cost.\nCONTENT: A Random Forest Regression was used. This supervised machine learning algorithm combined predictions from multiple decision trees to handle non-linear relationships in factors like population density and infrastructure costs.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Random Forest Regression, Machine Learning",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2021_S1_Q2_Model",
+    "text": "SECTION: 2021 Champion (S1) Question 2 Model\nCONTEXT: Bandwidth requirements for households.\nCONTENT: A Temporal Simulation was created. The team simulated 112 awake-hours per week, assigning internet activities based on probabilities. They summed the bandwidth for each hour to find peak usage requirements for 90% and 99% reliability.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Simulation, Probability Distributions",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2021_S1_Q3_Model",
+    "text": "SECTION: 2021 Champion (S1) Question 3 Model\nCONTEXT: Optimal cellular node placement.\nCONTENT: A Center of Mass calculation was used. The region was tiled, and the population-weighted center of mass was calculated for each subregion to optimally place 4G and 5G nodes to maximize coverage for the most people.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Center of Mass (Calculus/Geometry), Optimization",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2021_S2_Q3_Model",
+    "text": "SECTION: 2021 Runner Up (S2) Question 3 Model\nCONTEXT: Cellular tower optimization.\nCONTENT: Integer Programming (Optimization) was used. The objective was to minimize the number of towers subject to constraints on area coverage and bandwidth capacity.",
+    "metadata": {
+      "year": "2021",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Integer Programming, Constrained Optimization",
+      "chunk_index": 1
+    }
+  }
+]

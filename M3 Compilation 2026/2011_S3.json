@@ -1,0 +1,74 @@
+{  
+  "Team \#137": {  
+    "Placement": "Third Place (Cum Laude Team Prize)",  
+    "Comments": "This solution models the Lake Powell-Lake Mead system, focusing on inflow, outflow, and the impact on water supply and the economy. It considers factors like evaporation, seepage, and power generation at Hoover Dam. The solution also analyzes the sensitivity of the model to changes in inflow rates and proposes policy changes and conservation efforts.",  
+    "Q1": {  
+      "Definition": "Model the water volume of Lake Powell over a five-year period based on given inflow rates and model the effect that changes of the inflow rate have on areas of interest downstream from the lake.",  
+      "Assumption": \[  
+        "Over a five-year interval, the inflow rate into Lake Powell will remain fixed at the given value.",  
+        "Over a five-year interval, changes in the weather will not significantly affect the evaporation rates of Lakes Mead and Powell and will not affect other sources of inflow into Lake Mead."  
+      \],  
+      "Model": \[  
+        "Lake Powell:  Pvol(n \+ 1\) \= inP(n) \+ P(n) − evapP \* P(n) − outP(n)",  
+        "Lake Mead: M(n \+ 1\) \= inM(n) \+ M(n) − evapM \* M(n) − outM(n)",  
+        "Outflow of Lake Powell is modeled as a piecewise function based on historical data, with two regions: a constant outflow region and a region where outflow increases linearly with volume.",  
+        "Inflow to Lake Mead is modeled as a proportion of Lake Powell outflow plus a constant representing other sources."  
+      \],  
+      "Results": \[  
+        "Lake Powell volume projections for low, average, and high inflow scenarios.",  
+        "Lake Mead volume projections for low, average, and high inflow scenarios."  
+      \],  
+      "Sensitivity Analysis": "Examined the sensitivity of the model to changes in inflow rates (1% increments). Found that changes in inflow to Lake Powell have a nearly equal impact on Lake Powell volume, but a smaller impact on Hoover Dam power generation.",  
+      "Strength and Weakness": \[  
+        "Strength: Models the interconnected Lake Powell-Lake Mead system.",  
+        "Strength: Considers multiple factors influencing water volume (inflow, outflow, evaporation).",  
+        "Strength: Uses historical data to model outflow.",  
+        "Strength: Includes a sensitivity analysis.",  
+        "Weakness: Assumes constant evaporation rates.",  
+        "Weakness: Initial model had issues with unrealistic lake depletion and overflow; addressed with modifications."  
+      \]  
+    },  
+    "Q2": {  
+      "Definition": "Model the effect that changes of the inflow rate have on areas of interest downstream from the lake.",  
+      "Assumption": \[  
+        "100% efficiency in harnessing the hydroelectric power.",  
+        "Height of water above turbine is constant for each dam (ignore changes in water level).",  
+        "Outflows in excess of what is expected from Lake Powell will all reach Lake Mead, where they will all be used for hydroelectric generation to keep the water level constant."  
+      \],  
+      "Model": \[  
+        "Hydroelectric power generation: P \= hQgK, where P is power, h is reservoir height, Q is outflow rate, g is acceleration due to gravity, and k is efficiency constant.",  
+        "Economic impact on agriculture: Estimated based on the change in irrigated land capacity, calculated using water allocation percentages and crop water needs.",  
+        "Impact on municipal and industrial uses, and recreation: Qualitative assessment."  
+      \],  
+      "Results": \[  
+        "Low inflow: Significant decrease in irrigated land capacity and potential shutdown of Hoover Dam power generation.",  
+        "Average inflow: Stable water levels and power generation.",  
+        "High inflow: Increased water levels and power generation.",  
+        "Significant economic impacts on agriculture, municipal/industrial uses, and recreation are expected with reduced water availability."  
+      \],  
+      "Sensitivity Analysis": "Not explicitly mentioned in this section.",  
+      "Strength and Weakness": \[  
+        "Strength: Quantifies the impact on hydroelectric power generation.",  
+        "Strength: Considers the economic impact on agriculture.",  
+        "Weakness: Assumes 100% efficiency in power generation.",  
+        "Weakness: Relies on several simplifying assumptions for agricultural impact calculations."  
+      \]  
+    },  
+    "Q3": {  
+      "Definition": "Recommend courses of action to counteract the effects of the current drought.",  
+      "Assumption": "None explicitly stated.",  
+      "Model": "None (qualitative recommendations)",  
+      "Results": \[  
+        "Recommendation to revise the 2007 interim guidelines to equalize water levels between Lake Powell and Lake Mead.",  
+        "Recommendations to reduce water consumption through conservation efforts and improved irrigation techniques."  
+      \],  
+      "Sensitivity Analysis": "Not applicable.",  
+      "Strength and Weakness": \[  
+        "Strength: Provides specific policy recommendations.",  
+        "Strength: Addresses both water supply and demand.",  
+        "Weakness: Does not quantify the potential impact of the recommended policy changes.",  
+        "Weakness: Acknowledges that some recommendations are theoretical and face significant barriers."  
+      \]  
+    }  
+  }  
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "2024_S1_Q1_Assumption",
+    "text": "SECTION: 2024 Champion (S1) Question 1 Assumption\nCONTEXT: Predicting housing supply growth.\nCONTENT: The model assumes that the **carrying capacity** (maximum number of units) for the city is a fixed limit and remains constant throughout the entire 50-year prediction period, not accounting for major zoning changes. It is assumed that the **historical growth trend** data (2010-2019) is a fair and representative predictor of future growth rates.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Growth Limits, Extrapolation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S1_Q2_Assumption",
+    "text": "SECTION: 2024 Champion (S1) Question 2 Assumption\nCONTEXT: Predicting homelessness.\nCONTENT: The model assumes that **homelessness is primarily driven by housing market factors** (supply and price) and that social/health factors are secondary. It is assumed that the **linear relationship** observed in historical data between these variables will hold true over the entire forecasting period.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Assumption",
+      "topic": "Homelessness Drivers, Linearity",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S1_Q3_Assumption",
+    "text": "SECTION: 2024 Champion (S1) Question 3 Assumption\nCONTEXT: Policy effects on homelessness.\nCONTENT: It is assumed that **policy changes** (e.g., a 5% adjustment to housing units or unemployment) have an immediate, uniform, and measurable effect on the factors in the simulation, and that there are **no external confounding variables** that would negate the policy's impact.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Assumption",
+      "topic": "Policy Effectiveness, External Factors",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S1_Q1_Model",
+    "text": "SECTION: 2024 Champion (S1) Question 1 Model\nCONTEXT: Predicting long-term housing supply growth with physical limits.\nCONTENT: The team chose a logistic model for determining the growth of housing units. Logistic models measure the growth of a variable that starts exponential and then approaches an upper limit (carrying capacity). This aligns with the assumption that housing units are finite due to zoning and land area. They rejected linear regression because it predicted infinite growth exceeding feasible land capacity. The Seattle Development Capacity Report was used to calculate a carrying capacity of 531,770 units.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Logistic Growth Model, Carrying Capacity Estimation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S1_Q2_Model",
+    "text": "SECTION: 2024 Champion (S1) Question 2 Model\nCONTEXT: Predicting homelessness based on housing factors.\nCONTENT: The team used a multivariate linear regression model to determine correlations between homelessness (dependent variable) and total housing units/median listing price (independent variables). Missing data was handled via imputation. The equation used was E = b + sum(a_i * V_i). A separate linear model was used to predict future median listing prices to feed into the regression.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Multivariate Linear Regression, Data Imputation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S1_Q3_Model",
+    "text": "SECTION: 2024 Champion (S1) Question 3 Model\nCONTEXT: Long-term plan to reduce homelessness.\nCONTENT: The team utilized a Granger causality test to establish causal links between policy factors (housing units, price, unemployment, opioid deaths) and homelessness. After establishing significance (p < 0.05), they used a multiple regression model to simulate the impact of adjusting these factors by 5% (e.g., increasing units, decreasing opioid deaths) to quantify the reduction in homeless population.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Granger Causality Test, Multiple Regression, Policy Simulation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S2_Q1_Model",
+    "text": "SECTION: 2024 Runner Up (S2) Question 1 Model\nCONTEXT: Housing supply prediction.\nCONTENT: A logistic regression model was employed, suitable for resource-constrained variables like housing. The function S = L / (1 + e^-k(t-t0)) was used, where L is carrying capacity. This model was chosen for its resistance to outliers and ability to handle COVID-19 variations.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S2",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Logistic Regression",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S2_Q2_Model",
+    "text": "SECTION: 2024 Runner Up (S2) Question 2 Model\nCONTEXT: Homelessness forecasting.\nCONTENT: A vector autoregressive (VAR) model was selected. This is a multivariate time series approach chosen to handle the complex, multi-factor nature of homelessness (feedback between variables) better than univariate regression.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S2",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "Vector Autoregressive Model (VAR), Time Series Analysis",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S2_Q3_Model",
+    "text": "SECTION: 2024 Runner Up (S2) Question 3 Model\nCONTEXT: Affordable housing optimization.\nCONTENT: The team created a novel affordable housing optimization model. It calculates the minimum percentage of the city's housing budget required annually to build enough affordable units to house all homeless people above a specific threshold within a set timeline (e.g., 15 years).",
+    "metadata": {
+      "year": "2024",
+      "placement": "S2",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Optimization Model, Budget Allocation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S3_Q1_Model",
+    "text": "SECTION: 2024 Third Place (S3) Question 1 Model\nCONTEXT: Housing supply prediction.\nCONTENT: The team utilized a Random Forest Regression model. This machine learning approach allowed them to integrate multiple variables (population, unemployment, median income) without assuming a strict linear relationship, making it robust to non-linear data.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S3",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Random Forest Regression, Machine Learning",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2024_S3_Q2_Model",
+    "text": "SECTION: 2024 Third Place (S3) Question 2 Model\nCONTEXT: Homelessness dynamics.\nCONTENT: A State Machine / Markovian approach was used. The model defined states for individuals (e.g., at-risk, homeless, housed) and transition probabilities between these states to forecast the population dynamics of homelessness over time.",
+    "metadata": {
+      "year": "2024",
+      "placement": "S3",
+      "question": "Q2",
+      "section": "Model",
+      "math_methods": "State Machine, Markov Chain",
+      "chunk_index": 1
+    }
+  }
+]

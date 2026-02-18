@@ -1,0 +1,26 @@
+[scope] The state chosen for analysis will not experience major economic disruptions unrelated to EV adoption over the next 10 years.
+Justification: Economic disruptions could drastically alter consumer purchasing power and priorities. Based on historical example 2024 Champion Q1 (relevance: 0.35), where major policy changes were assumed not to occur, we assume stability to focus on EV adoption variables.
+
+[data] The data on EV and gasoline vehicle prices, household income, and gasoline and electricity costs will be extrapolated linearly over the next 10 years.
+Justification: This assumption allows for a manageable projection of these key variables, similar to the linear growth assumption made in 2024 Champion Q1 (relevance: 0.38) for housing market growth.
+
+[simplification] Monthly data for EV adoption variables reflects annual trends, assuming no significant seasonal variations.
+Justification: As in 2024 Champion Q3 (relevance: 0.36), unseasonal variables can be assumed to reflect annual trends, simplifying data analysis.
+
+[model] Battery cost reduction follows a consistent technological improvement rate similar to past trends.
+Justification: Historical trends in battery technology show a consistent cost reduction, allowing us to project future costs. This mirrors the assumption made in 2024 Champion Q1 (relevance: 0.33) regarding logistic growth in housing units.
+
+[scope] EV adoption is primarily influenced by purchase price, charging infrastructure, and state incentives.
+Justification: While many factors affect EV adoption, these variables have been identified as most impactful, similar to 2024 Champion Q2 (relevance: 0.33) focusing on key housing market variables.
+
+[data] Missing data in key variables will be estimated through interpolation based on available historical data.
+Justification: This approach is common in data analysis, as shown in 2024 Champion Q2 (relevance: 0.32), where extrapolation was used to handle missing data.
+
+[scope] Policy recommendations will assume current state and federal programs remain, but can be adjusted for budget constraints.
+Justification: This allows us to focus on enhancing existing policies and aligns with 2024 Champion Q3 (relevance: 0.35), where existing government capabilities were assumed stable.
+
+[model] Environmental awareness will steadily increase, impacting EV adoption positively.
+Justification: Increased environmental awareness is a global trend and is expected to continue, supporting the model's predictive capacity.
+
+[simplification] Population density will be categorized into urban and rural areas, with adoption rates adjusted accordingly.
+Justification: This simplification allows for targeted analysis of adoption patterns across different geographic areas, recognizing urban-rural disparities.

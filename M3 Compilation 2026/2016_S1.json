@@ -1,0 +1,124 @@
+{  
+  "Placement": "1",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[  
+      "With regard to miles driven per day, we define “low,” “medium,” and “high” to constitute 0-20 miles/day, 20-40 miles/day, and 40+ miles/day, respectively.",  
+      "we define “low,” “medium,” and “high” to mean 0-20 miles/day, 20-40 miles/day, and 40+ miles/day, respectively. For the hours/day factor, we took the data set from the 2009 NHTS study (sample size of 235333 individuals) and found the 1st and 3rd quartiles for the average amount of time individuals drove per day (NHTS). These values were 34 minutes and 111 minutes, respectively."  
+    \],  
+    "Assumption": \[  
+      "When one is “using” the car, one is actually driving the car.",  
+      "The average driving speed of a car in the U.S. is 30.99 mph. This value was derived from NHTS data regarding the average miles per trip and average time per trip.",  
+      "Traffic in a certain city, region, or locale can be considered as standardized over time in a day. This is a valid assumption because although traffic does follow a general trend in many locations, it is often unpredictable and always varies in areas on a regular basis due to spontaneous incidents such as car accidents, weather, and other extenuating factors.",  
+      "Cities are uniformly distributed in terms of population. This assumption allows us to ignore differences in traffic and other conditions throughout the city, which makes application of the model possible on a large scale.",  
+      "Across the US, the distribution of the amount of time individuals spent on the road is uniform. Though people may live in different regions with different population densities, they will work to minimize travel time. People living in communities with low population densities will tend to drive further distances but will spend the same amount of time in transit as those in denser areas."  
+    \],  
+    "Model": \[  
+      "M \= Hv, where v refers to the average velocity of the driver's car.",  
+      "v \= (1-T)Vo, where Vo refers to the average driving speed, 30.99 mph. T is the traffic factor",  
+      "T(p) \= K \- e-\\"P, where p is equal to the population distribution of the area and r and K are positive constants less than 1.",  
+      "M= H(1-K+e-\\"P)Vo.",  
+      "M(H, p) \= 30.9\*H\*(0.3 \+ e-0.00009p).",  
+      "G(x, t) \= e^((-(x-b)^2) / (2(c)^2)) \* (t), where b is equal to the expected average speed returned by our function for M and c is equal to the average standard deviation nationwide scaled to the specific region.",  
+      "Integral from tinitial to tfinal of (CDF\[dist, t \+ 1\] – CDF\[dist, t\]) CDF\[G(x, t), y\] dt. The amount of travel time we wish to check relative proportions for is given by t, and the distance we want to see if our population crossed (e.g., 20 miles, 40 miles) is given by y."  
+    \],  
+    "Results": \[  
+      "Low Driving Time (\< 34 min/day), Low Mileage (\< 20 miles/day): 24.20%",  
+      "Low Driving Time (\< 34 min/day), Medium Mileage (20-40 miles/day): 0%",  
+      "Low Driving Time (\< 34 min/day), High Mileage (\> 40 miles/day): 0%",  
+      "Medium Driving Time (34-111 min/day), Low Mileage (\< 20 miles/day): 35.56%",  
+      "Medium Driving Time (34-111 min/day), Medium Mileage (20-40 miles/day): 14.20%",  
+      "Medium Driving Time (34-111 min/day), High Mileage (\> 40 miles/day): 0.0098%",  
+      "High Driving Time (\> 111 min/day), Low Mileage (\< 20 miles/day): 0.17%",  
+      "High Driving Time (\> 111 min/day), Medium Mileage (20-40 miles/day): 11.51%",  
+      "High Driving Time (\> 111 min/day), High Mileage (\> 40 miles/day): 13.90%",  
+      "Low Driving Time (\< 34 min/day), Low Mileage (\< 20 miles/day): 21.51%",  
+      "Low Driving Time (\< 34 min/day), Medium Mileage (20-40 miles/day): 2.69%",  
+      "Low Driving Time (\< 34 min/day), High Mileage (\> 40 miles/day): 2.43E-8%",  
+      "Medium Driving Time (34-111 min/day), Low Mileage (\< 20 miles/day): 2.03%",  
+      "Medium Driving Time (34-111 min/day), Medium Mileage (20-40 miles/day): 24.86%",  
+      "Medium Driving Time (34-111 min/day), High Mileage (\> 40 miles/day): 22.88%",  
+      "High Driving Time (\> 111 min/day), Low Mileage (\< 20 miles/day): 7.79E-5 %",  
+      "High Driving Time (\> 111 min/day), Medium Mileage (20-40 miles/day): 0.028%",  
+      "High Driving Time (\> 111 min/day), High Mileage (\> 40 miles/day): 25.55%"  
+    \],  
+    "Sensitivity Analysis": \[  
+      "The sensitivity testing reveals that changes in K corresponds to about half as significant a change in the value of the model. This shows that the model is robust and not very sensitive to changes in K."  
+    \],  
+    "Strength and Weakness": \[  
+      "While our curve fit rather accurately describes the average speed of cars in New York City (our regression indicates a speed of 15.73 mph compared to a calculated average speed of 17.6) (Infinite Monkeys), our curve fit is not an extremely accurate model of average car speed vs. population density. With an RMSE of 0.1675, we have an average error with our T value of 0.1675.",  
+      "However, our model takes into account population density as the major factor in traffic and car speed. In addition, our model is highly intuitive as more dense cities lead to lower traffic speeds. Moreover, our model is adaptable to many different urban or rural landscapes. We have gathered relevant and accurate data for both urban and suburban areas with our model. Furthermore, even though we did not calculate proportions for American drivers as a whole, our model can be applied to any individual setting in America and is therefore much more specific and powerful in realistic applications by car-sharing and other interested companies."  
+    \]  
+  },  
+  "Q2": {  
+    "Definition": \[  
+        "A car-sharing transportation method can be defined as any form of transportation involving privately operated vehicles that does not involve a single owner of a vehicle."  
+    \],  
+    "Assumption": \[  
+      "The companies do not encounter implementation issues (e.g., implementation or construction costs or malfunctions). These are not within the problem parameters.",  
+      "People are willing to walk/bike ½ mile to reach a car-sharing station. Even sedentary people walk 1000-3000 steps a day, and one mile is about 2000 steps. Therefore, most healthy people would have no problem walking up to ½ mile to reach a transportation station (The Walking Site).",  
+      "Weather is not a factor. Weather varies throughout the year, and on a day-to-day basis is essentially random. Weather hazards will impede any sort of transportation and does not impact car-sharing transportation significantly more than other transportation methods.",  
+      "Users do not drive one-way between cities. In order to analyze one-way car-sharing models for a particular city, the city itself should be isolated with respect to other car-sharing cities.",  
+      "Users do not have car crashes, lose insurance documents or keys, park in unauthorized locations, drive without a license, or drive with impaired senses and functionality. In these instances the cost for any given model skyrockets, and these data points become outliers.",  
+      "Within the central area of a city, the population is uniformly distributed. We assume that the car-sharing company would put their stations in ideal locations, but between two cities the idealness of various locations would differ, on average, by a factor of the average population density for the major metropolitan area.",  
+      "Across cities, bus fares are constant. We researched bus fares for each of the four cities we are investigating. The differences between cities are negligible in our calculations, so for the sake of simplicity, we will assume they are constant."  
+    \],  
+    "Model": \[  
+      "Profit \= (revenue – cost) \* usage, where profit is profit, revenue, and cost are all per user, and usage is a function of both population density around a car-sharing station and the feasibility of the car-sharing method for an individual.",  
+      "UP \= T \* S \+ M. We assume that the user wishes to save time and money and that time saved is more valuable if the user makes a high hourly wage, while money saved is more valuable if the user makes a low hourly wage.",  
+      "Expenses per member per year \= ($10,000+ $1.71 average miles driven per year. / gallon average miles per gallon) / 90 members",  
+      "For the Zipcar round-trip model, the average revenue made per user per year is given by $25 \* 0.12/user \+ $7 \* 12/user \+ 0.75\*24 hours/day \* 365 days/yr \* $9.25 / hour/car / 90 users/car \= $762.",  
+      "Profit=(revenue-cost)\*users=(revenue-cost)\*k\*population density."  
+    \],  
+    "Results": \[  
+      "Ranked, the best cities for a company to develop car-sharing in are Poughkeepsie, NY; Richmond VA; Riverside, CA; and Knoxville, TN. The best business models to pursue are the free-floating model and the one-way model.",  
+      "Poughkeepsie, NY, Round-trip Zipcar: 3.80E+06\*k",  
+      "Poughkeepsie, NY, Round-trip Hertz: 5.21E+05\*k",  
+      "Poughkeepsie, NY, Free-floating: 8.68E+06\*k",  
+      "Poughkeepsie, NY, One-way: 2.90E+06\*k",  
+      "Richmond, VA, Round-trip Zipcar: 2.30E+06\*k",  
+      "Richmond, VA, Round-trip Hertz: 3.16E+05\*k",  
+      "Richmond, VA, Free-floating: 5.26E+06\*k",  
+      "Richmond, VA, One-way: 1.76E+06\*k",  
+      "Riverside, CA, Round-trip Zipcar: 1.96E+06\*k",  
+      "Riverside, CA, Round-trip Hertz: 2.69E+05\*k",  
+      "Riverside, CA, Free-floating: 4.47E+06\*k",  
+      "Riverside, CA, One-way: 1.50E+06\*k",  
+      "Knoxville, TN, Round-trip Zipcar: 1.18E+06\*k",  
+      "Knoxville, TN, Round-trip Hertz: 1.62E+05\*k",  
+      "Knoxville, TN, Free-floating: 2.70E+06\*k",  
+      "Knoxville, TN, One-way: 9.02E+05\*k"  
+    \],  
+    "Sensitivity Analysis": \[  
+      "N/A"  
+    \],  
+    "Strength and Weakness": \[  
+      "We assumed that the per capita incomes of each city were relatively equal because the discrepancies we found were not very significant. To improve on our model, we would take those differences into account in estimating how many individuals would be able to afford car-sharing.",  
+      "When determining profitability of each model, did not incorporate the cost of the jockey for the free-floating Car2go model because we ran out of time."  
+    \]  
+  },  
+  "Q3": {  
+      "Definition": \[\],  
+    "Assumption": \[  
+      "Self-driving vehicles would allow all car-sharing businesses to be one-way because the car could drive itself back to any needed location. Stations would not be required because of the self-driving function, so all options would resemble the one-way floating option.",  
+      "Users would stay within a certain radius to avoid exorbitant costs of having the car drive itself back between cities."  
+    \],  
+    "Model": \[  
+      "Using the pricing model of the one-way floating model of Car2Go, the self-driving car option comes out as the best option in both Scenario 3 and Scenario 4."  
+    \],  
+    "Results": \[  
+      "Free-floating Car2go, Revenue per user per year ($): 1641",  
+      "Free-floating Car2go, Cost per user per year ($): 190.4",  
+      "Free-floating Car2go, (Revenue \- Cost) per user per year: 1450.6",  
+      "Self-driving car, Revenue per user per year ($): 875.416",  
+      "Self-driving car, Cost per user per year ($): 190.4",  
+      "Self-driving car, (Revenue \- Cost) per user per year: 685"  
+    \],  
+    "Sensitivity Analysis": \[  
+      "N/A"  
+    \],  
+    "Strength and Weakness": \[  
+      "This model does not take into consideration the fact that self-driving cars and environmentally-friendly cars are much more expensive than regular sedans. Right now the price of self-driving cars is far too high for a feasible model. However, once self-driving cars become more commonplace, they will also increase usage."  
+    \]  
+  }  
+}

@@ -1,0 +1,121 @@
+{  
+  "Placement": "2",  
+  "Comments": "This paper underwent a light edit by SIAM staff prior to posting.",  
+  "Q1": {  
+    "Definition": \[\],  
+    "Assumption": \[  
+      "The typical commute for a majority of the population is short.",  
+      "For a given distance, time is distributed normally.",  
+      "The maximum drive length is 2860 miles",  
+      "The short/medium and medium/long distance divisions are 8.25 miles and 30 miles respectively.",  
+      "The short-medium and medium-long time divisions are 10 minutes and 30 minutes."  
+    \],  
+    "Simplification": \[  
+        "Each driver will fall into only one distance-time category."  
+    \],  
+    "Model": \[  
+      "distance\_distr(x) \= (1/5.77078) \* (1/2)^(x/4)",  
+      "Normal distribution curves for time, given distance categories (short, medium, long), with means and standard deviations derived from data and assumptions."  
+    \],  
+    "Results": \[  
+      "Short Distance, Short Time: 32.71%",  
+      "Short Distance, Medium Time: 43.05%",  
+      "Short Distance, Long Time: 0.306%",  
+      "Medium Distance, Short Time: 1.584%",  
+      "Medium Distance, Medium Time: 12.67%",  
+      "Medium Distance, Long Time: 9.14%",  
+      "Long Distance, Short Time: 0.0199%",  
+      "Long Distance, Medium Time: 0.0489%",  
+      "Long Distance, Long Time: 0.4810%"  
+    \],  
+    "Sensitivity Analysis": \[  
+      "The upper bound on the distance function has no effect as the function's value decreases to near zero values beyond a distance of 20 miles. The constants in the distance function, however, were very sensitive to change."  
+    \],  
+    "Strength and Weakness": \[  
+      "Drivers cannot be reasonably categorized into having typical driving any category; all drivers take trips of many different lengths.",  
+      "Our model had a weaker correlation between time and distance than the dataset."  
+    \]  
+  },  
+  "Q2": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "People make judgments based on cost.",  
+      "People will walk until the perceived value of walking is equal to the cheapest possible taxi service to bring them from their current position to their desired location.",  
+      "Commuter preferences have remained relatively constant since 1967.",  
+      "There are no discounts (e.g., student discounts, promotions, etc.).",  
+      "Commuters only return their rideshare once per day. (Round Trip)",  
+      "The average commuter has the car for 9 hours and 45 and Y minutes on weekdays, where Y is the time required to walk back to the station where his or her car is parked. (Round Trip)",  
+      "The average commuter takes the car out twice on weekends for a duration of four hours and Y minutes. (Round Trip)",  
+      "The time spent inside the station is negligible. (Round Trip)",  
+      "The cars follow an L-shaped snake geometry to travel between points. (Round Trip)",  
+      "No pickups and drop-offs will occur at airports. (Round Trip)",  
+      "No taxes. (Round Trip)",  
+      "All stations are operational (cars are present when they are needed and space is available when someone needs to park). (One-Way Station)",  
+      "Time spent waiting in stations is 0 minutes. (One-Way Station)",  
+      "Stations are within walking distance of the destination. (One-Way Station)",  
+      "Average person commutes 2 trips per day. (One-Way Station)",  
+      "Cars receive “superpermits” to park in any residential, metered, or general spot for free. (One-Way Free-Floating)",  
+      "Users can find parking spots available near their destination. (One-Way Free-Floating)",  
+      "Users do not need to walk to get from their car do the destination. (One-Way Free-Floating)",  
+      "Free-floating car users take short trips. (One-Way Free-Floating)",  
+      "Consumers will walk to the nearest available car. (One-Way Free-Floating)",  
+      "Although it is a one-way system, most consumers will still take two trips on a daily basis (One-Way Free-Floating)",  
+      "The insurance cost per car stays the same even if multiple people are sharing that car. (Fractional Ownership)",  
+      "Three people share each car. (Fractional Ownership)",  
+      "Gasoline prices stay constant. (Fractional Ownership)",  
+      "People drive as much when they car share compared to not car-sharing. (Fractional Ownership)"
+
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "U(TW, TT, C) \= \-0.147TW \- 0.0411TT \- 2.24C (Utility Function)",  
+      "Cost\_uberX,total \= $1.05 \+ $9.00 hr^-1 \* t\_drive \+ $0.70 mile^-1 \* d \+ $6.81 hr^-1 \* (t\_drive \+ 0.133) (UberX Cost)",  
+      "Cost\_walking,total \= $24.32 hr^-1 \* t\_walk (Walking Cost)",  
+      "Equating UberX cost and walking cost to find maximum walking distance/time.",  
+      "Round Trip Car-Sharing: Implicit cost calculation based on walking time and perceived cost of walking. Explicit cost based on Zipcar's pricing model.",  
+      "One-Way Car-Sharing Station Model: Implicit cost similar to round trip, but for one leg. Explicit cost based on fees.",  
+       "One-Way Car-Sharing Free-Floating Model: Cost to find car based on car density and walking cost. Trip cost based on Car2Go pricing.",  
+      "Fractional Ownership: Cost/year \= (repairs \+ insurance \+ payment)/number of people \+ 365\*38.4\*(miles/day)\*gas price."  
+    \],  
+    "Results": \[  
+      "Fractional ownership is the cheapest, followed by one-way floating, one-way station, and round trip.",  
+      "Among the four cities, Knoxville, TN is the cheapest for fractional ownership, followed by Richmond, VA; Poughkeepsie, NY; and Riverside, CA."  
+    \],  
+    "Sensitivity Analysis": \[  
+        "N/A"  
+    \],  
+    "Strength and Weakness": \[  
+      "Many bikesharing programs, which are one-way station systems, have had issues keeping stations from becoming full or empty, which create the undesirable scenarios of not being able to park or not having a bike to ride... With cars, however, this is significantly less possible because a unique driver is required for each car \[6\]. This greatly increases the cost of implementation."  
+    \]  
+  },  
+  "Q3": {  
+      "Definition":\[\],  
+    "Assumption": \[  
+      "In the future, 100% of vehicles are electric and autonomous.",  
+      "The electricity infrastructure does not significantly change over the next few decades.",  
+      "Completely switching from conventional to electric cars reduces greenhouse gases by 33%.",  
+      "Autonomous vehicles eliminate the need to walk to a station.",  
+      "Electric cars cost $0.05 to drive per mile.",  
+      "The cost of maintaining electric vehicles is 1/3 that of conventional cars.",  
+      "The total costs associated with air pollutants in the US is estimated at anywhere from US$71 billion to $277 billion per year. For simplicity, we will take the lower bound of that estimate, US$71 billion.",  
+      "The number of licensed US drivers remains constant at 210M.",  
+      "The cost of ride sharing does not change.",  
+      "Insurance premiums for autonomous cars will decrease by 66%."  
+    \],  
+      "Simplification":\[\],  
+    "Model": \[  
+      "One-Way Car-Sharing Model: Explicit cost \= $84.00 \+ 1825hours \* $x/hour, where x is the half-hour car-sharing rate. Total cost \= implicit cost \+ explicit cost.",  
+      "Round Trip Car-Sharing Model: Devolves into the one-way model with autonomous vehicles.",  
+      "Fractional Ownership Model: cost/year \= (repairs \+ insurance \+ payment)/number of people \+ 365\*(days/year)\*38.4\*(miles/day)\*$.05/mile"  
+    \],  
+    "Results": \[  
+      "Fractional ownership remains the cheapest option."  
+       \],  
+    "Sensitivity Analysis": \[  
+        "N/A"  
+    \],  
+    "Strength and Weakness": \[  
+        "N/A"  
+    \]  
+  }  
+}

@@ -1,0 +1,29 @@
+[data] Historical EV sales trends from 2014 to 2023 are representative of future sales trends in the chosen state.
+Justification: Based on Example 8, historical trends over a decade are assumed to remain similar in the near future. Our data spans a comparable time period, so we assume these trends will continue into the near future.
+
+[model] The decrease in battery costs will continue at a similar rate as observed in the past decade.
+Justification: Battery technology improvements have followed a consistent cost decline trajectory due to economies of scale and technological advancements, similar to trends in other tech sectors.
+
+[scope] State-level policy changes are limited to those currently proposed or under serious consideration.
+Justification: Following Example 3, predicting future policy changes is complex; thus, we assume no drastic changes will occur beyond those already in the pipeline.
+
+[model] EV adoption can be modeled using a logistic growth curve.
+Justification: In Example 5, a logistic model was used for growth where there are natural limits, such as population adoption capacity, indicating a saturation point for EV adoption.
+
+[simplification] Charging infrastructure will expand proportionally to the projected growth in EV sales.
+Justification: Infrastructure development historically follows demand, as seen in transportation and energy sectors, where increased demand spurs expanded infrastructure.
+
+[data] Gasoline prices will experience annual fluctuations within historical volatility ranges from 2014-2023.
+Justification: Historical volatility provides a reasonable estimate for future fluctuations, as it captures typical economic and geopolitical influences over the past decade.
+
+[scope] No significant technological breakthroughs will drastically alter the cost or performance of EVs beyond current projections.
+Justification: Based on Example 2, unforeseen circumstances like technological breakthroughs are difficult to predict, so we assume current technological trajectories remain stable.
+
+[data] State demographic and economic data from 2014 to 2023 can be extrapolated to forecast the 2024-2034 period.
+Justification: As per Example 9, extrapolating from existing data is necessary when forecasting, assuming similar conditions persist.
+
+[simplification] Household income distribution remains relatively stable, adjusting only for inflation and average economic growth.
+Justification: Socioeconomic trends show gradual changes over time unless influenced by significant economic events, aligning with Example 4's use of monthly data to reflect annual trends.
+
+[scope] Federal incentives are assumed to remain constant through 2034 unless current legislative changes are documented.
+Justification: In line with Example 3, where policy changes are unpredictable, federal incentives are assumed constant unless changes are formally proposed.

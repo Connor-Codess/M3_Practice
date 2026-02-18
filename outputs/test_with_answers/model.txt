@@ -1,0 +1,27 @@
+Framework: Dynamic Logistic Growth ODE with Time-Varying Parameters
+
+Equations:
+\(\frac{dA(t)}{dt} = r(t)\,A(t)\left[1 - \frac{A(t)}{K(t)}\right]\)
+\(r(t) = r_0 + r_B\bigl(B_0 - B(t)\bigr) + r_I I(t) - r_P\bigl(P_{diff}(t)\bigr)\)
+\(K(t) = K_0 + k_1\cdot \text{Infra}(t) + k_2\cdot \text{Policy}(t)\)
+
+Variables:
+A(t): Proportion of electric vehicles in the total vehicle fleet at time t
+B(t): Average battery cost at time t
+I(t): Combined EV incentives at time t
+P_diff(t): Relative price difference between EVs and conventional vehicles at time t
+Infra(t): Infrastructure metric (e.g., number of public chargers) at time t
+Policy(t): Policy support metric (e.g., score reflecting regulatory support) at time t
+
+Parameters:
+r_0: Base adoption growth rate
+r_B: Effect of battery cost on adoption growth
+r_I: Effect of incentives on adoption growth
+r_P: Effect of price difference on adoption growth
+K_0: Base carrying capacity (maximum EV proportion) at t=0
+k_1: Effect of infrastructure changes on carrying capacity
+k_2: Effect of policy support on carrying capacity
+B_0: Initial reference battery cost
+
+Rationale:
+This refined dynamic logistic growth model expands on the basic logistic by allowing both the growth rate and the carrying capacity to evolve in time. Incorporating battery costs, incentive influences, policy, and infrastructure dynamics helps capture more realistic market shifts and provides a deeper foundation for parameter sensitivity analysis. By re-calibrating parameter values with updated data and incorporating a systematic approach to testing parameter variations, we address prior concerns about minimal adoption rate changes and improve clarity in how assumptions inform model behavior.

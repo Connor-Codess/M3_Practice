@@ -1,0 +1,26 @@
+
+M3 Challenge 2024 - Renewable Energy Transition
+
+Background:
+As countries work to reduce carbon emissions, the transition to renewable
+energy sources has become increasingly important. This transition involves
+complex trade-offs between economic costs, reliability, and environmental
+benefits.
+
+The data provided includes historical energy production by source, costs
+of different generation technologies, and carbon emissions data.
+
+Q1: Develop a model to predict the optimal mix of energy sources for a
+state over the next 20 years, considering cost, reliability, and emissions.
+
+Q2: Analyze how sensitive your model is to changes in technology costs,
+policy incentives, and energy demand growth.
+
+Q3: Recommend a phased transition plan that balances economic and
+environmental goals. Consider political and social feasibility.
+
+Constraints:
+- Maximum 25 pages
+- Must include sensitivity analysis
+- All assumptions must be justified
+- Include at least two visualizations

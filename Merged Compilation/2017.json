@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2017_S1_Q1_Assumption",
+    "text": "SECTION: 2017 Champion (S1) Question 1 Assumption\nCONTEXT: Sea level rise risk (Probabilistic Model).\nCONTENT: The probabilistic model assumes that **historical sea level trends** are the only variables influencing future sea level, ignoring future extreme, non-linear climate events. It assumes **coastal elevation data** is accurate and uniform.",
+    "metadata": {
+      "year": "2017",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Assumption",
+      "topic": "Probabilistic Modeling, Historical Extrapolation",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2017_S1_Q1_Model",
+    "text": "SECTION: 2017 Champion (S1) Question 1 Model\nCONTEXT: Sea level rise risk.\nCONTENT: A Probabilistic Model was used. The team modeled sea level height as a random variable based on historical trends and calculated the probability of the sea level exceeding the park's coastal elevation.",
+    "metadata": {
+      "year": "2017",
+      "placement": "S1",
+      "question": "Q1",
+      "section": "Model",
+      "math_methods": "Probabilistic Modeling, Statistics",
+      "chunk_index": 1
+    }
+  }
+]

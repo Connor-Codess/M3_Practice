@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2018_S1_Q3_Assumption",
+    "text": "SECTION: 2018 Champion (S1) Question 3 Assumption\nCONTEXT: Food distribution strategy (Agent-Based).\nCONTENT: The model assumes that the **individual agents are perfectly rational** and will only travel to a center if the **monetary value of the food** strictly outweighs the opportunity cost of their time and travel expense.",
+    "metadata": {
+      "year": "2018",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Assumption",
+      "topic": "Rational Agent, Cost-Benefit",
+      "chunk_index": 1
+    }
+  },
+  {
+    "id": "2018_S1_Q3_Model",
+    "text": "SECTION: 2018 Champion (S1) Question 3 Model\nCONTEXT: Food distribution strategy.\nCONTENT: A Computational Simulation (Agent-Based approach) was used. It modeled individuals as rational economic agents who only travel to a food distribution center if the value of the food exceeds the travel cost and opportunity cost of time.",
+    "metadata": {
+      "year": "2018",
+      "placement": "S1",
+      "question": "Q3",
+      "section": "Model",
+      "math_methods": "Computational Simulation, Cost-Benefit Analysis",
+      "chunk_index": 1
+    }
+  }
+]
